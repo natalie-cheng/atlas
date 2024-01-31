@@ -7,8 +7,8 @@ public class Cyclops : MonoBehaviour
     // vars
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private static float health = 100;
-    private float speed = 1.5f;
+    public static float health = 100;
+    private float speed = 0.5f;
 
     // Accesses Atlas 
     private Atlas atlas;
@@ -30,6 +30,9 @@ public class Cyclops : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         atlas = FindObjectOfType<Atlas>();
         atlasTransform = atlas.transform;
+
+        // Lock rotation in the Z-axis to prevent flipping
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     // Update is called once per frame
