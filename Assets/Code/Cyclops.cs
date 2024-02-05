@@ -8,7 +8,7 @@ public class Cyclops : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     public float health = 100;
-    private float speed = 0.5f;
+    private float speed = 1.5f;
     private float attackRange = 1.0f;
     private float cyclopsDamage = 3.0f;
     private float forceAmount = 30f;
