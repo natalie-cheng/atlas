@@ -7,11 +7,12 @@ public class AtlasCyclopsVersion : MonoBehaviour
     // vars
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private float detectionRadius = 2.0f;
+    private float detectionRadius = 1.0f;
     private float forceAmount = 100f;
-    private float facingThreshold = 0.3f;
+    private float facingThreshold = 0.5f;
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
+    private float swordDamage = 34;
 
 
 
@@ -71,7 +72,8 @@ public class AtlasCyclopsVersion : MonoBehaviour
 
             // Apply the force to push the Cyclops back
             cyclopsRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
-            Debug.Log("Cyclops Hit!");
+            cyclop.health = cyclop.health - swordDamage;
+            Debug.Log(cyclop.health);
         }
     }
 

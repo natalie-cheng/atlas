@@ -7,8 +7,11 @@ public class Cyclops : MonoBehaviour
     // vars
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    public static float health = 100;
+    public float health = 100;
     private float speed = 0.5f;
+    public float attackRange = 0.1f;
+    private float cyclopsDamage = 3.0f;
+    private float forceAmount = 30f;
 
     // Accesses Atlas 
     private Atlas atlas;
@@ -30,6 +33,8 @@ public class Cyclops : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         atlas = FindObjectOfType<Atlas>();
         atlasTransform = atlas.transform;
+        health = 100;
+        Atlas.health = 100;
 
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -39,6 +44,7 @@ public class Cyclops : MonoBehaviour
     void Update()
     {
         Move();
+        checkIfDead();
     }
 
     // Makes the cyclops move towards the player
@@ -67,6 +73,49 @@ public class Cyclops : MonoBehaviour
 
         // Sets new Enemy's velocity
         rb.velocity = directionToPlayer * speed;
+
+        if(IsPlayerInRange())
+        {
+            hit();
+        }
+    }
+
+    // Checks if Atlas is within attack range
+    private bool IsPlayerInRange()
+    {
+        // Calculate the distance between Cyclops and Atlas
+        float distanceToPlayer = Vector2.Distance(transform.position, atlasTransform.position);
+
+        // Check if the player (Atlas) is within the attack range
+        return distanceToPlayer <= attackRange;
+    }
+
+    private void hit()
+    {
+        // Assuming your Atlas class has a Rigidbody2D component
+        Rigidbody2D atlasRB = atlas.GetComponent<Rigidbody2D>();
+        if (atlasRB != null)
+        {
+            // Calculate the direction away from the collision point
+            Vector3 pushDirection = atlas.transform.position - transform.position;
+            pushDirection.Normalize();
+
+            // Apply the force to push Atlas back
+            atlasRB.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
+            Atlas.health = Atlas.health - cyclopsDamage;
+            //Debug.Log(Atlas.health);
+        }
+    }
+
+
+
+    // checks if cyclops is dead
+    private void checkIfDead()
+    {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
