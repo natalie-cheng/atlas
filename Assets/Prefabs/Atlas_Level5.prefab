@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7109632852691347620}
   - component: {fileID: 593906205644591858}
   - component: {fileID: 1164429567883473004}
-  - component: {fileID: 8917964047782557142}
+  - component: {fileID: -4277234301840282565}
   m_Layer: 0
-  m_Name: Atlas
+  m_Name: Atlas_Level5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!70 &8917964047782557142
+--- !u!70 &-4277234301840282565
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,5 +160,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.99999994, y: 1}
+  m_Size: {x: 1, y: 1}
   m_Direction: 0
