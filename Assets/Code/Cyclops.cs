@@ -8,9 +8,9 @@ public class Cyclops : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     public float health = 100;
-    private float speed = 0.5f;
+    private float speed = 1.0f;
     private float attackRange = 1.0f;
-    private float cyclopsDamage = 3.0f;
+    private float cyclopsDamage = 1;
     private float forceAmount = 30f;
 
     // Accesses Atlas 
@@ -43,12 +43,12 @@ public class Cyclops : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        MoveAndHit();
         checkIfDead();
     }
 
     // Makes the cyclops move towards the player
-    private void Move()
+    private void MoveAndHit()
     {
         // Accesses the cyclops's position
         float cyclopsXCoordinate = this.transform.position.x;
@@ -57,9 +57,6 @@ public class Cyclops : MonoBehaviour
 
         // Accesses Atlas's position
         UnityEngine.Vector2 atlasPosition = new Vector2(atlasTransform.position.x, atlasTransform.position.y);
-
-        //// Calculate the distance between the cyclops and Atlas
-        //float distanceToPlayer = Vector2.Distance(cyclopsPosition, atlasPosition);
 
         // Makes the cyclops move towards the player
         UnityEngine.Vector3 directionToPlayer = new UnityEngine.Vector3(HeadingToPlayer.x, HeadingToPlayer.y, 0.0f);
@@ -71,15 +68,31 @@ public class Cyclops : MonoBehaviour
         // Apply the clamped position back to the GameObject's position
         rb.position = cyclopsPosition;
 
-        // Sets new Enemy's velocity
-        rb.velocity = directionToPlayer * speed;
+        // Check if the player is in range
+        if (IsPlayerInRange())
+        {
+            // Stop the cyclops
+            rb.velocity = Vector2.zero;
 
-        if(IsPlayerInRange())
+            // Start the delay coroutine
+            StartCoroutine(HitDelay());
+        }
+        else // If player is not in range
+        {
+            // Move the cyclops
+            rb.velocity = directionToPlayer * speed;
+        }
+    }
+
+    // Coroutine to introduce a delay before attacking
+    IEnumerator HitDelay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        if (IsPlayerInRange())
         {
             hit();
         }
     }
-
     // Checks if Atlas is within attack range
     private bool IsPlayerInRange()
     {
@@ -103,7 +116,6 @@ public class Cyclops : MonoBehaviour
             // Apply the force to push Atlas back
             atlasRB.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
             Atlas.health = Atlas.health - cyclopsDamage;
-            //Debug.Log(Atlas.health);
         }
     }
 
