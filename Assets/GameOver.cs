@@ -21,6 +21,9 @@ public class GameOver : MonoBehaviour
 
         // Ensure the Game Over canvas is initially disabled
         gameOverCanvas.text = "";
+
+        // Set the size of the text
+        gameOverCanvas.fontSize = 30;
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class GameOver : MonoBehaviour
         {
             // If the player is dead, show the Game Over canvas
             gameOverCanvas.text = "Game Over";
+            atlas.Dead();
         }
         else
         {
