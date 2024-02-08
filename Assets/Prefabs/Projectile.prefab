@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66373e62f1366404687ebe5d60da57af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orbLife: 0
+  lifespan: 2000
 --- !u!58 &2770652507633514277
 CircleCollider2D:
   m_ObjectHideFlags: 0
