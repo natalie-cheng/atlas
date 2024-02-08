@@ -16,11 +16,11 @@ public class AtlasHealthBar : MonoBehaviour
         RectTransform textRectTransform = healthDisplay.rectTransform;
 
         // Modify the x and y coordinates of the TextMeshPro object's RectTransform
-        textRectTransform.anchoredPosition = new Vector2(-330, 330); // Replace xValue and yValue with your desired coordinates
+        textRectTransform.anchoredPosition = new Vector2(-600, 400); // Replace xValue and yValue with your desired coordinates
     }
 
     private void Update()
     {
-        healthDisplay.text = "Health: " + Atlas.health;
+        healthDisplay.text = "Health: " + Atlas_Level5.health;
     }
 }

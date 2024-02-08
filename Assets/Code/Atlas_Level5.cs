@@ -5,16 +5,16 @@ using UnityEngine;
 public class Atlas_Level5 : MonoBehaviour
 {
     // vars
-    private Rigidbody2D rb;
+    public static Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private float speed = 2;
-    private float detectionRadius = 1.5f;
+    private float detectionRadius = 1.0f;
     private float forceAmount = 10000f;
     private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
     private float swordDamage = 34;
-    public static int health = 100;
+    public static float health = 100;
 
 
 
@@ -113,12 +113,12 @@ public class Atlas_Level5 : MonoBehaviour
             // Calculate the dot product of the forward direction of the current object and the direction to the target
             float dotProduct = Vector3.Dot(movement, directionToTarget);
 
-            //Debug.Log(dotProduct);
-            // Check if the dot product is greater than the facing threshold
-            if (dotProduct > facingThreshold)
-            {
-                return true;
-            }
+            //// Check if the dot product is greater than the facing threshold
+            //if (dotProduct > facingThreshold)
+            //{
+            //    return true;
+            //}
+            return true;
         }
         return false;
 
@@ -129,6 +129,7 @@ public class Atlas_Level5 : MonoBehaviour
     {
         if (health <= 0)
         {
+
             return true;
 
         }
