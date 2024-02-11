@@ -24,27 +24,27 @@ public class TransitionUI : MonoBehaviour
         if (level==1)
         {
             textContent.text = "this is level 1 content";
-            scene = "Level_1";
+            scene = "Level 1";
         }
         else if (level == 2)
         {
             textContent.text = "this is level 2 content";
-            scene = "Level_2";
+            scene = "Level 2";
         }
         else if (level == 3)
         {
             textContent.text = "this is level 3 content";
-            scene = "Level_3";
+            scene = "Level 3";
         }
         else if (level == 4)
         {
             textContent.text = "this is level 4 content";
-            scene = "Level_4";
+            scene = "Level 4";
         }
         else if (level == 5)
         {
             textContent.text = "this is level 5 content";
-            scene = "Level_5";
+            scene = "Level 5";
         }
     }
 
