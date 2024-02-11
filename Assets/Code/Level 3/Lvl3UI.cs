@@ -15,6 +15,7 @@ public class Lvl3UI : MonoBehaviour
     {
         Singleton = this;
         scoreText.text = health + "";
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
