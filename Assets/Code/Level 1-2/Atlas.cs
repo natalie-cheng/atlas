@@ -14,6 +14,7 @@ public class Atlas : MonoBehaviour
     private void Start()
     {
         // initialize santa vars
+        health = 100;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
