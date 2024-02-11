@@ -8,21 +8,24 @@ public class Atlas : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     public static float health = 100;
+    public static float xPos;
     public float speed = 2;
 
     // call start
     private void Start()
     {
         // initialize santa vars
+        health = 100;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        xPos = transform.position.x;
     }
 
     // frame update
     private void Update()
     {
         Move();
-
+        xPos = transform.position.x;
     }
 
     // move and update sprite
