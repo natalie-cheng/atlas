@@ -14,6 +14,7 @@ public class Lvl2UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameUI.levelTrack = 2;
         Singleton = this;
 
         scoreText.text = Atlas.health + "";

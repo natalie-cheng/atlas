@@ -8,7 +8,12 @@ public class GameUI : MonoBehaviour
     // UI object
     public static GameUI Singleton;
 
-    public static int levelTrack = 0;
+    public static int levelTrack;
+
+    private void Start()
+    {
+        levelTrack = 0;
+    }
 
     // load transition to next level
     public void LoadLevel()
