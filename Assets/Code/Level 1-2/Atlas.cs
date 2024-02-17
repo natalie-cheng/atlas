@@ -14,8 +14,7 @@ public class Atlas : MonoBehaviour
     // call start
     private void Start()
     {
-        // initialize santa vars
-        health = 100;
+        // initialize atlas vars
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         xPos = transform.position.x;

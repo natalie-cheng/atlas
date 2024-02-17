@@ -2632,7 +2632,7 @@ GameObject:
   - component: {fileID: 1550697535}
   - component: {fileID: 1550697534}
   m_Layer: 5
-  m_Name: WinText
+  m_Name: LossText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

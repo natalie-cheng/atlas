@@ -8,8 +8,8 @@ public class Lvl2UI : MonoBehaviour
 {
     public static Lvl2UI Singleton;
     public TextMeshProUGUI scoreText;
-    public GameObject endScreen;
-    public TextMeshProUGUI endText;
+    public GameObject winScreen;
+    public GameObject lossScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -17,15 +17,17 @@ public class Lvl2UI : MonoBehaviour
         GameUI.levelTrack = 2;
         Singleton = this;
 
+        Atlas.health = 100;
         scoreText.text = Atlas.health + "";
-        endScreen.SetActive(false);
+        winScreen.SetActive(false);
+        lossScreen.SetActive(false);
         Time.timeScale = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Atlas.health<0)
+        if (Atlas.health<=0)
         {
             GameOver(false);
         }
@@ -38,14 +40,13 @@ public class Lvl2UI : MonoBehaviour
     private void GameOver(bool win)
     {
         Time.timeScale = 0;
-        endScreen.SetActive(true);
         if (win)
         {
-            endText.text = "you won";
+            winScreen.SetActive(true);
         }
         else
         {
-            endText.text = "you lost";
+            lossScreen.SetActive(true);
         }
     }
 
@@ -63,7 +64,17 @@ public class Lvl2UI : MonoBehaviour
     // load transition to next level
     public void LoadNextLevel()
     {
-        GameUI.levelTrack += 1;
         SceneManager.LoadScene("Transition");
+    }
+
+    // back to main menu
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Replay()
+    {
+        SceneManager.LoadScene("Level 2");
     }
 }
