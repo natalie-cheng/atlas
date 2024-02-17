@@ -12,6 +12,7 @@ public class Lvl1UI : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject winScreen;
     public GameObject lossScreen;
+    public GameObject instructions;
 
     // total timer time
     private float totalTime = 121f;
@@ -36,7 +37,8 @@ public class Lvl1UI : MonoBehaviour
         // set game beginning ui
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
-        Time.timeScale = 1;
+        instructions.SetActive(true);
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -88,6 +90,13 @@ public class Lvl1UI : MonoBehaviour
     {
         numPlanks += 1;
         scoreText.text = numPlanks +"";
+    }
+
+    // start level
+    public void Play()
+    {
+        instructions.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // load transition to next level
