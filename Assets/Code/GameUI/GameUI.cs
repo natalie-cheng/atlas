@@ -18,7 +18,6 @@ public class GameUI : MonoBehaviour
     // load transition to next level
     public void LoadLevel()
     {
-        levelTrack += 1;
         SceneManager.LoadScene("Transition");
     }
 

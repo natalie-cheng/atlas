@@ -99,7 +99,7 @@ public class BirdManager : MonoBehaviour
 
             if (collide.gameObject.name == atlas.name)
             {
-                atlas.health -= 25;
+                Atlas_Level3.health -= 25;
                 Lvl3UI.changeHealth(25);
             }
             else
@@ -118,7 +118,7 @@ public class BirdManager : MonoBehaviour
 
             if (collision.gameObject.name == atlas.name)
             {
-                atlas.health -= 25;
+                Atlas_Level3.health -= 25;
                 Lvl3UI.changeHealth(25);
                 atlas.spriteRenderer.color = Color.red;
             }
@@ -152,6 +152,7 @@ public class BirdManager : MonoBehaviour
 
     private void Die()
     {
+        Lvl3UI.numBirds--;
         Destroy(gameObject);
     }
 }
