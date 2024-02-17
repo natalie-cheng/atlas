@@ -23,7 +23,13 @@ public class Boat : MonoBehaviour
         {
             Vector3 newPosition = transform.position + new Vector3(0f, moveInc, 0f);
             transform.position = newPosition;
-        } else if ((Input.GetKey("down") || Input.GetKey(KeyCode.S)) && transform.position.y > -15) ;
+        }
+        else if ((Input.GetKey("down") || Input.GetKey(KeyCode.S)) && transform.position.y > -15)
+        {
+            Vector3 newPosition = transform.position - new Vector3(0f, moveInc, 0f);
+            transform.position = newPosition;
+        }
+        
         if (Input.GetAxis("Vertical")==1 && transform.position.y < 15)
         {
             Vector3 newPosition = transform.position + new Vector3(0f, moveInc, 0f);
