@@ -125,20 +125,20 @@ public class Atlas_Level5 : MonoBehaviour
     }
 
     // checks if Atlas is dead
-    public bool checkIfDead()
-    {
-        if (health <= 0)
-        {
+    //public bool checkIfDead()
+    //{
+    //    if (health <= 0)
+    //    {
 
-            return true;
+    //        return true;
 
-        }
-        return false;
-    }
+    //    }
+    //    return false;
+    //}
 
-    public void Dead()
-    {
-        Destroy(this);
-    }
+    //public void Dead()
+    //{
+    //    Destroy(this);
+    //}
 
 }
