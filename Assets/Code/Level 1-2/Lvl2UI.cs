@@ -3,14 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Image = UnityEngine.UI.Image;
 
 public class Lvl2UI : MonoBehaviour
 {
     public static Lvl2UI Singleton;
-    public TextMeshProUGUI scoreText;
     public GameObject winScreen;
     public GameObject lossScreen;
     public GameObject instructions;
+    public Image healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,6 @@ public class Lvl2UI : MonoBehaviour
         Singleton = this;
 
         Atlas.health = 100;
-        scoreText.text = Atlas.health + "";
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
         instructions.SetActive(true);
@@ -29,11 +29,7 @@ public class Lvl2UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Atlas.health<=0)
-        {
-            GameOver(false);
-        }
-        else if (Atlas.xPos > 9.5)
+        if (Atlas.xPos > 9.5)
         {
             GameOver(true);
         }
@@ -60,7 +56,14 @@ public class Lvl2UI : MonoBehaviour
     private void changeHealthInternal(float dmg)
     {
         Atlas.health -= dmg;
-        scoreText.text = Atlas.health + "";
+
+        // change health bar fill
+        healthBar.fillAmount -= dmg / Atlas.maxHealth;
+
+        if (Atlas.health <= 0)
+        {
+            GameOver(false);
+        }
     }
 
     // start level

@@ -10,13 +10,12 @@ public class Atlas_Level5 : MonoBehaviour
     private float speed = 2;
     private float detectionRadius = 1.0f;
     private float forceAmount = 10000f;
-    private float facingThreshold = 0.3f;
+    //private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
     private float swordDamage = 34;
     public static float health = 100;
-
-
+    public static float maxHealth = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -125,20 +124,20 @@ public class Atlas_Level5 : MonoBehaviour
     }
 
     // checks if Atlas is dead
-    public bool checkIfDead()
-    {
-        if (health <= 0)
-        {
+    //public bool checkIfDead()
+    //{
+    //    if (health <= 0)
+    //    {
 
-            return true;
+    //        return true;
 
-        }
-        return false;
-    }
+    //    }
+    //    return false;
+    //}
 
-    public void Dead()
-    {
-        Destroy(this);
-    }
+    //public void Dead()
+    //{
+    //    Destroy(this);
+    //}
 
 }

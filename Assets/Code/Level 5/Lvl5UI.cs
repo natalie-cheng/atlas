@@ -1,61 +1,73 @@
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Image = UnityEngine.UI.Image;
 
-public class Lvl3UI : MonoBehaviour
+public class Lvl5UI : MonoBehaviour
 {
-    public static Lvl3UI Singleton;
-    public float health = 100f;
+    public static Lvl5UI Singleton;
+    public TextMeshProUGUI timerText;
     public GameObject winScreen;
     public GameObject lossScreen;
     public GameObject instructions;
     public Image healthBar;
 
-    public static int numBirds;
-
+    // total timer time
+    private float totalTime = 121f;
+    // track current time
+    private float currentTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameUI.levelTrack = 3;
-
+        GameUI.levelTrack = 5;
         Singleton = this;
+
+        // set the time
+        currentTime = totalTime;
+
+        Atlas_Level5.health = 100;
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
         instructions.SetActive(true);
         Time.timeScale = 0;
-
-        Atlas_Level3.health = 100;
-
-        numBirds = GameObject.FindGameObjectsWithTag("Bird_1").Length + GameObject.FindGameObjectsWithTag("Bird").Length;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if all the birds are killed, then win
-        if (numBirds<=0)
+        // update timer
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 1f)
         {
             GameOver(true);
         }
+
+        // calculate time
+        int minutes = Mathf.FloorToInt(currentTime / 60);
+        int seconds = Mathf.FloorToInt(currentTime % 60);
+
+        // display time
+        timerText.text = "Time: " + (minutes > 0 ? minutes.ToString() : "0") + ":" + (seconds >= 10 ? seconds.ToString() : "0" + seconds.ToString());
+
     }
 
-    public static void changeHealth(float dmg)
+    public static void AtlasChangeHealth(float dmg)
     {
-        Singleton.changeHealthInternal(dmg);
+        Singleton.ChangeHealthInternal(dmg);
     }
 
-    private void changeHealthInternal(float dmg)
+    private void ChangeHealthInternal(float dmg)
     {
-        Atlas_Level3.health -= dmg;
+        Atlas_Level5.health -= dmg;
 
         // change health bar fill
-        healthBar.fillAmount -= dmg / Atlas_Level3.maxHealth;
+        healthBar.fillAmount -= dmg / Atlas_Level5.maxHealth;
 
-        if (Atlas_Level3.health <= 0)
+        if (Atlas_Level5.health <= 0)
         {
             GameOver(false);
         }
@@ -84,7 +96,7 @@ public class Lvl3UI : MonoBehaviour
     // load transition to next level
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene("Transition");
+        SceneManager.LoadScene("EndScene");
     }
 
     // back to main menu
@@ -95,6 +107,6 @@ public class Lvl3UI : MonoBehaviour
 
     public void Replay()
     {
-        SceneManager.LoadScene("Level 3");
+        SceneManager.LoadScene("Level 5");
     }
 }

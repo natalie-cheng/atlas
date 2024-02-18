@@ -7,10 +7,10 @@ public class Cyclops : MonoBehaviour
     // vars
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    public float health = 100;
+    public float health = 100f;
     private float speed = 1.0f;
     private float attackRange = 1.0f;
-    private float cyclopsDamage = 50;
+    private float cyclopsDamage = 50f;
     private float forceAmount = 100f;
 
     // Accesses Atlas 
@@ -60,7 +60,7 @@ public class Cyclops : MonoBehaviour
     void Update()
     {
         MoveAndHit();
-        checkIfDead();
+        //checkIfDead();
     }
 
     // Makes the cyclops move towards the player
@@ -132,7 +132,8 @@ public class Cyclops : MonoBehaviour
             // Apply the force to push Atlas back
             atlasRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
 
-            Atlas_Level5.health -= cyclopsDamage;
+            //Atlas_Level5.health -= cyclopsDamage;
+            Lvl5UI.AtlasChangeHealth(cyclopsDamage);
             Debug.Log(pushDirection * forceAmount);
         }
     }

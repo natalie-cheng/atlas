@@ -69,6 +69,6 @@ public class Lvl4UI : MonoBehaviour
 
     public void Replay()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level 4");
     }
 }

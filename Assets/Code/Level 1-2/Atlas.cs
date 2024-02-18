@@ -8,6 +8,7 @@ public class Atlas : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     public static float health = 100;
+    public static float maxHealth = 100;
     public static float xPos;
     public float speed = 2;
 

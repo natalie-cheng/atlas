@@ -14,6 +14,8 @@ public class Atlas_Level3 : MonoBehaviour
     public GameObject arrow;
     private float lastShotTime;
     public float reloadTime = 3f;
+    public static float maxHealth = 100;
+
     // call start
     private void Start()
     {
