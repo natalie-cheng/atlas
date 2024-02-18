@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Image = UnityEngine.UI.Image;
 
 public class Lvl5UI : MonoBehaviour
 {
     public static Lvl5UI Singleton;
-    public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public GameObject winScreen;
     public GameObject lossScreen;
     public GameObject instructions;
+    public Image healthBar;
 
     // total timer time
     private float totalTime = 121f;
@@ -28,7 +29,6 @@ public class Lvl5UI : MonoBehaviour
         currentTime = totalTime;
 
         Atlas_Level5.health = 100;
-        scoreText.text = "Health: " + Atlas_Level5.health;
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
         instructions.SetActive(true);
@@ -41,11 +41,7 @@ public class Lvl5UI : MonoBehaviour
         // update timer
         currentTime -= Time.deltaTime;
 
-        if (Atlas_Level5.health <= 0)
-        {
-            GameOver(false);
-        }
-        else if (currentTime <= 1f)
+        if (currentTime <= 1f)
         {
             GameOver(true);
         }
@@ -57,7 +53,24 @@ public class Lvl5UI : MonoBehaviour
         // display time
         timerText.text = "Time: " + (minutes > 0 ? minutes.ToString() : "0") + ":" + (seconds >= 10 ? seconds.ToString() : "0" + seconds.ToString());
 
-        scoreText.text = "Health: " + Atlas_Level5.health;
+    }
+
+    public static void AtlasChangeHealth(float dmg)
+    {
+        Singleton.ChangeHealthInternal(dmg);
+    }
+
+    private void ChangeHealthInternal(float dmg)
+    {
+        Atlas_Level5.health -= dmg;
+
+        // change health bar fill
+        healthBar.fillAmount -= dmg / Atlas_Level5.maxHealth;
+
+        if (Atlas_Level5.health <= 0)
+        {
+            GameOver(false);
+        }
     }
 
     private void GameOver(bool win)

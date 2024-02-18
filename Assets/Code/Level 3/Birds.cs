@@ -7,6 +7,7 @@ public class Birds : MonoBehaviour
     public float health = 10f;
     public float speed = 0.5f; // Speed of the movement
     private float time = 0f; // Time parameter for the figure-eight calculation
+    private float birdDmg = 25f;
 
     // Start is called before the first frame update
     void Start()
@@ -49,8 +50,7 @@ public class Birds : MonoBehaviour
         {
             if (collision.gameObject.name == atlas.name)
             {
-                Atlas_Level3.health -= 25;
-                Lvl3UI.changeHealth(25);
+                Lvl3UI.changeHealth(birdDmg);
                 atlas.spriteRenderer.color = Color.red;
             }
             else

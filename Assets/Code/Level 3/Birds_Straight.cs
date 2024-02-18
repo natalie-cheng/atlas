@@ -9,7 +9,8 @@ public class BirdManager : MonoBehaviour
     private Dictionary<GameObject, Vector3> birdStartingPositions = new Dictionary<GameObject, Vector3>();
     private List<GameObject> birds = new List<GameObject>();
     public float delayBetweenBirds = 2f; 
-    public float speed = 3f; 
+    public float speed = 3f;
+    private float birdDmg = 25f;
 
     void Start()
     {
@@ -99,8 +100,7 @@ public class BirdManager : MonoBehaviour
 
             if (collide.gameObject.name == atlas.name)
             {
-                Atlas_Level3.health -= 25;
-                Lvl3UI.changeHealth(25);
+                Lvl3UI.changeHealth(birdDmg);
             }
             else
             {
@@ -118,8 +118,7 @@ public class BirdManager : MonoBehaviour
 
             if (collision.gameObject.name == atlas.name)
             {
-                Atlas_Level3.health -= 25;
-                Lvl3UI.changeHealth(25);
+                Lvl3UI.changeHealth(birdDmg);
                 atlas.spriteRenderer.color = Color.red;
             }
             else

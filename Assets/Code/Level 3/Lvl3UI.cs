@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Image = UnityEngine.UI.Image;
 
 public class Lvl3UI : MonoBehaviour
 {
     public static Lvl3UI Singleton;
-    public TextMeshProUGUI scoreText;
     public float health = 100f;
     public GameObject winScreen;
     public GameObject lossScreen;
     public GameObject instructions;
+    public Image healthBar;
 
     public static int numBirds;
 
@@ -22,7 +23,6 @@ public class Lvl3UI : MonoBehaviour
         GameUI.levelTrack = 3;
 
         Singleton = this;
-        scoreText.text = health + "";
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
         instructions.SetActive(true);
@@ -36,14 +36,28 @@ public class Lvl3UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if all the birds are killed, then win
+        if (numBirds<=0)
+        {
+            GameOver(true);
+        }
+    }
+
+    public static void changeHealth(float dmg)
+    {
+        Singleton.changeHealthInternal(dmg);
+    }
+
+    private void changeHealthInternal(float dmg)
+    {
+        Atlas_Level3.health -= dmg;
+
+        // change health bar fill
+        healthBar.fillAmount -= dmg / Atlas_Level3.maxHealth;
+
         if (Atlas_Level3.health <= 0)
         {
             GameOver(false);
-        }
-        // else if all the birds are killed, then win
-        else if (numBirds<=0)
-        {
-            GameOver(true);
         }
     }
 
@@ -58,17 +72,6 @@ public class Lvl3UI : MonoBehaviour
         {
             lossScreen.SetActive(true);
         }
-    }
-
-    public static void changeHealth(float dmg)
-    {
-        Singleton.changeHealthInternal(dmg);
-    }
-
-    private void changeHealthInternal(float dmg)
-    {
-        health -= dmg;
-        scoreText.text = health + "";
     }
 
     // start level
