@@ -13,11 +13,10 @@ public class CyclopsSpawner : MonoBehaviour
     /// When the next enemy should be spawned
     public float nextSpawnTime = 0;
 
-    // Reference to Atlas
     public Atlas atlas;
 
-    // Range for random spawning
-    public float SpawnRange = 10.0f;
+    public UnityEngine.Vector2 SpawnPoint = new UnityEngine.Vector2(10.0f, -5.0f);
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +29,8 @@ public class CyclopsSpawner : MonoBehaviour
     {
         if (/*!atlas.isDead &&*/ Time.time > nextSpawnTime)
         {
-            // Calculate random spawn point away from Atlas
-            Vector2 randomDirection = Random.insideUnitCircle.normalized;
-            Vector2 spawnPoint = (Vector2)atlas.transform.position + randomDirection * SpawnRange;
-
-            // Instantiate a Cyclops at the calculated spawn point
-            Instantiate(Cyclops, spawnPoint, Quaternion.identity);
+            // Instantiate an enemy at the random spawn point.
+            Instantiate(Cyclops, SpawnPoint, UnityEngine.Quaternion.identity);
 
             // Set the next spawn time by adding the SpawnInterval to the current time.
             nextSpawnTime = Time.time + SpawnInterval;

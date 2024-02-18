@@ -5,20 +5,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float lifespan = 10f;
-    public float trackTime;
-
+    public float orbLife;
+    public float lifespan = 1000;
     // Start is called before the first frame update
     void Start()
     {
-        trackTime = 0;
+        orbLife = 0;
     }
 
     private void Update()
     {
-        trackTime += Time.deltaTime;
-
-        if ( trackTime > lifespan)
+        orbLife += 1;
+        if ( orbLife > lifespan)
         {
             Destroy(gameObject);
         }
@@ -30,12 +28,9 @@ public class Projectile : MonoBehaviour
         // if make contact with Boat, decrease boat health
         if (collision.collider.gameObject.GetComponent<Boat>())
         {
-            collision.collider.gameObject.GetComponent<Boat>().GoLeft();
+            collision.collider.gameObject.GetComponent<Boat>().MinusHealth();
+            Destroy(gameObject);
             print("Hit");
-            Destroy(gameObject);
-        } else if (!collision.collider.gameObject.GetComponent<Zeus>())
-        {
-            Destroy(gameObject);
         }
     }
 }

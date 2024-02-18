@@ -8,18 +8,16 @@ public class Cyclops : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     public float health = 100;
-    private float speed = 1.0f;
+    private float speed = 0.5f;
     private float attackRange = 1.0f;
-    private float cyclopsDamage = 50;
-    private float forceAmount = 100f;
+    private float cyclopsDamage = 3.0f;
+    private float forceAmount = 30f;
 
     // Accesses Atlas 
-    private Atlas_Level5 atlas;
+    private Atlas atlas;
 
     /// Transform from the Atlas object used to find the player's position
     private Transform atlasTransform;
-
-    private Rigidbody2D atlasRb;
 
     /// Vector from cyclops to the Atlas
     private UnityEngine.Vector2 OffsetToPlayer => atlasTransform.position - transform.position;
@@ -33,38 +31,24 @@ public class Cyclops : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        atlas = FindObjectOfType<Atlas_Level5>();
+        atlas = FindObjectOfType<Atlas>();
         atlasTransform = atlas.transform;
-        atlasRb = atlas.GetComponent<Rigidbody2D>();
         health = 100;
+        Atlas.health = 100;
 
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-
-
-        //if (atlasRb != null)
-        //{
-        //    // Create a Vector2 representing the force to be applied
-        //    Vector2 force = new Vector2(50f, 50f);
-
-        //    // Add the force to the Rigidbody using AddForce method
-        //    atlasRb.AddForce(force, ForceMode2D.Impulse);
-        //}
-        //else
-        //{
-        //    Debug.LogError("Rigidbody component not found!");
-        //}
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveAndHit();
+        Move();
         checkIfDead();
     }
 
     // Makes the cyclops move towards the player
-    private void MoveAndHit()
+    private void Move()
     {
         // Accesses the cyclops's position
         float cyclopsXCoordinate = this.transform.position.x;
@@ -73,6 +57,9 @@ public class Cyclops : MonoBehaviour
 
         // Accesses Atlas's position
         UnityEngine.Vector2 atlasPosition = new Vector2(atlasTransform.position.x, atlasTransform.position.y);
+
+        //// Calculate the distance between the cyclops and Atlas
+        //float distanceToPlayer = Vector2.Distance(cyclopsPosition, atlasPosition);
 
         // Makes the cyclops move towards the player
         UnityEngine.Vector3 directionToPlayer = new UnityEngine.Vector3(HeadingToPlayer.x, HeadingToPlayer.y, 0.0f);
@@ -84,32 +71,15 @@ public class Cyclops : MonoBehaviour
         // Apply the clamped position back to the GameObject's position
         rb.position = cyclopsPosition;
 
-        //// Check if the player is in range
-        //if (IsPlayerInRange())
-        //{
-        //    // Stop the cyclops
-        //    rb.velocity = Vector2.zero;
-
-        //    // Start the delay coroutine
-        //    StartCoroutine(HitDelay());
-        //}
-        //else // If player is not in range
-        //{
-        //    // Move the cyclops
-        //    rb.velocity = directionToPlayer * speed;
-        //}
+        // Sets new Enemy's velocity
         rb.velocity = directionToPlayer * speed;
-    }
 
-    // Coroutine to introduce a delay before attacking
-    IEnumerator HitDelay()
-    {
-        yield return new WaitForSeconds(1.5f);
-        if (IsPlayerInRange())
+        if(IsPlayerInRange())
         {
             hit();
         }
     }
+
     // Checks if Atlas is within attack range
     private bool IsPlayerInRange()
     {
@@ -122,29 +92,18 @@ public class Cyclops : MonoBehaviour
 
     private void hit()
     {
-        if (atlasRb != null)
+        // Assuming your Atlas class has a Rigidbody2D component
+        Rigidbody2D atlasRB = atlas.GetComponent<Rigidbody2D>();
+        if (atlasRB != null)
         {
             // Calculate the direction away from the collision point
-            Vector2 pushDirection = (atlas.transform.position - transform.position).normalized;
-
-            //Debug.Log(pushDirection * forceAmount);
+            Vector3 pushDirection = atlas.transform.position - transform.position;
+            pushDirection.Normalize();
 
             // Apply the force to push Atlas back
-            atlasRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
-
-            Atlas_Level5.health -= cyclopsDamage;
-            Debug.Log(pushDirection * forceAmount);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        rb.velocity = Vector2.zero;
-        // Check if collided with Atlas
-        if (collision.gameObject == atlas.gameObject)
-        {
-            // Hit the player
-            hit();
+            atlasRB.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
+            Atlas.health = Atlas.health - cyclopsDamage;
+            //Debug.Log(Atlas.health);
         }
     }
 
