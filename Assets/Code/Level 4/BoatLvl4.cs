@@ -8,10 +8,12 @@ public class Boat : MonoBehaviour
     private float moveInc = 0.1f;
     private float moveHit = 5f;
 
+    public static float xPos;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        xPos = transform.position.x;
     }
 
     // Update is called once per frame
@@ -39,23 +41,25 @@ public class Boat : MonoBehaviour
             Vector3 newPosition = transform.position - new Vector3(0f, moveInc, 0f);
             transform.position = newPosition;
         }
-            
+
+        xPos = transform.position.x;
         
     }
 
     public void GoLeft()
     {
-        print("HELLP");
+        //print("HELLP");
         Vector3 newPosition = transform.position - new Vector3(moveHit, 0f, 0f);
         transform.position = newPosition;
-         
+        xPos = transform.position.x;
+
     }
     public void GoRight()
     {
-        print("HELLP");
+        //print("HELLP");
 
         Vector3 newPosition = transform.position + new Vector3(moveHit, 0f, 0f);
         transform.position = newPosition;
-
+        xPos = transform.position.x;
     }
 }

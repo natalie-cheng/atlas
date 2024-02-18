@@ -1,13 +1,11 @@
-using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Lvl2UI : MonoBehaviour
+public class Lvl4UI : MonoBehaviour
 {
-    public static Lvl2UI Singleton;
-    public TextMeshProUGUI scoreText;
+    public static Lvl4UI Singleton;
     public GameObject winScreen;
     public GameObject lossScreen;
     public GameObject instructions;
@@ -15,11 +13,9 @@ public class Lvl2UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameUI.levelTrack = 2;
+        GameUI.levelTrack = 4;
         Singleton = this;
 
-        Atlas.health = 100;
-        scoreText.text = Atlas.health + "";
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
         instructions.SetActive(true);
@@ -29,11 +25,11 @@ public class Lvl2UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Atlas.health<=0)
+        if (Boat.xPos <= -35)
         {
             GameOver(false);
         }
-        else if (Atlas.xPos > 9.5)
+        else if (Boat.xPos >= 35)
         {
             GameOver(true);
         }
@@ -50,17 +46,6 @@ public class Lvl2UI : MonoBehaviour
         {
             lossScreen.SetActive(true);
         }
-    }
-
-    public static void changeHealth(float dmg)
-    {
-        Singleton.changeHealthInternal(dmg);
-    }
-
-    private void changeHealthInternal(float dmg)
-    {
-        Atlas.health -= dmg;
-        scoreText.text = Atlas.health + "";
     }
 
     // start level

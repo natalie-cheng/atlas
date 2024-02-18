@@ -11,6 +11,7 @@ public class Lvl3UI : MonoBehaviour
     public float health = 100f;
     public GameObject winScreen;
     public GameObject lossScreen;
+    public GameObject instructions;
 
     public static int numBirds;
 
@@ -24,7 +25,8 @@ public class Lvl3UI : MonoBehaviour
         scoreText.text = health + "";
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
-        Time.timeScale = 1;
+        instructions.SetActive(true);
+        Time.timeScale = 0;
 
         Atlas_Level3.health = 100;
 
@@ -67,6 +69,13 @@ public class Lvl3UI : MonoBehaviour
     {
         health -= dmg;
         scoreText.text = health + "";
+    }
+
+    // start level
+    public void Play()
+    {
+        instructions.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // load transition to next level
