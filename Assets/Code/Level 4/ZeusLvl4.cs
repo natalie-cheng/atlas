@@ -8,7 +8,7 @@ public class Zeus : MonoBehaviour
     private float speed = 0.1f;
     public GameObject ProjectilePrefab;
     public Rigidbody2D rigidBody;
-    private float projectileVel = 5;
+    private float projectileVel = 10;
     public Transform boat;
     private float projMass = 0.0001f;
     private float lastFireTime;

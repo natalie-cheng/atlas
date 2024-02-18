@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 {
     public float lifespan = 10f;
     public float trackTime;
+    private Collider2D myCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         } else if (!collision.collider.gameObject.GetComponent<Zeus>())
         {
-            Destroy(gameObject);
+            //Physics2D.IgnoreCollision(collision.collider, myCollider );
         }
     }
 }
