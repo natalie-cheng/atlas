@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
         float x = direction.x;
         float y = direction.y;
         rb = GetComponent<Rigidbody2D>();
-        velocity = new Vector2(x * 2f, y * 2f);
+        velocity = new Vector2(x * 10f, y * 10f);
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
         rb.velocity = velocity;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
     }

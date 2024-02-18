@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AtlasCyclopsVersion : MonoBehaviour
+public class Atlas_Level5 : MonoBehaviour
 {
     // vars
-    private Rigidbody2D rb;
+    public static Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private float speed = 2;
     private float detectionRadius = 1.0f;
-    private float forceAmount = 100f;
-    private float facingThreshold = 0.5f;
+    private float forceAmount = 10000f;
+    private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
     private float swordDamage = 34;
+    public static float health = 100;
 
 
 
@@ -30,8 +32,21 @@ public class AtlasCyclopsVersion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //check_if_hit();
+        Move();
+        check_if_hit();
     }
+
+    private void Move()
+    {
+        // horizontal and vertical input axes
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        // set the direction, increase by speed
+        Vector2 vec = new Vector2(horizontal, vertical); ;
+        rb.velocity = vec * speed;
+    }
+
 
     // For delay in hit
     void FixedUpdate()
@@ -41,12 +56,13 @@ public class AtlasCyclopsVersion : MonoBehaviour
 
     public void check_if_hit()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             // Collect all instances of a cyclops
             Cyclops[] allCyclops = GameObject.FindObjectsOfType<Cyclops>();
             foreach (Cyclops cyclop in allCyclops)
             {
+                // Check if the cyclops is within hit range and Atlas is facing it
                 if (IsObjectInHitRange(cyclop.transform))
                 {
                     // Check if enough time has passed since the last hit
@@ -62,7 +78,7 @@ public class AtlasCyclopsVersion : MonoBehaviour
 
     private void hit(Cyclops cyclop)
     {
-        // Assuming your Cyclops class has a Rigidbody2D component
+        // Assuming Cyclops has a Rigidbody2D component
         Rigidbody2D cyclopsRb = cyclop.GetComponent<Rigidbody2D>();
         if (cyclopsRb != null)
         {
@@ -72,8 +88,7 @@ public class AtlasCyclopsVersion : MonoBehaviour
 
             // Apply the force to push the Cyclops back
             cyclopsRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
-            cyclop.health = cyclop.health - swordDamage;
-            Debug.Log(cyclop.health);
+            cyclop.health -= swordDamage;
         }
     }
 
@@ -98,14 +113,32 @@ public class AtlasCyclopsVersion : MonoBehaviour
             // Calculate the dot product of the forward direction of the current object and the direction to the target
             float dotProduct = Vector3.Dot(movement, directionToTarget);
 
-            //Debug.Log(dotProduct);
-            // Check if the dot product is greater than the facing threshold
-            if (dotProduct > facingThreshold)
-            {
-                return true;
-            }
+            //// Check if the dot product is greater than the facing threshold
+            //if (dotProduct > facingThreshold)
+            //{
+            //    return true;
+            //}
+            return true;
         }
         return false;
 
     }
+
+    // checks if Atlas is dead
+    public bool checkIfDead()
+    {
+        if (health <= 0)
+        {
+
+            return true;
+
+        }
+        return false;
+    }
+
+    public void Dead()
+    {
+        Destroy(this);
+    }
+
 }
