@@ -8,7 +8,7 @@ public class Atlas_Level3 : MonoBehaviour
     // vars
     private Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
-    public float health = 100;
+    public static float health = 100;
     public float speed = 4;
     public GameObject bullet;
     public GameObject arrow;
@@ -17,7 +17,7 @@ public class Atlas_Level3 : MonoBehaviour
     // call start
     private void Start()
     {
-        // initialize santa vars
+        // initialize atlas vars
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         lastShotTime = -reloadTime; 
@@ -67,7 +67,7 @@ public class Atlas_Level3 : MonoBehaviour
 
     private void die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
         DestroyAllWithTag("Bird");
         DestroyAllWithTag("Bird_1");
     }

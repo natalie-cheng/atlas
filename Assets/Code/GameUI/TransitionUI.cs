@@ -19,29 +19,31 @@ public class TransitionUI : MonoBehaviour
         LoadText(GameUI.levelTrack);
     }
 
+    // level track is one below the corresponding level
+    // ie level 0 displays the transition between level 0-1
     private void LoadText(int level)
     {
-        if (level==1)
+        if (level==0)
         {
             textContent.text = "this is level 1 content";
             scene = "Level 1";
         }
-        else if (level == 2)
+        else if (level == 1)
         {
             textContent.text = "this is level 2 content";
             scene = "Level 2";
         }
-        else if (level == 3)
+        else if (level == 2)
         {
             textContent.text = "this is level 3 content";
             scene = "Level 3";
         }
-        else if (level == 4)
+        else if (level == 3)
         {
             textContent.text = "this is level 4 content";
             scene = "Level 4";
         }
-        else if (level == 5)
+        else if (level == 4)
         {
             textContent.text = "this is level 5 content";
             scene = "Level 5";

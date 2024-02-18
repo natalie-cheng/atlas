@@ -49,7 +49,7 @@ public class Birds : MonoBehaviour
         {
             if (collision.gameObject.name == atlas.name)
             {
-                atlas.health -= 25;
+                Atlas_Level3.health -= 25;
                 Lvl3UI.changeHealth(25);
                 atlas.spriteRenderer.color = Color.red;
             }
@@ -75,6 +75,7 @@ public class Birds : MonoBehaviour
 
     private void Die()
     {
+        Lvl3UI.numBirds--;
         Destroy(gameObject);
     }
 }
