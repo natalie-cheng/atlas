@@ -13,7 +13,7 @@ public class Atlas_Level5 : MonoBehaviour
     //private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
-    private float swordDamage = 34;
+    private float swordDamage = 100;
     public static float health = 100;
     public static float maxHealth = 100;
 
@@ -69,6 +69,7 @@ public class Atlas_Level5 : MonoBehaviour
                     {
                         hit(cyclop);
                         lastHitTime = Time.time; // Update the last hit time
+                        //Debug.Log("here");
                     }
                 }
             }
@@ -88,6 +89,7 @@ public class Atlas_Level5 : MonoBehaviour
             // Apply the force to push the Cyclops back
             cyclopsRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
             cyclop.health -= swordDamage;
+            Debug.Log(cyclop.health);
         }
     }
 
@@ -96,21 +98,21 @@ public class Atlas_Level5 : MonoBehaviour
     {
         // Calculate the distance between the current object and the target object
         float distance = Vector3.Distance(transform.position, otherTransform.position);
-
         // Check if the distance is less than the proximity threshold
         if (distance < detectionRadius)
         {
+            Debug.Log(detectionRadius);
             // Calculate the direction from the current object to the target object
-            Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
+            //Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
 
-            // horizontal and vertical input axes
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
-            Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
+            //// horizontal and vertical input axes
+            //float horizontal = Input.GetAxis("Horizontal");
+            //float vertical = Input.GetAxis("Vertical");
+            //Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
 
 
-            // Calculate the dot product of the forward direction of the current object and the direction to the target
-            float dotProduct = Vector3.Dot(movement, directionToTarget);
+            //// Calculate the dot product of the forward direction of the current object and the direction to the target
+            //float dotProduct = Vector3.Dot(movement, directionToTarget);
 
             //// Check if the dot product is greater than the facing threshold
             //if (dotProduct > facingThreshold)

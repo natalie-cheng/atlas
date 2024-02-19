@@ -60,7 +60,7 @@ public class Cyclops : MonoBehaviour
     void Update()
     {
         MoveAndHit();
-        //checkIfDead();
+        checkIfDead();
     }
 
     // Makes the cyclops move towards the player
