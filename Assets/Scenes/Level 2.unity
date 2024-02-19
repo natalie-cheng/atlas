@@ -1307,7 +1307,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.59, y: 2.39}
+    oldSize: {x: 0.82666665, y: 0.82666665}
     newSize: {x: 0.27555555, y: 0.27555555}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3186,6 +3186,7 @@ GameObject:
   - component: {fileID: 1570209959}
   - component: {fileID: 1570209958}
   - component: {fileID: 1570209961}
+  - component: {fileID: 1570209962}
   m_Layer: 0
   m_Name: Charybdis
   m_TagString: Untagged
@@ -3250,7 +3251,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 1993088108, guid: 112d732c58bb54bb8a74cfbfda1311e3, type: 3}
   m_Color: {r: 0.09560132, g: 0.08254716, b: 0.5, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3311,6 +3312,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &1570209962
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570209957}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad256c15bb49c47cc9307fdc23b8864e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1642849103
 GameObject:
   m_ObjectHideFlags: 0
