@@ -12,6 +12,8 @@ public class Cyclops : MonoBehaviour
     private float attackRange = 1.0f;
     private float cyclopsDamage = 50f;
     private float forceAmount = 100f;
+    // sprite renderer of cyclops
+    public SpriteRenderer spriteRender;
 
     // Accesses Atlas 
     private Atlas_Level5 atlas;
@@ -36,6 +38,8 @@ public class Cyclops : MonoBehaviour
         atlas = FindObjectOfType<Atlas_Level5>();
         atlasTransform = atlas.transform;
         atlasRb = atlas.GetComponent<Rigidbody2D>();
+        // Gets the sprite renderer from Unity
+        spriteRender = GetComponent<SpriteRenderer>();
         health = 100;
 
         // Lock rotation in the Z-axis to prevent flipping
@@ -59,6 +63,7 @@ public class Cyclops : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        flip();
         MoveAndHit();
         checkIfDead();
     }
@@ -134,7 +139,6 @@ public class Cyclops : MonoBehaviour
 
             //Atlas_Level5.health -= cyclopsDamage;
             Lvl5UI.AtlasChangeHealth(cyclopsDamage);
-            Debug.Log(pushDirection * forceAmount);
         }
     }
 
@@ -157,6 +161,19 @@ public class Cyclops : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    // Sets orientation of sprite
+    void flip()
+    {
+        if (OffsetToPlayer.x < 0f)
+        {
+            spriteRender.flipX = true;
+        }
+        else if (OffsetToPlayer.x > 0f)
+        {
+            spriteRender.flipX = false;
         }
     }
 
