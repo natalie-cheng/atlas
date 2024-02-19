@@ -13,7 +13,7 @@ public class Atlas_Level3 : MonoBehaviour
     public GameObject bullet;
     public GameObject arrow;
     private float lastShotTime;
-    public float reloadTime = 3f;
+    public float reloadTime = 1.5f;
     public static float maxHealth = 100;
 
     // call start

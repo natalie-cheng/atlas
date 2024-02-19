@@ -556,7 +556,7 @@ MonoBehaviour:
   speed: 4
   bullet: {fileID: 1452312266941582262, guid: 76e4c31b1b3bb4acd80e97685c7d3657, type: 3}
   arrow: {fileID: 0}
-  reloadTime: 3
+  reloadTime: 1.5
 --- !u!58 &148347545
 CircleCollider2D:
   m_ObjectHideFlags: 0
