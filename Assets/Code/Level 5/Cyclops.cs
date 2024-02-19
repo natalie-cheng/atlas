@@ -10,7 +10,7 @@ public class Cyclops : MonoBehaviour
     public float health = 100f;
     private float speed = 1.0f;
     private float attackRange = 1.0f;
-    private float cyclopsDamage = 50f;
+    private float cyclopsDamage = 10f;
     private float forceAmount = 100f;
     // sprite renderer of cyclops
     public SpriteRenderer spriteRender;
