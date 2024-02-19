@@ -9,7 +9,7 @@ public class Atlas_Level5 : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float speed = 2;
     private float detectionRadius = 1.0f;
-    private float forceAmount = 10000f;
+    //private float forceAmount = 10000f;
     //private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
@@ -82,14 +82,14 @@ public class Atlas_Level5 : MonoBehaviour
         Rigidbody2D cyclopsRb = cyclop.GetComponent<Rigidbody2D>();
         if (cyclopsRb != null)
         {
-            // Calculate the direction away from the collision point
-            Vector3 pushDirection = cyclop.transform.position - transform.position;
-            pushDirection.Normalize();
+            //// Calculate the direction away from the collision point
+            //Vector3 pushDirection = cyclop.transform.position - transform.position;
+            //pushDirection.Normalize();
 
-            // Apply the force to push the Cyclops back
-            cyclopsRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
+            //// Apply the force to push the Cyclops back
+            //cyclopsRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
             cyclop.health -= swordDamage;
-            Debug.Log(cyclop.health);
+            //Debug.Log(cyclop.health);
         }
     }
 
@@ -101,7 +101,6 @@ public class Atlas_Level5 : MonoBehaviour
         // Check if the distance is less than the proximity threshold
         if (distance < detectionRadius)
         {
-            Debug.Log(detectionRadius);
             // Calculate the direction from the current object to the target object
             //Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
 
