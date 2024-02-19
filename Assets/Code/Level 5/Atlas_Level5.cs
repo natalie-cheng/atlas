@@ -8,7 +8,11 @@ public class Atlas_Level5 : MonoBehaviour
     public static Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private float speed = 2;
+<<<<<<< HEAD
     private float detectionRadius = 1.5f;
+=======
+    private float detectionRadius = 1.35f;
+>>>>>>> level-5
     //private float forceAmount = 10000f;
     //private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
