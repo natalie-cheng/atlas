@@ -58,7 +58,7 @@ public class ScyllaShot : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // destroy object
-        if (collision.collider.name.Contains("Boat2"))
+        if (collision.collider.tag.Contains("BoatLvl2"))
         {
             Lvl2UI.changeHealth(dmg);
         }

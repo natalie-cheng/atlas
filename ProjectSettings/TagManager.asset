@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bird
   - Bird_1
+  - BoatLvl2
   layers:
   - Default
   - TransparentFX

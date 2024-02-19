@@ -31,7 +31,7 @@ public class Lvl2UI : MonoBehaviour
     {
         if (Atlas.xPos > 9.5)
         {
-            GameOver(true);
+            //GameOver(true);
         }
     }
 

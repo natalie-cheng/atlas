@@ -5,9 +5,19 @@ using UnityEngine;
 public class Charybdis : MonoBehaviour
 {
     public float gravityConstant = 60f; // gravity constant
-    public float mass = 10f; // charybdis mass
-    public GameObject atlasBoat;
-    public float dmg = 10f;
+    public float mass; // charybdis mass
+    private GameObject atlasBoat;
+    public float dmg;
+    public float radius;
+    private float currentTime;
+    private float tick;
+
+    private void Start()
+    {
+        atlasBoat = GameObject.FindWithTag("BoatLvl2");
+        currentTime = Time.time;
+        tick = 0.5f;
+    }
 
     // physics update
     private void FixedUpdate()
@@ -15,14 +25,26 @@ public class Charybdis : MonoBehaviour
         ApplyGravity();
     }
 
+    private void Update()
+    {
+        if (WithinRange() && (Time.time>currentTime+tick))
+        {
+            Lvl2UI.changeHealth(dmg);
+            currentTime += tick;
+        }
+    }
+
     // apply gravity to the boat
     private void ApplyGravity()
     {
         Rigidbody2D boatrb = atlasBoat.GetComponent<Rigidbody2D>();
-
-        // get the direction and distance to the boat
         Vector3 direction = boatrb.transform.position - transform.position;
-        float distance = direction.magnitude;
+        float distance = radius;
+        if (!WithinRange())
+        {
+            // get the distance
+            distance = direction.magnitude;
+        }
 
         // calculate gravity force
         float force = (gravityConstant * mass * boatrb.mass) / (distance * distance);
@@ -31,13 +53,11 @@ public class Charybdis : MonoBehaviour
         boatrb.AddForce(-direction.normalized * force);
     }
 
-    // if it collides with anything
-    private void OnCollisionEnter2D(Collision2D collision)
+    private bool WithinRange()
     {
-        // destroy object
-        if (collision.collider.name.Contains("Boat2"))
-        {
-            Lvl2UI.changeHealth(dmg);
-        }
+        Rigidbody2D boatrb = atlasBoat.GetComponent<Rigidbody2D>();
+        float distanceTo = Vector2.Distance(boatrb.transform.position, transform.position);
+        if (distanceTo < radius) return true;
+        else return false;
     }
 }
