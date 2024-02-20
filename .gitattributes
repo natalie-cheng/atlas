@@ -2,5 +2,5 @@
 * text=auto
 # exclude shader files from language detection
 Assets/TextMesh*Pro/Shaders/* linguist-vendored=true
-Assets/TextMesh*Pro/Shaders/TMP_SDF SSD.shader linguist-vendored=false
+Assets/TextMesh*Pro/Shaders/TMP_SDF*SSD.shader linguist-vendored=false
 Assets/TextMesh*Pro/Shaders/TMPro_Mobile.cginc linguist-vendored=false
