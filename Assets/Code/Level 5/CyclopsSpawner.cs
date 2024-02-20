@@ -7,10 +7,16 @@ public class CyclopsSpawner : MonoBehaviour
     /// Object to spawn
     public GameObject Cyclops;
 
-    /// Seconds between spawn operations
-    public float SpawnInterval = 3.0f;
+    /// Seconds between spawn operations for start
+    private float SpawnInterval = 2.0f;
 
-    /// When the next enemy should be spawned
+    /// Decrease Spawn Interval
+    private float SpawnDecreaseTime = 0.015f;
+
+    // Minimum amount that SpawnInterval can be
+    private float MinimumSpawnInterval = 0.75f;
+
+    /// When the next enemy should be spawnedå
     public float nextSpawnTime = 0;
 
     // Reference to Atlas
@@ -39,6 +45,13 @@ public class CyclopsSpawner : MonoBehaviour
 
             // Set the next spawn time by adding the SpawnInterval to the current time.
             nextSpawnTime = Time.time + SpawnInterval;
+
+            // Keep decreasing SpawnInterval until it is too low
+            if(SpawnInterval > MinimumSpawnInterval)
+            {
+                SpawnInterval = SpawnInterval - SpawnDecreaseTime;
+            }
+            Debug.Log(SpawnInterval);
         }
     }
 }
