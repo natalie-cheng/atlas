@@ -261,6 +261,14 @@ PrefabInstance:
       value: Atlas
       objectReference: {fileID: 0}
     - target: {fileID: 6529605013602747740, guid: 8a2efafa647a0421fb1b2b769615893e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529605013602747740, guid: 8a2efafa647a0421fb1b2b769615893e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529605013602747740, guid: 8a2efafa647a0421fb1b2b769615893e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6973
       objectReference: {fileID: 0}
