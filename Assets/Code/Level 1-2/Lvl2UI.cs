@@ -29,9 +29,9 @@ public class Lvl2UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Atlas.xPos > 9.5)
+        if (Atlas.xPos > 52)
         {
-            //GameOver(true);
+            GameOver(true);
         }
     }
 

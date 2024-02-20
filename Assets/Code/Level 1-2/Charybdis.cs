@@ -8,15 +8,18 @@ public class Charybdis : MonoBehaviour
     public float mass; // charybdis mass
     private GameObject atlasBoat;
     public float dmg;
-    public float radius;
     private float currentTime;
     private float tick;
+    private bool withinRange;
+    private float distance;
 
     private void Start()
     {
         atlasBoat = GameObject.FindWithTag("BoatLvl2");
         currentTime = Time.time;
-        tick = 0.5f;
+        tick = 1f;
+        withinRange = false;
+        distance = 0;
     }
 
     // physics update
@@ -27,10 +30,10 @@ public class Charybdis : MonoBehaviour
 
     private void Update()
     {
-        if (WithinRange() && (Time.time>currentTime+tick))
+        if (withinRange && (Time.time>currentTime+tick))
         {
             Lvl2UI.changeHealth(dmg);
-            currentTime += tick;
+            currentTime = Time.time;
         }
     }
 
@@ -39,8 +42,7 @@ public class Charybdis : MonoBehaviour
     {
         Rigidbody2D boatrb = atlasBoat.GetComponent<Rigidbody2D>();
         Vector3 direction = boatrb.transform.position - transform.position;
-        float distance = radius;
-        if (!WithinRange())
+        if (!withinRange)
         {
             // get the distance
             distance = direction.magnitude;
@@ -53,11 +55,20 @@ public class Charybdis : MonoBehaviour
         boatrb.AddForce(-direction.normalized * force);
     }
 
-    private bool WithinRange()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        Rigidbody2D boatrb = atlasBoat.GetComponent<Rigidbody2D>();
-        float distanceTo = Vector2.Distance(boatrb.transform.position, transform.position);
-        if (distanceTo < radius) return true;
-        else return false;
+        if (collider.CompareTag("BoatLvl2"))
+        {
+            withinRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        // Reset the flag when the other object exits
+        if (collider.CompareTag("BoatLvl2"))
+        {
+            withinRange = false;
+        }
     }
 }

@@ -39,4 +39,5 @@ public class Atlas : MonoBehaviour
         Vector2 vec = new Vector2(horizontal, vertical); ;
         rb.velocity = vec * speed;
     }
+
 }

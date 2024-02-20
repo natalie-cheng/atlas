@@ -31,6 +31,7 @@ public class Scylla : MonoBehaviour
         // if the player is within range, shoot shot
         if (WithinRange())
         {
+            Debug.Log("within range");
             Shoot();
         }
     }
@@ -39,8 +40,8 @@ public class Scylla : MonoBehaviour
     private bool WithinRange()
     {
         // get the distance between scylla and the player
-        float playerDist = Vector3.Distance(transform.position, player.position);
-
+        float playerDist = Vector2.Distance(transform.position, player.position);
+        Debug.Log(transform.position);
         // if it's less than the radius, it's within range
         if (playerDist < radius)
         {
