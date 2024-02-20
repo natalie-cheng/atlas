@@ -9,12 +9,13 @@ public class Atlas_Level3 : MonoBehaviour
     private Rigidbody2D rb;
     public SpriteRenderer spriteRenderer;
     public static float health = 100;
-    public float speed = 4;
+    public float speed = 7;
     public GameObject bullet;
     public GameObject arrow;
     private float lastShotTime;
     public float reloadTime = 1.5f;
     public static float maxHealth = 100;
+    public bool isInvulnerable = false;
 
     // call start
     private void Start()
@@ -46,6 +47,25 @@ public class Atlas_Level3 : MonoBehaviour
 
     }
 
+    public void TakeDamage(float damage)
+    {
+        if (!isInvulnerable)
+        {
+            isInvulnerable = true;
+            Lvl3UI.changeHealth(damage); // Assuming this method reduces Atlas's health
+            spriteRenderer.color = Color.red;
+            StartCoroutine(InvulnerabilityTimer());
+        }
+    }
+
+    // Coroutine to handle the invulnerability duration
+    private IEnumerator InvulnerabilityTimer()
+    {
+        yield return new WaitForSeconds(1f); // Atlas is invulnerable for 1 second
+        isInvulnerable = false;
+        spriteRenderer.color = Color.white; // Reset color or remove this if color change is handled elsewhere
+    }
+
     // move and update sprite
     private void Move()
     {
@@ -54,7 +74,11 @@ public class Atlas_Level3 : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         // set the direction, increase by speed
-        Vector2 vec = new Vector2(horizontal, vertical); ;
+        Vector2 vec = new Vector2(horizontal, vertical);
+        if (vec.magnitude > 1)
+        {
+            vec.Normalize();
+        }
         rb.velocity = vec * speed;
     }
 
