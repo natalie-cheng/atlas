@@ -42,7 +42,7 @@ public class TransitionUI : MonoBehaviour
         }
         else if (level == 2)
         {
-            textContent.text = "Whew ! You survived all those Scyllas and Charybdises. However, as you near Greece, you’re suddenly " +
+            textContent.text = "Whew! You survived all those Scyllas and Charybdises. However, as you near Greece, you’re suddenly " +
                 "attacked by the vicious Stymphalian birds. These monstrous birds are known for their bronze beaks, razor-sharp " +
                 "feathers, and carnivorous appetite. As they swarm around you, you whip out your bow and arrow and desperately try to " +
                 "slay them all before they peck you to death!";

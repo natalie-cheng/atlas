@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 6
-  dmg: 5
+  dmg: 10
   shotPrefab: {fileID: 3009581325878264111, guid: 864b9b7e232574e3ea49397f84d82d15, type: 3}
 --- !u!95 &1623106603170711833
 Animator:

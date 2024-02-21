@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityConstant: 60
   mass: 15
-  dmg: 5
+  dmg: 8
 --- !u!58 &1667479589885855958
 CircleCollider2D:
   m_ObjectHideFlags: 0

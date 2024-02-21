@@ -4641,14 +4641,14 @@ MonoBehaviour:
     boat before you die of starvation.
 
 
-    - Use the WASD or arrow keys to move
-    around
+    - Use WASD or arrow keys to move around
 
-    - Use the space bar or mouse click to pick up a plank
+    -
+    Use the space bar or mouse click to pick up a plank
 
 
-    Find
-    all the pieces before time runs out!'
+    Find all the pieces
+    before time runs out!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
   m_sharedMaterial: {fileID: 4048497433923875894, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}

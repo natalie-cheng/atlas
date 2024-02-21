@@ -2410,7 +2410,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -2850,7 +2850,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Here are some instructions
+  m_text: 'The goal of the level is to make it through the straits without dying.
+
+    -
+    Use WASD or arrow keys to navigate the boat
+
+    - Charybdis (whirlpools) will
+    suck you in and cause damage if you run into them
+
+    - Scylla (monsters) will
+    shoot damaging projectiles if you get too close
+
+    - Colliding with Scylla
+    will also cause damage'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
   m_sharedMaterial: {fileID: 4048497433923875894, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
@@ -2877,8 +2889,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2935,6 +2947,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 790610590}
     m_Modifications:
+    - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
+      propertyPath: mass
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
       value: Charybdis
@@ -3029,7 +3045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -4715,7 +4731,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -4966,6 +4982,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 790610590}
     m_Modifications:
+    - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
+      propertyPath: mass
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
       value: Charybdis (4)
@@ -5417,7 +5437,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -5665,7 +5685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6794646856901850318, guid: 66bbaf55f52bc4800831106a2638ca63, type: 3}
       propertyPath: dmg
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6794646856901850318, guid: 66bbaf55f52bc4800831106a2638ca63, type: 3}
       propertyPath: radius
@@ -5967,7 +5987,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: dmg
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
