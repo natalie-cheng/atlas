@@ -291,8 +291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   atlas: {fileID: 148347539}
-  delayBetweenBirds: 2
-  speed: 3
+  speed: 8
+  birdDmg: 25
+  position: {x: 0, y: 0, z: 0}
 --- !u!95 &105259870
 Animator:
   serializedVersion: 5
@@ -553,10 +554,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
-  speed: 4
+  speed: 7
   bullet: {fileID: 1452312266941582262, guid: 76e4c31b1b3bb4acd80e97685c7d3657, type: 3}
   arrow: {fileID: 0}
-  reloadTime: 1.5
+  reloadTime: 1.1
+  isInvulnerable: 0
 --- !u!58 &148347545
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -901,6 +903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 1
+  birdDmg: 25
 --- !u!212 &253826933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1362,8 +1365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   atlas: {fileID: 148347539}
-  delayBetweenBirds: 2
-  speed: 3
+  speed: 6
+  birdDmg: 25
+  position: {x: 0, y: 0, z: 0}
 --- !u!95 &553062576
 Animator:
   serializedVersion: 5
@@ -2216,8 +2220,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   atlas: {fileID: 148347539}
-  delayBetweenBirds: 2
-  speed: 3
+  speed: 10
+  birdDmg: 25
+  position: {x: 0, y: 0, z: 0}
 --- !u!95 &1186058783
 Animator:
   serializedVersion: 5
@@ -2584,6 +2589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 1
+  birdDmg: 25
 --- !u!212 &1204290739
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3601,6 +3607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 1
+  birdDmg: 25
 --- !u!95 &1744741989
 Animator:
   serializedVersion: 5

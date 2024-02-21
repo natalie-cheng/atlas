@@ -1,125 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BirdManager : MonoBehaviour
 {
     public float health = 10f;
-    public GameObject atlas; 
-    private Dictionary<GameObject, Vector3> birdStartingPositions = new Dictionary<GameObject, Vector3>();
-    private List<GameObject> birds = new List<GameObject>();
-    public float delayBetweenBirds = 2f; 
-    public float speed = 3f;
-    private float birdDmg = 25f;
+    public GameObject atlas;
+    public float speed = 1.5f;
+    public float birdDmg = 25f;
+    private Vector3 moveDirection;
+    public Vector3 position;
 
     void Start()
     {
-        GameObject[] birdsArray = GameObject.FindGameObjectsWithTag("Bird");
-        foreach (GameObject bird in birdsArray)
-        {
-            birds.Add(bird);
-            birdStartingPositions[bird] = bird.transform.position;
-        }
 
-        StartCoroutine(SendBirdsTowardsAtlas());
+        position = gameObject.transform.position;
+        CalculateMovement();
+
+
     }
 
-    private void Update()
+    void Update()
     {
-        if (health == 0)
+        if (health <= 0)
         {
             Die();
         }
-
-      
-        RemoveDestroyedBirds();
+        MoveTowardsAtlas();
     }
 
-    IEnumerator SendBirdsTowardsAtlas()
+
+    private void CalculateMovement()
     {
-        while (true) 
-        {
-            for (int i = 0; i < birds.Count; i++)
-            {
-                if (birds[i] != null) 
-                {
-                    
-                    StartCoroutine(MoveBirdTowardsAtlas(birds[i], i));
-                }
-                
-                yield return new WaitForSeconds(delayBetweenBirds);
-            }
-
-            
-            yield return new WaitForSeconds(delayBetweenBirds * birds.Count);
-        }
-    }
-
-    IEnumerator MoveBirdTowardsAtlas(GameObject bird, int index)
-    {
-        Vector3 direction = (atlas.transform.position - bird.transform.position).normalized;
-        Vector3 startingPosition = birdStartingPositions[bird];
-
-        while (bird != null && !bird.GetComponent<Renderer>().isVisible)
-        {
-            // Initial wait until the bird is visible if starting off-screen
-            yield return null;
-        }
-
-        while (bird != null) // Keep this loop running to continue the behavior
-        {
-            // Move bird towards Atlas
-            bird.transform.position += direction * speed * Time.deltaTime;
-            
-
-            // Check if the bird has moved off-screen
-            if (!bird.GetComponent<Renderer>().isVisible)
-            {
-                // Reset bird position to its starting position
-                bird.transform.position = birdStartingPositions[bird]; 
-                // Break this iteration of the loop to restart the movement from the beginning
-                break;
-            }
-            yield return null; // Wait for the next frame
-        }
-
-        if (bird != null) // Ensure the bird has not been destroyed before restarting
-        {
-            // After resetting, restart the coroutine for this bird to repeat the process
-            StartCoroutine(MoveBirdTowardsAtlas(bird, index));
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Collider2D collide = collision.collider;
-
-        Atlas_Level3 atlas = FindObjectOfType<Atlas_Level3>();
         if (atlas != null)
         {
-
-            if (collide.gameObject.name == atlas.name)
-            {
-                Lvl3UI.changeHealth(birdDmg);
-            }
-            else
-            {
-                health -= 5f;
-            }
+            // Calculate direction from the bird to the atlas
+            moveDirection = (atlas.transform.position - transform.position).normalized;
         }
+
+
     }
+    void MoveTowardsAtlas()
+    {
+        // Move the bird in the initial calculated direction
+        transform.position += moveDirection * speed * Time.deltaTime;
+    }
+
+    private void OnBecameInvisible()
+    {
+        gameObject.transform.position = position;
+        CalculateMovement();
+
+
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         Atlas_Level3 atlas = FindObjectOfType<Atlas_Level3>();
-        if (atlas != null)
+        if (atlas != null && !atlas.isInvulnerable)
         {
 
             if (collision.gameObject.name == atlas.name)
             {
-                Lvl3UI.changeHealth(birdDmg);
-                atlas.spriteRenderer.color = Color.red;
+                atlas.TakeDamage(birdDmg);
             }
             else
             {
@@ -129,25 +76,8 @@ public class BirdManager : MonoBehaviour
 
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Atlas_Level3 atlas = FindObjectOfType<Atlas_Level3>();
-        atlas.spriteRenderer.color = Color.white;
 
-    }
 
-    private void RemoveDestroyedBirds()
-    {
-        for (int i = birds.Count - 1; i >= 0; i--)
-        {
-            if (birds[i] == null)
-            {
-                birdStartingPositions.Remove(birds[i]);
-                birds.RemoveAt(i);
-            }
-        }
-
-    }
 
     private void Die()
     {

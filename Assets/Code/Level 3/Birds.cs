@@ -7,7 +7,7 @@ public class Birds : MonoBehaviour
     public float health = 10f;
     public float speed = 0.5f; // Speed of the movement
     private float time = 0f; // Time parameter for the figure-eight calculation
-    private float birdDmg = 25f;
+    public float birdDmg = 25f;
 
     // Start is called before the first frame update
     void Start()
@@ -43,33 +43,22 @@ public class Birds : MonoBehaviour
         return Mathf.Sin(t) * Mathf.Cos(t) * 0.01f; // Creates the figure-eight pattern
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Atlas_Level3 atlas = FindObjectOfType<Atlas_Level3>();
-        if (atlas != null)
+        if (atlas != null && !atlas.isInvulnerable)
         {
+
             if (collision.gameObject.name == atlas.name)
             {
-                Lvl3UI.changeHealth(birdDmg);
-                atlas.spriteRenderer.color = Color.red;
+                atlas.TakeDamage(birdDmg);
             }
             else
             {
                 health -= 5f;
             }
         }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Atlas_Level3 atlas = FindObjectOfType<Atlas_Level3>();
-        atlas.spriteRenderer.color = Color.white;
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
 
     }
 
