@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifespan: 4
   shotSpeed: 10
-  dmg: 5
+  dmg: 10
 --- !u!50 &235472057736293491
 Rigidbody2D:
   serializedVersion: 4
