@@ -3769,7 +3769,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Here are some instructions
+  m_text: 'The goal is to survive for 2 minutes without taking too much damage and
+    dying.
+
+    - Use WASD or arrow keys to move around
+
+    - Use space bar/click
+    to swing your sword and attack a cyclops when they are near you
+
+    - Each cyclops
+    takes one hit to die
+
+    - Cyclopes will spawn at an increasing rate
+
+    -
+    Colliding with a cyclops will cause you to take damage'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
   m_sharedMaterial: {fileID: 4048497433923875894, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}

@@ -6693,7 +6693,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Here are some instructions
+  m_text: 'The goal is to escape by reaching the right side of the screen.
+
+    -
+    You can only move up and down. Use WS or the arrow keys to move
+
+    - Hitting
+    a rock will cause you to move backwards
+
+    - Hitting a current will cause you
+    to move forwards
+
+    - Zeus will periodically throw lightning bolts at you
+
+    -
+    Being hit by a lightning bolt will cause you to move backwards
+
+
+    Don''t fall
+    too far behind!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
   m_sharedMaterial: {fileID: 4048497433923875894, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}

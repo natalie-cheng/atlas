@@ -1820,7 +1820,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Here are some instructions
+  m_text: 'The goal of the level is to shoot all the birds.
+
+    - Use WASD or arrow
+    keys to move
+
+    - Use space bar or click to shoot
+
+    - Arrows will fly in
+    the direction of your mouse position
+
+    - The birds will fly at you and you
+    must dodge while shooting
+
+    - Each bird takes two shots to die
+
+    - Colliding
+    with a bird will cause you to take damage'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
   m_sharedMaterial: {fileID: 4048497433923875894, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
@@ -1847,8 +1863,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
