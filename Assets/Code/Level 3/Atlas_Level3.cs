@@ -35,10 +35,10 @@ public class Atlas_Level3 : MonoBehaviour
         }
 
         Move();
-        if (Input.GetAxis("Attack") == 1f && Time.time - lastShotTime >= reloadTime)
+        if ((Input.GetAxis("Attack") == 1f || Input.GetKeyDown(KeyCode.Space)) && Time.time - lastShotTime >= reloadTime)
         {
             Shoot();
-            lastShotTime = Time.time; // Update lastShotTime to the current time
+            lastShotTime = Time.time; 
         }
 
 
