@@ -51,7 +51,6 @@ public class CyclopsSpawner : MonoBehaviour
             {
                 SpawnInterval = SpawnInterval - SpawnDecreaseTime;
             }
-            Debug.Log(SpawnInterval);
         }
     }
 }

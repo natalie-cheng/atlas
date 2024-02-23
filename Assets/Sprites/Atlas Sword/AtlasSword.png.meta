@@ -1,0 +1,5486 @@
+fileFormatVersion: 2
+guid: 30a706e81410848e18cae1fff45b3710
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AtlasSword_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2305
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921537659f1c9465d9d857a0c7d9f385
+      internalID: -1908295535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2305
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e88d3da8b43418bb719b68b67c36c6
+      internalID: -391457532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2305
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf454e63160d4345b7d08c9231de1e0
+      internalID: -1160986678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2305
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d9e2a5be2684b68889a3499fbd587e
+      internalID: 1390685335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2305
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813e2fe610ff8469c99086df07a6deee
+      internalID: 101399125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2305
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8a6879d1ea84a88a389b5c6b88f5f6
+      internalID: 1181506031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 2305
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbb960823b4545098d9001fb1bad70b
+      internalID: 359058735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_7
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 2322
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c278d286bf0ce483f9801021403cd5ec
+      internalID: 1438583344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2239
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82d5b4c172204b5ab2f3d75ecb4cc36
+      internalID: -1882119591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_9
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2239
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1126f2b859e842b1b32d859e5f3cc55
+      internalID: 241752764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_10
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2239
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f458d00df79d4d3cbe46fbae52918d6
+      internalID: -1473562367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_11
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2239
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325652d2d97904954b866e714e3b28d6
+      internalID: -983498614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_12
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2239
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad7d7d9d1aec47e6b8c313927e359a1
+      internalID: 680911259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_13
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2239
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751ee598a79784412aedaf4c81f75c22
+      internalID: 2065706987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_14
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2239
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707a71b840c464432ae06d25e53aaa1e
+      internalID: -1435923357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_15
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 2261
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e4007364b9048bbbafeca72c1560b5
+      internalID: 2117320536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2174
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fa957a6bcc54ae29563a61c3617965
+      internalID: 43095293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_17
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2174
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1315fe4a3efc46bfb3512603b9a56fe
+      internalID: 212469156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_18
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2174
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a3c291ff75847f8a41fb0578f68a8c
+      internalID: -1955695564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2174
+        width: 38
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66c3baaa08f1439c9198105361453ad
+      internalID: -1856860973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_20
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2174
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad4b1875233a413f9a0d556e2ec4877
+      internalID: 1431400207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_21
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2174
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b93710613ad34d0c82c8e977e43c9e4
+      internalID: 537979952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_22
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2174
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81d232f4d7cd40928eecb98f8e2c456
+      internalID: -1347926246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_23
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 2188
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426ed16d66cce49daa0545292737e6a5
+      internalID: 2011459154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_24
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2112
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048992e2e3a9b49aca0951f27e432f6c
+      internalID: -863679067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_25
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2112
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7caba2f387b10492b8d97acdad127be6
+      internalID: 1081298118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_26
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2112
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88b8b401e58d4b40b099f39b76d7a00
+      internalID: -836980587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_27
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2112
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb756985e498425e930d0c643a9431e
+      internalID: 619032249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_28
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 2112
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737853dacafaa473d9c2b9386ff5ff44
+      internalID: 455183768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_29
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2112
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b03527b63bea4d00a34eef719235f69
+      internalID: -386776392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_30
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2112
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198d68366409641a3b6bebec15f8734e
+      internalID: 2087865517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2048
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3a4c46efc0a46a09b18f958c9760eb
+      internalID: 66046287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2047
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313e827e5b3a94a14ba38d23ea295ace
+      internalID: -2046471880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_33
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2047
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c955c576752d43cf8b4e2f3399da862
+      internalID: -734138366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_34
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 2047
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3946ef53c394c36b029581051795c1
+      internalID: -242692241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_35
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 2047
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1df136515eb458ba20262525271dca
+      internalID: 582667700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_36
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2047
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b198c7bcb596d4d52b109c4cc023674d
+      internalID: -2056334014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_37
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 2047
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63972776e433c48199adc8d604033bd0
+      internalID: -227247275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_38
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 2047
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f9bd47112d04af78bd37505aba2fa6
+      internalID: 1864530751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_39
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1984
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ef9d364ba1147938d2629450a5ca3d
+      internalID: -1797082149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_40
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1984
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2e63b5a15bf444abcf3a2db87abc8f
+      internalID: 612378817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_41
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1984
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65730b2c445d4afe8c85f7125b73116
+      internalID: 121632871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_42
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1982
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852fce5a0af014ff4aa7a7b43ef38d3e
+      internalID: 2107791439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_43
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1982
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3518d6f3d6942ce99252fc2d78e24d
+      internalID: 804580988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_44
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1982
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f32cd2c27c14ecbabe8d1573d98edc
+      internalID: 1720824806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_45
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1982
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6902731399d451486bd0e726d7703f
+      internalID: -1821678784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_46
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1982
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fad4df842d28443bafd92a651840178
+      internalID: 911983500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1919
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5551f97a780943bda04a6e202d480e6
+      internalID: -236652275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_48
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1920
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00724e39e8e29442f9d4603c018f40fc
+      internalID: 995859973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_49
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1920
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e92f12712a04d3abee9c67b1c4f64f
+      internalID: 1860828991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_50
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1920
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45a33af14b614b56b345c7a9c3abc76
+      internalID: 533193492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_51
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1920
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd4fef255a9f422db80d3c14300f50b
+      internalID: -804914316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_52
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1920
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335fe34242ec24094bb3480f662857e0
+      internalID: 151658657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_53
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1920
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1a715ec270e4878ba7106de1a3955e
+      internalID: -238289580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_54
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1920
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bd255f663bd4bfc9dce75e4cc73ff8
+      internalID: -1973945048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_55
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1855
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e8a5832b38e4f34994f2026c11eeff
+      internalID: 1828406815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_56
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1855
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf313221cff04cadb35608027c8dc99
+      internalID: -1061687924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_57
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1855
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de2171f2f78a4553839a3a4993b9152
+      internalID: -1618325779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_58
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1855
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29a1b9af65db4c609c72d8d3c5aa85f
+      internalID: 155323091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_59
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1855
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a45e2dd981a4ac799b06c3c674e6f5
+      internalID: -845453900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_60
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1855
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c756c9b3fad4686a16972854f76153
+      internalID: -567840478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_61
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1855
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0a57f8af15345ffbf8be97b2ed7246
+      internalID: 700599859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_62
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1855
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02ec3c4ccaa949d5840567e8ea94557
+      internalID: 877538194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_63
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1794
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041a4ecd3b91b435e85a6bca1e6887e8
+      internalID: 1146893540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_64
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1794
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70400e13c9a884d6d87eeece34dad034
+      internalID: -1613695779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_65
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1793
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd854ec295a784b9f95c1e41a39b3255
+      internalID: -5618615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_66
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1792
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3316c280a16c345debd6d92dc5ba9767
+      internalID: 963064439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_67
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1793
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e0612fecb7247be89e6fd8ff2960fe
+      internalID: 733701784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_68
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1794
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468ac0b5c85074072a23c3c1b1b88c32
+      internalID: -1502274487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_69
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1793
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328413e812b754cfbbce53da19ea7a1f
+      internalID: -106729344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_70
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1792
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2316b67e2a5c34d539180be5af700eba
+      internalID: 746121125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_71
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1793
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97699aadacbc48c980fe0158973f282
+      internalID: -1017256458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_72
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1728
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cbd3401cacd41d7982f3493fd34ae9
+      internalID: -1755917702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_73
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1729
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67be948d8a1c4850aa281c017da6fa9
+      internalID: 734420866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_74
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1729
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cd0f54fe4784bc0993800dd0f7e0c4
+      internalID: 1262794841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_75
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1729
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e158993ff21a4ec2ab657de0f1424cf
+      internalID: -612435815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_76
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1729
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d295e0c4be241b3834f821e41a47ce
+      internalID: -815590290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_77
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1729
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd954b3a95734f27851a5b289b958e3
+      internalID: 224193546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_78
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1729
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bab75164a75447f49b38937d60456a4
+      internalID: -1897283156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_79
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1729
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cae740fa87c24518ab117761d2c48db
+      internalID: 1357839753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_80
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1729
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f66707c48534cbeb455872f8debee2
+      internalID: -111081144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_81
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1662
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343e5ab82640f43ea884591c7299026c
+      internalID: 974244840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_82
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1662
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b6540a1740a46bdb4978b70b89e214
+      internalID: -1603658821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_83
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1663
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05bb85721ca84384b5d3a7d871811d5
+      internalID: 983076120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_84
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1663
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01125b92efca74eb2a5b894e1106922c
+      internalID: 601911157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_85
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1662
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b218c1549624b1b9583d3011df0399
+      internalID: -1844548132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_86
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1662
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d941c7e5a56dc4fe4976cdac76750864
+      internalID: 156314704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_87
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1663
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cb0b179abaa4f46a8b14d6b6549119
+      internalID: -1745643547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_88
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1663
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7509466f27ec444c699c1c51a10140ff
+      internalID: 1742426925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_89
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1662
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518eb9035d04b4e57b5292e20781a7a9
+      internalID: 2005395991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_90
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1600
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6eb637d30cc4d1fb31de5a0c15d7bf
+      internalID: 2143940871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_91
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1601
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd15292c2df994e2fbbba0451b7292e7
+      internalID: -1899864209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_92
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1602
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6724227436a1b47d49917f9868eaf29d
+      internalID: 365315343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_93
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1602
+        width: 25
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d754a294861884f8e9ec99e9787aa3ac
+      internalID: 473697408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_94
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1601
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b086aa7b9e578456abb5db2fe9d02da9
+      internalID: 419976090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_95
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1601
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a349e1e9a02fc43e6b522ee8a0ceeecf
+      internalID: 1007237468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_96
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1601
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ef33d4c14fa41e9a7941b73944ff98
+      internalID: 1415422658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_97
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1601
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e3228df115e463d8f09180b937f932
+      internalID: 1100217392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_98
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1601
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34436b4c219254a76b1b485809317898
+      internalID: -1239535221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_99
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1536
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5379156857246d093eb07806ea04fc
+      internalID: -388714949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_100
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1536
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b15cab523dd467f920e307a7c7f527
+      internalID: -1124284340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_101
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1536
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5739f6a8c6a475c8c04773a4ff52c6
+      internalID: 1952756289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_102
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1536
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4be039658cc4571a68508123c53a31
+      internalID: -1362835255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_103
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1536
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156fedf6a41e240e68ec4b7393b95a05
+      internalID: -1581475920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_104
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1536
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf65bcf34b08c4aea8b702a65380964d
+      internalID: 373645556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_105
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1537
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57539e11b280d4771ae94c5188d38189
+      internalID: 781533087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_106
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1536
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42699e30055f842e5af919f87cc0d9cf
+      internalID: 178257306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_107
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1536
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8275cb093d6ab4d588b3e675a8dd12d9
+      internalID: 277557537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_108
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1538
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3c776ffbc374b6ebf3e36b403e6eee
+      internalID: 1550498049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_109
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1538
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7a557fa8ebc455a81e59aa0f7fd753
+      internalID: -1445943464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_110
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1538
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e366b47a090b44000bb05af08d602d5d
+      internalID: -528601618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_111
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1471
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714cfcb30f2174eef96a2d4d88fcf931
+      internalID: -1475264248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_112
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1470
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3107ae1493db4bc7b10a73f4c9cb9e9
+      internalID: 1597962556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_113
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1470
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66c215beb52b466b80f6eded6962589
+      internalID: -1830634195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_114
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1470
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6b9873e9a8743ef858771b59ebf7ad
+      internalID: -319289801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_115
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1470
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ea208def6c94bc3ae8f4803c8f100a
+      internalID: 712202357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_116
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1470
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c789a50d7ec04fa08c10684666c5d15
+      internalID: -24020585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_117
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1407
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb767e1e4bd944c09d695b6055a703b
+      internalID: 565187532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_118
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1407
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7d83beccb454734ab601431ff2917d
+      internalID: -1564782776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_119
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1407
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae5f3a83bafd47f2ae10a55781fcf5a
+      internalID: -1539004734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_120
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1408
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d047fff0307094ec486b16252f6a15d5
+      internalID: -732512868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_121
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1408
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2362cbf9ce7d41698819ffecb5bd597
+      internalID: -1273838957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_122
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1408
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9d1cfb68cd54dc4866d7844896569f
+      internalID: -241057706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_123
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1344
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbb071ef8b6a423db7d749701a775fa
+      internalID: -1457557232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_124
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1343
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2715014bb77042d3bfcc3e2cc9436e8
+      internalID: 968557886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_125
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1343
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c10647cf809e4315a0efcd6a4245b63
+      internalID: 1061672076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_126
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1343
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e912ae7cb2e464c8aa04e18e948fd2
+      internalID: 1918366149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_127
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1343
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dce81d8065b4f45baa9fc703d5dab8
+      internalID: -1846338000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_128
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1343
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a748c498ee74019a8ee41bfc140d5a
+      internalID: -8762157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_129
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1281
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef587493df40f4932b43fe5610ea1b4d
+      internalID: -994216440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_130
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1278
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c52be36d44fb41b59b20e8389b93e22
+      internalID: -1385652435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_131
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1278
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ece795d2ad184e2ca2cf0003b2803ac
+      internalID: -1180222887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_132
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1278
+        width: 24
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71ddb1b8fe33468c9e3888a2991d93c
+      internalID: 1204331722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_133
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1278
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab0f607b646e4259952a1435103f504
+      internalID: -806298562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_134
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1278
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0ef96e0712a400b86dfa4ef9f13603
+      internalID: 1585524313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_135
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1278
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9278ffdab7a4078b23aafd542cd318
+      internalID: 1176152343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_136
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1278
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cf75c2998c84c019a24e93c675c794
+      internalID: -895103402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_137
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1278
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcd88c3a9cfc4cd9afad792ddd8b853
+      internalID: -526421672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_138
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1278
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da383e6965de48bbabcd021397c6e7d
+      internalID: -1627499068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_139
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1278
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0b53d564d1f424c9e22d41c9c08915
+      internalID: -1337004331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_140
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1278
+        width: 24
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9be870c3ca748a1a6968ce27d29d9b
+      internalID: 1572351169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_141
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1278
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5146e42c6af8436f8631dac9d3473c7
+      internalID: 1706334554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_142
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1216
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0271a5938c448b1adf07befa7938a6
+      internalID: 401272830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_143
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1216
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef083c783161c47998773f801f8927fc
+      internalID: -2002565143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_144
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1216
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41db17daf9494490f98837edac977263
+      internalID: -1323465718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_145
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1215
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e42b8efc9424e9ba8e5da4cd5afadd
+      internalID: 322921558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_146
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1215
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0eca0bf1d79f4588ad845710a299863
+      internalID: 2130999767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_147
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1215
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec29031ba3b674936935371963ce5408
+      internalID: -1027591436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_148
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1215
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bd5b9236d4342488a5847eec70a8d3
+      internalID: -1087452051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_149
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1215
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cd1576ae72b44beb0ce4811c644adf
+      internalID: 994428911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_150
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1215
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaac3b4b048e44ae89498215ce22fee0
+      internalID: -64244062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_151
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1215
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4495932dad644b1861a36c9119cc45
+      internalID: -861879993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_152
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1215
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c178f25a66944f9c97bfdb9d0eec01c
+      internalID: 1564205088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_153
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1215
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8db741eaabd64c2a800fc46c2fdb1b9
+      internalID: -2050579192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_154
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1215
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5640309d9771d4d4db9c50ef809d3703
+      internalID: -2047749623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_155
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1151
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291e9d3ac43ec489eb44a02e4bb79fec
+      internalID: 1541897636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_156
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1152
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6854c5cb57b24f69a575ae004209389
+      internalID: 100283625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_157
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1152
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a619a60c4a9b46d2b807e93912d7ec8
+      internalID: 1568350674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_158
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1151
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f31465d81334b4b83dd6bee1343fcf
+      internalID: 967564211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_159
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1151
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1627b3dbb2dc642008124264c44a9bc5
+      internalID: 1434598906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_160
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1151
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e8b22d432ce480ab4da48a34cb234f
+      internalID: -401969781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_161
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1151
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522aa8a540efe4cc88f558f015cc6a50
+      internalID: 630545860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_162
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1151
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c98e4f1aff6d44a597a4ffa2f46c019
+      internalID: 287913667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_163
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1151
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fcf8d7ce5a4425586a4e0c1c764b31
+      internalID: -1539133869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_164
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1151
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c85207f58644e0d9591ae1ba1f991f
+      internalID: -246095636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_165
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1151
+        width: 27
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9699b271d304f028f343889f78444a
+      internalID: -298081297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_166
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 1151
+        width: 25
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5094ce0c53ba417590bf9268c44125b
+      internalID: 1498410959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_167
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1151
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86de9721da63247c78250f00be4b589c
+      internalID: -341127547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_168
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1087
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82ec7f278d91476b9e93c7e6b7215d6
+      internalID: 1866457154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_169
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1087
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0a3ce9c2a614393ba9ad5d70e04d0d
+      internalID: -2054388889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_170
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1087
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5167303b7f0d492799ba9f334c4827b
+      internalID: -435388758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_171
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1086
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3ee89754dcc4852a38d7d7bb69d892
+      internalID: -1807440692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_172
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1086
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d91608f8566439fbbf50beed86b247
+      internalID: -1025261251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_173
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1086
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c156443cd438a40cba0b400170559b96
+      internalID: 1489717449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_174
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1086
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d77aaa18d9174fd597ef76efa2fb13a
+      internalID: 1495237278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_175
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1086
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5386aa43a888a4105b2acdc834a4a821
+      internalID: -839463551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_176
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1086
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac05342213df54686bf95ac9faaf563a
+      internalID: -1036358846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_177
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1086
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30908b848da7f4412aa884972ae66536
+      internalID: 404849727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_178
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1086
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67ee688c50314bef92122b3a2ae0692
+      internalID: 119268499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_179
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1086
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ee8e02f50204cba9ca196a391d5f6d
+      internalID: -1257972077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_180
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1086
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975c5b58d3c074f6291ca4f9c5a170bd
+      internalID: -532215426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_181
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1023
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087ee4cd0e70248f081163fc87616950
+      internalID: -1576174184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_182
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1023
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed60ce1286aab4986b768abef62de500
+      internalID: 1247534351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_183
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1023
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdf5a9312e4848d588134787f4aebd9
+      internalID: -1936550633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_184
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1026
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780f61568f19b4fbea816cbdb118e04c
+      internalID: 1141270478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_185
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1026
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce09635b269b48e5842512ade076a17
+      internalID: 194751835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_186
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1023
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1e92e4bcd484291bf3ccacadd815a0
+      internalID: 1272629904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_187
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 930
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca900a1118b445afb986db16372580c
+      internalID: -105465820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_188
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 929
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20c23ace8a764412ba3b4c77a2f07b6
+      internalID: 269856767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_189
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 928
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2435c5667944ec090a4968dd0470f7
+      internalID: -1400878012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_190
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 929
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa3427df6dda408fa921d9abeaa71f7
+      internalID: 1545439221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_191
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 930
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb50f265982f24b9fa5371d0f6ec5eff
+      internalID: 1607319475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_192
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 929
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ffc79161f514592ae3307d875f006b
+      internalID: -1367103408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_193
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 928
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b40db7343f8e4bb38b5d9660241e476
+      internalID: 2017254739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_194
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 929
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560b8a6e53358468b9ac71d3fc7c77ee
+      internalID: 182926812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_195
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 801
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a165f507bd0414d9bbf0cad9d8ed96e1
+      internalID: 1096619771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_196
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 802
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137f265be33f54b43810bb09ebf27fde
+      internalID: 883046442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_197
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 802
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469157574d7494c84a81adc7a8f203bd
+      internalID: 1116997790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_198
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 801
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d4bb76f1b8645aa8e40a462728a70f
+      internalID: 481602891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_199
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 801
+        width: 54
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37779f2cfa7cb4beaadad94ac660fc9f
+      internalID: 1154148070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_200
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 801
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e682db9a21047dd9dde642b14ac517
+      internalID: 385503770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_201
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 801
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554ef7baf16884d86b74ed6aada2f10d
+      internalID: -548380134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_202
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 801
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfe376a6c09d4bd59a1a23651ded345
+      internalID: -1250034187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_203
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 671
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4919cca0ad54deebcaec1e775df6a5
+      internalID: -870815041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_204
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 671
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14d3a97f6134415ab9dbef5c11763f7
+      internalID: 2054767714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_205
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 671
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305d6f578556f4ed685fd22122596380
+      internalID: 194028755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_206
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 671
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfafcc1b43ea84dc3acefef8a99e8760
+      internalID: 1876071718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_207
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 671
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930d36c6bcdcc45359d0946a7ca3594f
+      internalID: 297194528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_208
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 671
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155db810bb64342fbb2e077dfd36000f
+      internalID: -998563826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_209
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 671
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396fd06ee07fc4a238a7734a0ffc769d
+      internalID: 4545694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_210
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 670
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba7c07c8eb254e27a8f1e130a0d71e1
+      internalID: -1941147387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_211
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 545
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19de59bd49c54d3cb0016218b357143
+      internalID: 1523682149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_212
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 545
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d9f3df8cb014c9185918585660a1d0
+      internalID: -1875144218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_213
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 545
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baeb3ae1d53147a8b9e35eb7b42efbf
+      internalID: 829458563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_214
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 545
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59211cec9dfa443c79c576234d421646
+      internalID: 1382927591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_215
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 545
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7523a2c39c5704961b3156f61581d1b8
+      internalID: -552269986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_216
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 545
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d0f70d3055f499bb8e32917078eb67
+      internalID: -1980377841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_217
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 545
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485be8fc650744bcca96100a04d4b3eb
+      internalID: -1528288098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_218
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 545
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee8814e77aca4c22a47dca8a9d0240f
+      internalID: 1736076526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_219
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 417
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a79ea685a1dd4e69a9fc4cf690bf531
+      internalID: -1216901514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_220
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 416
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331484666f7f44f9294d3910e3518e91
+      internalID: 734380749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_221
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 416
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63627a2852d24262b5b27203815867d
+      internalID: -576877139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_222
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 416
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea1be2a931df421daa8c3c3441272b8
+      internalID: -963289904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_223
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 416
+        width: 39
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97d0a31b3a2e45a28ba87e59b6848d7
+      internalID: -2116896046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_224
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 416
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fcd919e0d4f458691edeefdeb46108
+      internalID: -1115832044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_225
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 287
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56117d364311d4276a68cc507a48bb83
+      internalID: -1772669844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_226
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 279
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a0c03484b7745e1a7f14712b85cb40
+      internalID: -640576694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_227
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 279
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7fdab130f2148689978db578697499
+      internalID: 307268868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_228
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 284
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fb6e25923bf4077894729f85e47d73
+      internalID: -1802830974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_229
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 286
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cfeab26ca844863a919dbaf0075bdc
+      internalID: -754943106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_230
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 286
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584c1bad7400046188a37ce0651b38b8
+      internalID: -1399322280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_231
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 159
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f34b3f37f3447cc80896c586a14aad
+      internalID: -1461215324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_232
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 159
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7ceddf262944c3aa7a60d217a6a8a7
+      internalID: -428401161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_233
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 159
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a34685b4dbc04835add762d3eaffe97
+      internalID: -884143954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_234
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 160
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00f4ef9790df4d748f50f2eafb14181
+      internalID: 1064677493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_235
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 146
+        width: 38
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34f5bbdd4b304c1385490d1cbb28501
+      internalID: -771568704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_236
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 160
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39c8ce95e6994428a8f7ff24d0cba32
+      internalID: 662696422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_237
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 32
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40aa229aea86b4b87a0936a8ff7158a5
+      internalID: 174509198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_238
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 24
+        width: 47
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ea7527b6be0492589db1d0a8b2966b
+      internalID: -1290468714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_239
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 24
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb4f79d78b2245be8efcc7d68d0f1d2
+      internalID: 1176706028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_240
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 27
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cf7808d61f649bdae2482067fe554e
+      internalID: 46544555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_241
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 31
+        width: 68
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35346543884b64c839c5bb6d4533dcc7
+      internalID: 1538332404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasSword_242
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 31
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a096a47d3afc44bee8a6bd40335a906e
+      internalID: 1630618100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AtlasSword_0: -1908295535
+      AtlasSword_1: -391457532
+      AtlasSword_10: -1473562367
+      AtlasSword_100: -1124284340
+      AtlasSword_101: 1952756289
+      AtlasSword_102: -1362835255
+      AtlasSword_103: -1581475920
+      AtlasSword_104: 373645556
+      AtlasSword_105: 781533087
+      AtlasSword_106: 178257306
+      AtlasSword_107: 277557537
+      AtlasSword_108: 1550498049
+      AtlasSword_109: -1445943464
+      AtlasSword_11: -983498614
+      AtlasSword_110: -528601618
+      AtlasSword_111: -1475264248
+      AtlasSword_112: 1597962556
+      AtlasSword_113: -1830634195
+      AtlasSword_114: -319289801
+      AtlasSword_115: 712202357
+      AtlasSword_116: -24020585
+      AtlasSword_117: 565187532
+      AtlasSword_118: -1564782776
+      AtlasSword_119: -1539004734
+      AtlasSword_12: 680911259
+      AtlasSword_120: -732512868
+      AtlasSword_121: -1273838957
+      AtlasSword_122: -241057706
+      AtlasSword_123: -1457557232
+      AtlasSword_124: 968557886
+      AtlasSword_125: 1061672076
+      AtlasSword_126: 1918366149
+      AtlasSword_127: -1846338000
+      AtlasSword_128: -8762157
+      AtlasSword_129: -994216440
+      AtlasSword_13: 2065706987
+      AtlasSword_130: -1385652435
+      AtlasSword_131: -1180222887
+      AtlasSword_132: 1204331722
+      AtlasSword_133: -806298562
+      AtlasSword_134: 1585524313
+      AtlasSword_135: 1176152343
+      AtlasSword_136: -895103402
+      AtlasSword_137: -526421672
+      AtlasSword_138: -1627499068
+      AtlasSword_139: -1337004331
+      AtlasSword_14: -1435923357
+      AtlasSword_140: 1572351169
+      AtlasSword_141: 1706334554
+      AtlasSword_142: 401272830
+      AtlasSword_143: -2002565143
+      AtlasSword_144: -1323465718
+      AtlasSword_145: 322921558
+      AtlasSword_146: 2130999767
+      AtlasSword_147: -1027591436
+      AtlasSword_148: -1087452051
+      AtlasSword_149: 994428911
+      AtlasSword_15: 2117320536
+      AtlasSword_150: -64244062
+      AtlasSword_151: -861879993
+      AtlasSword_152: 1564205088
+      AtlasSword_153: -2050579192
+      AtlasSword_154: -2047749623
+      AtlasSword_155: 1541897636
+      AtlasSword_156: 100283625
+      AtlasSword_157: 1568350674
+      AtlasSword_158: 967564211
+      AtlasSword_159: 1434598906
+      AtlasSword_16: 43095293
+      AtlasSword_160: -401969781
+      AtlasSword_161: 630545860
+      AtlasSword_162: 287913667
+      AtlasSword_163: -1539133869
+      AtlasSword_164: -246095636
+      AtlasSword_165: -298081297
+      AtlasSword_166: 1498410959
+      AtlasSword_167: -341127547
+      AtlasSword_168: 1866457154
+      AtlasSword_169: -2054388889
+      AtlasSword_17: 212469156
+      AtlasSword_170: -435388758
+      AtlasSword_171: -1807440692
+      AtlasSword_172: -1025261251
+      AtlasSword_173: 1489717449
+      AtlasSword_174: 1495237278
+      AtlasSword_175: -839463551
+      AtlasSword_176: -1036358846
+      AtlasSword_177: 404849727
+      AtlasSword_178: 119268499
+      AtlasSword_179: -1257972077
+      AtlasSword_18: -1955695564
+      AtlasSword_180: -532215426
+      AtlasSword_181: -1576174184
+      AtlasSword_182: 1247534351
+      AtlasSword_183: -1936550633
+      AtlasSword_184: 1141270478
+      AtlasSword_185: 194751835
+      AtlasSword_186: 1272629904
+      AtlasSword_187: -105465820
+      AtlasSword_188: 269856767
+      AtlasSword_189: -1400878012
+      AtlasSword_19: -1856860973
+      AtlasSword_190: 1545439221
+      AtlasSword_191: 1607319475
+      AtlasSword_192: -1367103408
+      AtlasSword_193: 2017254739
+      AtlasSword_194: 182926812
+      AtlasSword_195: 1096619771
+      AtlasSword_196: 883046442
+      AtlasSword_197: 1116997790
+      AtlasSword_198: 481602891
+      AtlasSword_199: 1154148070
+      AtlasSword_2: -1160986678
+      AtlasSword_20: 1431400207
+      AtlasSword_200: 385503770
+      AtlasSword_201: -548380134
+      AtlasSword_202: -1250034187
+      AtlasSword_203: -870815041
+      AtlasSword_204: 2054767714
+      AtlasSword_205: 194028755
+      AtlasSword_206: 1876071718
+      AtlasSword_207: 297194528
+      AtlasSword_208: -998563826
+      AtlasSword_209: 4545694
+      AtlasSword_21: 537979952
+      AtlasSword_210: -1941147387
+      AtlasSword_211: 1523682149
+      AtlasSword_212: -1875144218
+      AtlasSword_213: 829458563
+      AtlasSword_214: 1382927591
+      AtlasSword_215: -552269986
+      AtlasSword_216: -1980377841
+      AtlasSword_217: -1528288098
+      AtlasSword_218: 1736076526
+      AtlasSword_219: -1216901514
+      AtlasSword_22: -1347926246
+      AtlasSword_220: 734380749
+      AtlasSword_221: -576877139
+      AtlasSword_222: -963289904
+      AtlasSword_223: -2116896046
+      AtlasSword_224: -1115832044
+      AtlasSword_225: -1772669844
+      AtlasSword_226: -640576694
+      AtlasSword_227: 307268868
+      AtlasSword_228: -1802830974
+      AtlasSword_229: -754943106
+      AtlasSword_23: 2011459154
+      AtlasSword_230: -1399322280
+      AtlasSword_231: -1461215324
+      AtlasSword_232: -428401161
+      AtlasSword_233: -884143954
+      AtlasSword_234: 1064677493
+      AtlasSword_235: -771568704
+      AtlasSword_236: 662696422
+      AtlasSword_237: 174509198
+      AtlasSword_238: -1290468714
+      AtlasSword_239: 1176706028
+      AtlasSword_24: -863679067
+      AtlasSword_240: 46544555
+      AtlasSword_241: 1538332404
+      AtlasSword_242: 1630618100
+      AtlasSword_25: 1081298118
+      AtlasSword_26: -836980587
+      AtlasSword_27: 619032249
+      AtlasSword_28: 455183768
+      AtlasSword_29: -386776392
+      AtlasSword_3: 1390685335
+      AtlasSword_30: 2087865517
+      AtlasSword_31: 66046287
+      AtlasSword_32: -2046471880
+      AtlasSword_33: -734138366
+      AtlasSword_34: -242692241
+      AtlasSword_35: 582667700
+      AtlasSword_36: -2056334014
+      AtlasSword_37: -227247275
+      AtlasSword_38: 1864530751
+      AtlasSword_39: -1797082149
+      AtlasSword_4: 101399125
+      AtlasSword_40: 612378817
+      AtlasSword_41: 121632871
+      AtlasSword_42: 2107791439
+      AtlasSword_43: 804580988
+      AtlasSword_44: 1720824806
+      AtlasSword_45: -1821678784
+      AtlasSword_46: 911983500
+      AtlasSword_47: -236652275
+      AtlasSword_48: 995859973
+      AtlasSword_49: 1860828991
+      AtlasSword_5: 1181506031
+      AtlasSword_50: 533193492
+      AtlasSword_51: -804914316
+      AtlasSword_52: 151658657
+      AtlasSword_53: -238289580
+      AtlasSword_54: -1973945048
+      AtlasSword_55: 1828406815
+      AtlasSword_56: -1061687924
+      AtlasSword_57: -1618325779
+      AtlasSword_58: 155323091
+      AtlasSword_59: -845453900
+      AtlasSword_6: 359058735
+      AtlasSword_60: -567840478
+      AtlasSword_61: 700599859
+      AtlasSword_62: 877538194
+      AtlasSword_63: 1146893540
+      AtlasSword_64: -1613695779
+      AtlasSword_65: -5618615
+      AtlasSword_66: 963064439
+      AtlasSword_67: 733701784
+      AtlasSword_68: -1502274487
+      AtlasSword_69: -106729344
+      AtlasSword_7: 1438583344
+      AtlasSword_70: 746121125
+      AtlasSword_71: -1017256458
+      AtlasSword_72: -1755917702
+      AtlasSword_73: 734420866
+      AtlasSword_74: 1262794841
+      AtlasSword_75: -612435815
+      AtlasSword_76: -815590290
+      AtlasSword_77: 224193546
+      AtlasSword_78: -1897283156
+      AtlasSword_79: 1357839753
+      AtlasSword_8: -1882119591
+      AtlasSword_80: -111081144
+      AtlasSword_81: 974244840
+      AtlasSword_82: -1603658821
+      AtlasSword_83: 983076120
+      AtlasSword_84: 601911157
+      AtlasSword_85: -1844548132
+      AtlasSword_86: 156314704
+      AtlasSword_87: -1745643547
+      AtlasSword_88: 1742426925
+      AtlasSword_89: 2005395991
+      AtlasSword_9: 241752764
+      AtlasSword_90: 2143940871
+      AtlasSword_91: -1899864209
+      AtlasSword_92: 365315343
+      AtlasSword_93: 473697408
+      AtlasSword_94: 419976090
+      AtlasSword_95: 1007237468
+      AtlasSword_96: 1415422658
+      AtlasSword_97: 1100217392
+      AtlasSword_98: -1239535221
+      AtlasSword_99: -388714949
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

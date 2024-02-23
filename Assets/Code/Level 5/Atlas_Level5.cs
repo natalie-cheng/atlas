@@ -16,6 +16,8 @@ public class Atlas_Level5 : MonoBehaviour
     private float swordDamage = 100;
     public static float health = 100;   
     public static float maxHealth = 100;
+    // Animator reference
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +28,16 @@ public class Atlas_Level5 : MonoBehaviour
 
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        flip();
         Move();
         check_if_hit();
+        animate();
     }
 
     private void Move()
@@ -122,6 +127,29 @@ public class Atlas_Level5 : MonoBehaviour
         }
         return false;
 
+    }
+
+    // Sets orientation of sprite
+    void flip()
+    {
+        // Gets horizontal and vertical inputs
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        if (horizontalInput < 0f)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (horizontalInput > 0f)
+        {
+            spriteRenderer.flipX = true;
+        }
+    }
+
+    private void animate()
+    {
+        animator.SetBool("swing", Input.GetKeyDown(KeyCode.Space));
+        animator.SetBool("walking", Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f);
     }
 
     // checks if Atlas is dead
