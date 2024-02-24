@@ -8,9 +8,9 @@ public class Atlas_Level5 : MonoBehaviour
     public static Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private float speed = 2;
-    private float detectionRadius = 1.35f;
+    private float detectionRadius = 1.5f;
     //private float forceAmount = 10000f;
-    //private float facingThreshold = 0.3f;
+    private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
     private float swordDamage = 100;
@@ -18,6 +18,8 @@ public class Atlas_Level5 : MonoBehaviour
     public static float maxHealth = 100;
     // Animator reference
     public Animator animator;
+    private int swingAnimationDuration = 1;
+    public bool isSwinging = false;
 
     // Start is called before the first frame update
     void Start()
@@ -47,16 +49,17 @@ public class Atlas_Level5 : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         // set the direction, increase by speed
-        Vector2 vec = new Vector2(horizontal, vertical); ;
+        Vector2 vec = new Vector2(horizontal, vertical);
         rb.velocity = vec * speed;
+        animator.SetBool("walking", true);
     }
 
 
-    // For delay in hit
-    void FixedUpdate()
-    {
-        check_if_hit();
-    }
+    //// For delay in hit
+    //void FixedUpdate()
+    //{
+    //    check_if_hit();
+    //}
 
     public void check_if_hit()
     {
@@ -81,6 +84,8 @@ public class Atlas_Level5 : MonoBehaviour
         }
     }
 
+
+
     private void hit(Cyclops cyclop)
     {
         // Assuming Cyclops has a Rigidbody2D component
@@ -98,6 +103,37 @@ public class Atlas_Level5 : MonoBehaviour
         }
     }
 
+    //// Checks if object is in hit range and Atlas is facing Cyclops
+    //private bool IsObjectInHitRange(Transform otherTransform)
+    //{
+    //    // Calculate the distance between the current object and the target object
+    //    float distance = Vector3.Distance(transform.position, otherTransform.position);
+    //    // Check if the distance is less than the proximity threshold
+    //    if (distance < detectionRadius)
+    //    {
+    //        // Calculate the direction from the current object to the target object
+    //        //Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
+
+    //        //// horizontal and vertical input axes
+    //        //float horizontal = Input.GetAxis("Horizontal");
+    //        //float vertical = Input.GetAxis("Vertical");
+    //        //Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
+
+
+    //        //// Calculate the dot product of the forward direction of the current object and the direction to the target
+    //        //float dotProduct = Vector3.Dot(movement, directionToTarget);
+
+    //        //// Check if the dot product is greater than the facing threshold
+    //        //if (dotProduct > facingThreshold)
+    //        //{
+    //        //    return true;
+    //        //}
+    //        return true;
+    //    }
+    //    return false;
+    //}
+
+
     // Checks if object is in hit range and Atlas is facing Cyclops
     private bool IsObjectInHitRange(Transform otherTransform)
     {
@@ -106,8 +142,8 @@ public class Atlas_Level5 : MonoBehaviour
         // Check if the distance is less than the proximity threshold
         if (distance < detectionRadius)
         {
-            // Calculate the direction from the current object to the target object
-            //Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
+           //Calculate the direction from the current object to the target object
+           Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
 
             //// horizontal and vertical input axes
             //float horizontal = Input.GetAxis("Horizontal");
@@ -118,15 +154,20 @@ public class Atlas_Level5 : MonoBehaviour
             //// Calculate the dot product of the forward direction of the current object and the direction to the target
             //float dotProduct = Vector3.Dot(movement, directionToTarget);
 
-            //// Check if the dot product is greater than the facing threshold
-            //if (dotProduct > facingThreshold)
-            //{
-            //    return true;
-            //}
-            return true;
+            // Calculate the direction the character is facing based on SpriteRenderer's flipX state
+            Vector3 facingDirection = spriteRenderer.flipX ? Vector3.right : Vector3.left;
+
+            // Calculate the dot product of the facing direction of the current object and the direction to the target
+            float dotProduct = Vector3.Dot(facingDirection, directionToTarget);
+
+            // Check if the dot product is greater than the facing threshold
+            if (dotProduct > facingThreshold)
+            {
+                return true;
+            }
+            //return true;
         }
         return false;
-
     }
 
     // Sets orientation of sprite
@@ -148,10 +189,33 @@ public class Atlas_Level5 : MonoBehaviour
 
     private void animate()
     {
-        animator.SetBool("swing", Input.GetKeyDown(KeyCode.Space));
-        animator.SetBool("walking", Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f);
+        // Check for user input to set animation parameters
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        bool isWalking = (horizontalInput != 0 || verticalInput != 0);
+
+        // Set animation parameters based on character state
+        animator.SetBool("walking", isWalking);
+
+        if (Input.GetKeyDown(KeyCode.Space) && !isSwinging)
+        {
+            StartCoroutine(SwingSword());
+        }
     }
 
+    IEnumerator SwingSword()
+    {
+        Debug.Log("SwingSword coroutine started");
+        isSwinging = true;
+        animator.SetBool("swinging", true);
+
+        // Adjust this value according to the duration of your swing animation
+        yield return new WaitForSeconds(0.006f); // Change 0.5f to match your animation's duration
+
+        Debug.Log("Swing animation complete");
+        animator.SetBool("swinging", false);
+        isSwinging = false;
+    }
     // checks if Atlas is dead
     //public bool checkIfDead()
     //{
