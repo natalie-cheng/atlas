@@ -12,7 +12,7 @@ public class Zeus : MonoBehaviour
     public Transform boat;
     private float projMass = 0.0001f;
     private float lastFireTime;
-    private const float fireInterval = 2f;
+    private const float fireInterval = 1f;
 
     private Vector2 OffsetToBoat => boat.position - transform.position;
     private Vector2 HeadingToBoat => OffsetToBoat.normalized;
