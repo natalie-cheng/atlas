@@ -63,7 +63,7 @@ public class Atlas_Level3 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f); // Atlas is invulnerable for 1 second
         isInvulnerable = false;
-        spriteRenderer.color = Color.blue; // Reset color or remove this if color change is handled elsewhere
+        spriteRenderer.color = Color.white; // Reset color or remove this if color change is handled elsewhere
     }
 
     // move and update sprite
