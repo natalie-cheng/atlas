@@ -3637,11 +3637,14 @@ MonoBehaviour:
 
     - Use space bar or click to shoot
 
-    - The birds
-    will fly at you and you must dodge while shooting
+    - Aim using
+    mouse (arrows will fly in the direction of your mouse)
 
-    - Each bird takes two
-    shots to die
+    - The birds will
+    fly at you and you must dodge while shooting
+
+    - Each bird takes two shots
+    to die
 
     - Colliding with a bird will cause you to take damage
 
@@ -4820,7 +4823,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 86bc31b497b2a4b2e8cb1b75a5d4d539, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4839,8 +4842,8 @@ Transform:
   m_GameObject: {fileID: 2116375329}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0169, y: -0.0797, z: -1}
-  m_LocalScale: {x: 6.9629364, y: 4.0027533, z: 1}
+  m_LocalPosition: {x: -0.0169, y: -0.1287, z: -1}
+  m_LocalScale: {x: 6.9629364, y: 4.0411797, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
