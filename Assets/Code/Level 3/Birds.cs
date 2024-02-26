@@ -13,9 +13,8 @@ public class Birds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Optionally, adjust the starting position based on the desired offset and pattern
-        float initialYPosition = transform.position.y; // Keep the original Y position as an offset
-        transform.position = new Vector3(CalculateX(time) - 5f, CalculateY(time) + initialYPosition, transform.position.z); // Adjust -5f as needed
+        float initialYPosition = transform.position.y; 
+        transform.position = new Vector3(CalculateX(time) - 5f, CalculateY(time) + initialYPosition, transform.position.z); 
     }
 
     // Update is called once per frame
@@ -39,7 +38,6 @@ public class Birds : MonoBehaviour
 
     private float CalculateX(float t)
     {
-        // Adjust these parameters to fit the screen and movement preferences
         return Mathf.Sin(t) * 10; // Scale and speed adjustment for X-axis
     }
 

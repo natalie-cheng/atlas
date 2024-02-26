@@ -40,11 +40,25 @@ public class Atlas_Level3 : MonoBehaviour
             Shoot();
             lastShotTime = Time.time; 
         }
+        flip();
 
 
 
 
+    }
 
+    void flip()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        if (horizontalInput < 0f)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (horizontalInput > 0f)
+        {
+            spriteRenderer.flipX = false;
+        }
     }
 
     public void TakeDamage(float damage)
