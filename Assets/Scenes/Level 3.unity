@@ -238,6 +238,7 @@ MonoBehaviour:
   speed: 8
   birdDmg: 25
   position: {x: 0, y: 0, z: 0}
+  spriteRenderer: {fileID: 105259872}
 --- !u!95 &105259870
 Animator:
   serializedVersion: 5
@@ -383,7 +384,7 @@ GameObject:
   - component: {fileID: 148347541}
   - component: {fileID: 148347543}
   - component: {fileID: 148347544}
-  - component: {fileID: 148347545}
+  - component: {fileID: 148347547}
   m_Layer: 0
   m_Name: Atlas
   m_TagString: Untagged
@@ -432,8 +433,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 1061672076, guid: 979af9915111b4e78a3be99c09ccaad6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -452,8 +453,8 @@ Transform:
   m_GameObject: {fileID: 148347539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.929, y: 0.4467, z: 0}
+  m_LocalScale: {x: 2.5258045, y: 1.8475025, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -484,7 +485,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &148347544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,8 +504,8 @@ MonoBehaviour:
   arrow: {fileID: 0}
   reloadTime: 1.1
   isInvulnerable: 0
---- !u!58 &148347545
-CircleCollider2D:
+--- !u!60 &148347547
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -536,8 +537,37 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.28011963, y: 0.52}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.059144307, y: 0.25326744}
+      - {x: -0.080894955, y: 0.2375856}
+      - {x: -0.107369386, y: 0.20471957}
+      - {x: -0.105851546, y: 0.060707852}
+      - {x: -0.13695219, y: -0.100712575}
+      - {x: -0.078891926, y: -0.14757323}
+      - {x: -0.09450568, y: -0.20417567}
+      - {x: -0.07685738, y: -0.24817058}
+      - {x: -0.0018046517, y: -0.26664656}
+      - {x: 0.0456194, y: -0.22704607}
+      - {x: 0.13739139, y: -0.22650522}
+      - {x: 0.091623016, y: -0.15917614}
+      - {x: 0.08966398, y: -0.11465625}
+      - {x: 0.117294736, y: -0.09533806}
+      - {x: 0.116516374, y: 0.034698386}
+      - {x: 0.0998052, y: 0.04948913}
+      - {x: 0.11561397, y: 0.1854833}
+      - {x: 0.08667474, y: 0.23473367}
+      - {x: 0.048961267, y: 0.26815385}
+  m_UseDelaunayMesh: 0
 --- !u!1 &166809734
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +744,7 @@ MonoBehaviour:
   health: 10
   speed: 1
   birdDmg: 25
+  spriteRenderer: {fileID: 253826933}
 --- !u!212 &253826933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1044,6 +1075,7 @@ MonoBehaviour:
   speed: 6
   birdDmg: 25
   position: {x: 0, y: 0, z: 0}
+  spriteRenderer: {fileID: 553062578}
 --- !u!95 &553062576
 Animator:
   serializedVersion: 5
@@ -2303,6 +2335,7 @@ MonoBehaviour:
   speed: 10
   birdDmg: 25
   position: {x: 0, y: 0, z: 0}
+  spriteRenderer: {fileID: 1186058785}
 --- !u!95 &1186058783
 Animator:
   serializedVersion: 5
@@ -2537,6 +2570,7 @@ MonoBehaviour:
   health: 10
   speed: 1
   birdDmg: 25
+  spriteRenderer: {fileID: 1204290739}
 --- !u!212 &1204290739
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4102,6 +4136,7 @@ MonoBehaviour:
   health: 10
   speed: 1
   birdDmg: 25
+  spriteRenderer: {fileID: 1744741985}
 --- !u!95 &1744741989
 Animator:
   serializedVersion: 5

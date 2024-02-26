@@ -8,6 +8,7 @@ public class Birds : MonoBehaviour
     public float speed = 0.5f; // Speed of the movement
     private float time = 0f; // Time parameter for the figure-eight calculation
     public float birdDmg = 25f;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,10 @@ public class Birds : MonoBehaviour
         if (health == 0)
         {
             Die();
+        }
+        else if (health == 5f)
+        {
+            spriteRenderer.color = Color.red;
         }
 
         // Update time

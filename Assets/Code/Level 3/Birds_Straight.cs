@@ -11,6 +11,8 @@ public class BirdManager : MonoBehaviour
     public float birdDmg = 25f;
     private Vector3 moveDirection;
     public Vector3 position;
+    public SpriteRenderer spriteRenderer;
+
 
     void Start()
     {
@@ -26,6 +28,10 @@ public class BirdManager : MonoBehaviour
         if (health <= 0)
         {
             Die();
+        }
+        else if (health == 5f)
+        {
+            spriteRenderer.color = Color.red;
         }
         MoveTowardsAtlas();
     }
