@@ -11,7 +11,7 @@ public class CyclopsSpawner : MonoBehaviour
     private float SpawnInterval = 2.0f;
 
     /// Decrease Spawn Interval
-    private float SpawnDecreaseTime = 0.015f;
+    private float SpawnDecreaseTime = 0.065f;
 
     // Minimum amount that SpawnInterval can be
     private float MinimumSpawnInterval = 0.75f;

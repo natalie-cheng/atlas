@@ -15,8 +15,9 @@ public class Cyclops : MonoBehaviour
     // sprite renderer of cyclops
     public SpriteRenderer spriteRender;
 
-    // Accesses Atlas 
+    // Accesses Atlas and its sprite renderer
     private Atlas_Level5 atlas;
+    private SpriteRenderer atlasSpriteRenderer;
 
     /// Transform from the Atlas object used to find the player's position
     private Transform atlasTransform;
@@ -28,6 +29,11 @@ public class Cyclops : MonoBehaviour
 
     /// Unit vector in the direction of the Atlas, relative to cyclops
     private UnityEngine.Vector2 HeadingToPlayer => OffsetToPlayer.normalized;
+    // Time for cyclop's constant attack
+    private float currentTime;
+    private float tick;
+    // Checks if Atlas is Hit
+    public bool isAtlasHitRunning = false;
 
 
     // Start is called before the first frame update
@@ -41,6 +47,7 @@ public class Cyclops : MonoBehaviour
         // Gets the sprite renderer from Unity
         spriteRender = GetComponent<SpriteRenderer>();
         health = 100;
+        atlasSpriteRenderer = atlas.GetComponent<SpriteRenderer>();
 
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -58,6 +65,8 @@ public class Cyclops : MonoBehaviour
         //{
         //    Debug.LogError("Rigidbody component not found!");
         //}
+        currentTime = Time.time;
+        tick = 1f;
     }
 
     // Update is called once per frame
@@ -106,15 +115,15 @@ public class Cyclops : MonoBehaviour
         rb.velocity = directionToPlayer * speed;
     }
 
-    // Coroutine to introduce a delay before attacking
-    IEnumerator HitDelay()
-    {
-        yield return new WaitForSeconds(1.5f);
-        if (IsPlayerInRange())
-        {
-            hit();
-        }
-    }
+    //// Coroutine to introduce a delay before attacking
+    //IEnumerator HitDelay()
+    //{
+    //    yield return new WaitForSeconds(1.0f);
+    //    if (IsPlayerInRange())
+    //    {
+    //        hit();
+    //    }
+    //}
     // Checks if Atlas is within attack range
     private bool IsPlayerInRange()
     {
@@ -139,17 +148,37 @@ public class Cyclops : MonoBehaviour
 
             //Atlas_Level5.health -= cyclopsDamage;
             Lvl5UI.AtlasChangeHealth(cyclopsDamage);
+            atlasSpriteRenderer.color = Color.red;
+            //Debug.Log("here-1");
+            StartCoroutine(atlasHit());
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    // Coroutine to handle the invulnerability duration
+    private IEnumerator atlasHit()
     {
+        if (isAtlasHitRunning) yield break; // Exit if already running
+        isAtlasHitRunning = true;
+
+        yield return new WaitForSeconds(0.2f); // Atlas is invulnerable for 1 second
+        atlasSpriteRenderer.color = Color.white; // Reset color or remove this if color change is handled elsewhere
+
+        isAtlasHitRunning = false; // Reset flag
+    }
+
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (isAtlasHitRunning)
+        {
+            return; // Exit if already running
+        }
         rb.velocity = Vector2.zero;
         // Check if collided with Atlas
-        if (collision.gameObject == atlas.gameObject)
+        if (collision.gameObject == atlas.gameObject && (Time.time > currentTime + tick))
         {
             // Hit the player
             hit();
+            currentTime = Time.time;
         }
     }
 
@@ -161,6 +190,7 @@ public class Cyclops : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            atlasSpriteRenderer.color = Color.white;
         }
     }
 

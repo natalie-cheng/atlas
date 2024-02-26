@@ -8,7 +8,7 @@ public class Atlas_Level5 : MonoBehaviour
     public static Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private float speed = 2;
-    private float detectionRadius = 1.5f;
+    private float detectionRadius = 1.75f;
     //private float forceAmount = 10000f;
     private float facingThreshold = 0.3f;
     private float lastHitTime = 0f;
@@ -18,8 +18,9 @@ public class Atlas_Level5 : MonoBehaviour
     public static float maxHealth = 100;
     // Animator reference
     public Animator animator;
-    private int swingAnimationDuration = 1;
+    //private int swingAnimationDuration = 1;
     public bool isSwinging = false;
+    public bool isWalking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,7 @@ public class Atlas_Level5 : MonoBehaviour
         flip();
         Move();
         check_if_hit();
-        animate();
+        HandleInput();
     }
 
     private void Move()
@@ -90,6 +91,7 @@ public class Atlas_Level5 : MonoBehaviour
     {
         // Assuming Cyclops has a Rigidbody2D component
         Rigidbody2D cyclopsRb = cyclop.GetComponent<Rigidbody2D>();
+        SpriteRenderer cyclopssprite = cyclop.GetComponent<SpriteRenderer>();
         if (cyclopsRb != null)
         {
             //// Calculate the direction away from the collision point
@@ -99,9 +101,17 @@ public class Atlas_Level5 : MonoBehaviour
             //// Apply the force to push the Cyclops back
             //cyclopsRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
             cyclop.health -= swordDamage;
-            //Debug.Log(cyclop.health);
+            //cyclopssprite.color = Color.red;
+            //StartCoroutine(cyclopsHit(cyclopssprite));
         }
     }
+
+    //// Coroutine to handle the invulnerability duration
+    //private IEnumerator cyclopsHit(SpriteRenderer cyclopssprite)
+    //{
+    //    yield return new WaitForSeconds(0.2f); // Atlas is invulnerable for 1 second
+    //    cyclopssprite.color = Color.white; // Reset color or remove this if color change is handled elsewhere
+    //}
 
     //// Checks if object is in hit range and Atlas is facing Cyclops
     //private bool IsObjectInHitRange(Transform otherTransform)
@@ -173,6 +183,11 @@ public class Atlas_Level5 : MonoBehaviour
     // Sets orientation of sprite
     void flip()
     {
+        if (isSwinging)
+        {
+            return;
+        }
+
         // Gets horizontal and vertical inputs
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -187,35 +202,75 @@ public class Atlas_Level5 : MonoBehaviour
         }
     }
 
-    private void animate()
-    {
-        // Check for user input to set animation parameters
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        bool isWalking = (horizontalInput != 0 || verticalInput != 0);
+    //private void animate()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space) && !isSwinging)
+    //    {
+    //        StartCoroutine(SwingSword());
+    //    }
 
-        // Set animation parameters based on character state
-        animator.SetBool("walking", isWalking);
+    //    // Check for user input to set animation parameters
+    //    float horizontalInput = Input.GetAxis("Horizontal");
+    //    float verticalInput = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isSwinging)
-        {
-            StartCoroutine(SwingSword());
-        }
-    }
+    //    if (horizontalInput != 0 || verticalInput != 0)
+    //    {
+    //        StartCoroutine(Walk());
+    //    }
 
-    IEnumerator SwingSword()
-    {
-        Debug.Log("SwingSword coroutine started");
-        isSwinging = true;
-        animator.SetBool("swinging", true);
+    //    animator.SetBool("walking", (horizontalInput != 0 || verticalInput != 0));
+    //}
 
-        // Adjust this value according to the duration of your swing animation
-        yield return new WaitForSeconds(0.006f); // Change 0.5f to match your animation's duration
+    //IEnumerator SwingSword()
+    //{
+    //    Cyclops[] allCyclops = GameObject.FindObjectsOfType<Cyclops>();
+    //    foreach (Cyclops cyclop in allCyclops)
+    //    {
+    //        if(cyclop.isAtlasHitRunning)
+    //        {
+    //            yield break; // Exit if already running
+    //        }
+    //    }
+    //    //Debug.Log("SwingSword coroutine started");
+    //    isSwinging = true;
+    //    animator.SetBool("swinging", true);
 
-        Debug.Log("Swing animation complete");
-        animator.SetBool("swinging", false);
-        isSwinging = false;
-    }
+    //    // Adjust this value according to the duration of your swing animation
+    //    yield return new WaitForSeconds(0.000001f); // Change 0.5f to match your animation's duration
+
+    //    //Debug.Log("Swing animation complete");
+    //    animator.SetBool("swinging", false);
+    //    isSwinging = false;
+    //}
+
+
+    //IEnumerator Walk()
+    //{
+    //    Cyclops[] allCyclops = GameObject.FindObjectsOfType<Cyclops>();
+    //    foreach (Cyclops cyclop in allCyclops)
+    //    {
+    //        if (cyclop.isAtlasHitRunning)
+    //        {
+    //            yield break; // Exit if already running
+    //        }
+    //    }
+    //    isWalking = true;
+    //    animator.SetBool("walking", true);
+
+    //    for(int i = 0; i < 1000; i++){
+    //        yield return new WaitForSeconds(0.0001f);
+    //        if (Input.GetKeyDown(KeyCode.Space))
+    //        {
+    //            animator.SetBool("walking", false);
+    //            StartCoroutine(SwingSword());
+    //            yield break;
+    //        }
+    //    }
+    //    //Debug.Log("Swing animation complete");
+    //    animator.SetBool("walking", false);
+    //    isWalking = false;
+    //}
+
     // checks if Atlas is dead
     //public bool checkIfDead()
     //{
@@ -232,5 +287,70 @@ public class Atlas_Level5 : MonoBehaviour
     //{
     //    Destroy(this);
     //}
+
+    // This method should be called from Update to handle input every frame
+    private void HandleInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !isSwinging)
+        {
+            isSwinging = true;
+            StartCoroutine(SwingSword());
+        }
+
+        // Check for user input to set animation parameters
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        bool isMoving = horizontalInput != 0 || verticalInput != 0;
+
+        // Start Walk coroutine only if not already walking and there is movement input
+        if (isMoving && !isWalking)
+        {
+            StartCoroutine(Walk());
+        }
+
+        // Set walking animation parameter
+        animator.SetBool("walking", isMoving);
+    }
+
+    private IEnumerator SwingSword()
+    {
+        isSwinging = true;
+        animator.SetBool("swinging", true);
+
+        // Wait for the duration of your swing animation
+        // Adjust this value according to the duration of your swing animation
+        yield return new WaitForSeconds(0.06f); // Example: 0.06 second for swing animation
+
+        animator.SetBool("swinging", false);
+        isSwinging = false;
+    }
+
+    private IEnumerator Walk()
+    {
+        isWalking = true;
+
+        while (isWalking)
+        {
+            animator.SetBool("walking", true);
+
+            // This loop now runs as long as the character is moving
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            isWalking = horizontalInput != 0 || verticalInput != 0;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                //Debug.Log("came here");
+                // Exit if swinging starts
+                animator.SetBool("walking", false);
+                yield break;
+            }
+
+            // A small delay to allow for input checking each frame
+            yield return null;
+        }
+
+        animator.SetBool("walking", false);
+    }
 
 }

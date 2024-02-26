@@ -15,7 +15,7 @@ public class Lvl5UI : MonoBehaviour
     public Image healthBar;
 
     // total timer time
-    private float totalTime = 121f;
+    private float totalTime = 61f;
     // track current time
     private float currentTime;
 
