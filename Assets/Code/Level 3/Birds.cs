@@ -10,11 +10,12 @@ public class Birds : MonoBehaviour
     public float birdDmg = 25f;
     public SpriteRenderer spriteRenderer;
     private float previousXPosition; // To track the direction of movement
+    private float initialYPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        float initialYPosition = transform.position.y; 
+        initialYPosition = transform.position.y;
         transform.position = new Vector3(CalculateX(time) - 5f, CalculateY(time) + initialYPosition, transform.position.z);
         previousXPosition = transform.position.x;
     }
@@ -37,7 +38,7 @@ public class Birds : MonoBehaviour
 
         // Calculate new position
         float newXPosition = CalculateX(time);
-        float newYPosition = CalculateY(time) + transform.position.y;
+        float newYPosition = CalculateY(time) + initialYPosition; // Use initialYPosition instead of transform.position.y
         transform.position = new Vector3(newXPosition, newYPosition, transform.position.z);
 
         // Check direction of movement to flip sprite accordingly
@@ -61,7 +62,7 @@ public class Birds : MonoBehaviour
 
     private float CalculateY(float t)
     {
-        return Mathf.Sin(t) * Mathf.Cos(t) * 0.01f; // Creates the figure-eight pattern
+        return Mathf.Sin(t) * Mathf.Cos(t); // Creates the figure-eight pattern
     }
 
 
