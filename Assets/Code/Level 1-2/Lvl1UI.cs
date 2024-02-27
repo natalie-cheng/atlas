@@ -15,7 +15,7 @@ public class Lvl1UI : MonoBehaviour
     public GameObject instructions;
 
     // total timer time
-    private float totalTime = 121f;
+    private float totalTime = 45f;
     // track current time
     private float currentTime;
 

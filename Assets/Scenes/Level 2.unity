@@ -2949,7 +2949,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -6332,7 +6332,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -24, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 1.75, z: 1}
+  m_LocalScale: {x: 2, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6349,7 +6349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c454121ef0b864643a0375b679bb1ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
 --- !u!1001 &4131029339688943049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6448,8 +6447,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4528302, g: 0.17728728, b: 0.17728728, a: 1}
+  m_Sprite: {fileID: -381323408, guid: 66f5eb56a7b201b4fb7114e4b359ec6e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6499,6 +6498,7 @@ GameObject:
   - component: {fileID: 5321345237399225430}
   - component: {fileID: 1607648364696979483}
   - component: {fileID: 8544770772423257907}
+  - component: {fileID: 8544770772423257908}
   m_Layer: 7
   m_Name: BoatLvl2
   m_TagString: BoatLvl2
@@ -6542,7 +6542,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.06, y: 1.13}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6550,27 +6550,49 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.15234375, y: 0.47265625}
-      - {x: -0.29296875, y: 0.40234375}
-      - {x: -0.40234375, y: 0.29296875}
-      - {x: -0.47265625, y: 0.15234375}
-      - {x: -0.5, y: 0}
-      - {x: -0.47265625, y: -0.15234375}
-      - {x: -0.40234375, y: -0.29296875}
-      - {x: -0.29296875, y: -0.40234375}
-      - {x: -0.15234375, y: -0.47265625}
-      - {x: 0, y: -0.5}
-      - {x: 0.15234375, y: -0.47265625}
-      - {x: 0.29296875, y: -0.40234375}
-      - {x: 0.40234375, y: -0.29296875}
-      - {x: 0.47265625, y: -0.15234375}
-      - {x: 0.5, y: 0}
-      - {x: 0.47265625, y: 0.15234375}
-      - {x: 0.40234375, y: 0.29296875}
-      - {x: 0.29296875, y: 0.40234375}
-      - {x: 0.15234375, y: 0.47265625}
+    - - {x: 0.45999998, y: -0.53499997}
+      - {x: 0.48, y: -0.49499997}
+      - {x: 0.53, y: -0.355}
+      - {x: 0.53, y: 0.39499998}
+      - {x: 0.48, y: 0.48499998}
+      - {x: 0.34, y: 0.53499997}
+      - {x: 0.16, y: 0.515}
+      - {x: 0.11, y: 0.565}
+      - {x: -0.03, y: 0.565}
+      - {x: -0.24, y: 0.515}
+      - {x: -0.28, y: 0.53499997}
+      - {x: -0.5, y: 0.49499997}
+      - {x: -0.53, y: 0.435}
+      - {x: -0.53, y: -0.48499998}
+      - {x: -0.51, y: -0.53499997}
+      - {x: -0.42, y: -0.565}
+      - {x: -0.26, y: -0.565}
+      - {x: -0.19, y: -0.545}
+      - {x: 0.089999996, y: -0.53499997}
+      - {x: 0.19999999, y: -0.565}
+      - {x: 0.32, y: -0.565}
   m_UseDelaunayMesh: 0
+--- !u!95 &8544770772423257908
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369822967324865228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0b8f7202f9fb2b4fbdb57001efe7524, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

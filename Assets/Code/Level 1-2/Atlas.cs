@@ -10,7 +10,7 @@ public class Atlas : MonoBehaviour
     public static float health = 100;
     public static float maxHealth = 100;
     public static float xPos;
-    public float speed = 2;
+    private float speed = 2;
 
     // call start
     private void Start()
@@ -19,6 +19,9 @@ public class Atlas : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         xPos = transform.position.x;
+
+        if (GameUI.levelTrack == 1) speed = 2.5f;
+        else if (GameUI.levelTrack == 2) speed = 2f;
     }
 
     // frame update
