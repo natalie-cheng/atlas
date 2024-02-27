@@ -7,7 +7,7 @@ public class Atlas_Level5 : MonoBehaviour
     // vars
     public static Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private float speed = 2;
+    private float speed = 3;
     private float detectionRadius = 1.75f;
     //private float forceAmount = 10000f;
     private float facingThreshold = 0.3f;
@@ -51,7 +51,10 @@ public class Atlas_Level5 : MonoBehaviour
 
         // set the direction, increase by speed
         Vector2 vec = new Vector2(horizontal, vertical);
-        rb.velocity = vec * speed;
+        if(rb != null)
+        {
+            rb.velocity = vec * speed;
+        }
         animator.SetBool("walking", true);
     }
 

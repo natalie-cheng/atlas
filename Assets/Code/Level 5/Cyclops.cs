@@ -8,7 +8,7 @@ public class Cyclops : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     public float health = 100f;
-    private float speed = 1.0f;
+    private float speed = 1f;
     private float attackRange = 1.0f;
     private float cyclopsDamage = 10f;
     private float forceAmount = 100f;
@@ -51,6 +51,7 @@ public class Cyclops : MonoBehaviour
 
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        speed = Random.Range(0.2f, 2.2f);
 
 
         //if (atlasRb != null)
