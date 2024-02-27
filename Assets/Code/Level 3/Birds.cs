@@ -9,12 +9,14 @@ public class Birds : MonoBehaviour
     private float time = 0f; // Time parameter for the figure-eight calculation
     public float birdDmg = 25f;
     public SpriteRenderer spriteRenderer;
+    private float previousXPosition; // To track the direction of movement
 
     // Start is called before the first frame update
     void Start()
     {
         float initialYPosition = transform.position.y; 
-        transform.position = new Vector3(CalculateX(time) - 5f, CalculateY(time) + initialYPosition, transform.position.z); 
+        transform.position = new Vector3(CalculateX(time) - 5f, CalculateY(time) + initialYPosition, transform.position.z);
+        previousXPosition = transform.position.x;
     }
 
     // Update is called once per frame
@@ -32,8 +34,24 @@ public class Birds : MonoBehaviour
         // Update time
         time += Time.deltaTime * speed;
 
+
         // Calculate new position
-        transform.position = new Vector3(CalculateX(time), CalculateY(time) + transform.position.y, transform.position.z);
+        float newXPosition = CalculateX(time);
+        float newYPosition = CalculateY(time) + transform.position.y;
+        transform.position = new Vector3(newXPosition, newYPosition, transform.position.z);
+
+        // Check direction of movement to flip sprite accordingly
+        if (newXPosition > previousXPosition)
+        {
+            spriteRenderer.flipX = true; // Bird is moving to the left, flip it
+        }
+        else if (newXPosition < previousXPosition)
+        {
+            spriteRenderer.flipX = false; // Bird is moving to the right, keep it as is
+        }
+
+        // Update previousXPosition for the next frame
+        previousXPosition = newXPosition;
     }
 
     private float CalculateX(float t)
