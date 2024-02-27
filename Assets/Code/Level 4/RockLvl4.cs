@@ -25,6 +25,7 @@ public class Rock : MonoBehaviour
         if (collision.collider.gameObject.GetComponent<Boat>())
         {
             collision.collider.gameObject.GetComponent<Boat>().GoLeft();
+            Destroy(gameObject);
         }
     }
 }

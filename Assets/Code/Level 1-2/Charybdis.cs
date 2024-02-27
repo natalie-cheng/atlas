@@ -12,6 +12,7 @@ public class Charybdis : MonoBehaviour
     private float tick;
     private bool withinRange;
     private float distance;
+    private float totalRange = 8f;
 
     private void Start()
     {
@@ -47,12 +48,15 @@ public class Charybdis : MonoBehaviour
             // get the distance
             distance = direction.magnitude;
         }
-
+        
         // calculate gravity force
         float force = (gravityConstant * mass * boatrb.mass) / (distance * distance);
 
-        // apply gravity force to boat
-        boatrb.AddForce(-direction.normalized * force);
+        if (distance < totalRange)
+        {
+            // apply gravity force to boat
+            boatrb.AddForce(-direction.normalized * force);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

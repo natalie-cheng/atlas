@@ -27,6 +27,7 @@ public class Current : MonoBehaviour
         if (collision.collider.gameObject.GetComponent<Boat>())
         {
             collision.collider.gameObject.GetComponent<Boat>().GoRight();
+            Destroy(gameObject);
         }
     }
 }

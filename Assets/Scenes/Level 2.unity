@@ -2410,7 +2410,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -2949,7 +2949,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -3045,7 +3045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -4731,7 +4731,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -4984,7 +4984,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -5437,7 +5437,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
@@ -5991,7 +5991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1745009036416143126, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: mass
-      value: 215
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4002472686097772534, guid: 6d5448a9daf144ccc9a3fc90a3849fde, type: 3}
       propertyPath: m_Name
