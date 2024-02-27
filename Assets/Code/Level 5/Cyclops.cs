@@ -6,6 +6,7 @@ public class Cyclops : MonoBehaviour
 {
     // vars
     private Rigidbody2D rb;
+    private Transform t;
     private SpriteRenderer spriteRenderer;
     public float health = 100f;
     private float speed = 1f;
@@ -40,6 +41,7 @@ public class Cyclops : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        t = GetComponent<Transform>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         atlas = FindObjectOfType<Atlas_Level5>();
         atlasTransform = atlas.transform;
@@ -49,9 +51,13 @@ public class Cyclops : MonoBehaviour
         health = 100;
         atlasSpriteRenderer = atlas.GetComponent<SpriteRenderer>();
 
+
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        speed = Random.Range(0.2f, 2.2f);
+        speed = Random.Range(0.5f, 1.5f) * 1.25f;
+        float size = 3f * 1.25f / speed;
+        t.localScale = new Vector3(size, size, 0);
+
 
 
         //if (atlasRb != null)

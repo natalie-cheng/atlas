@@ -7,7 +7,7 @@ public class Atlas_Level5 : MonoBehaviour
     // vars
     public static Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private float speed = 3;
+    private float speed = 3.5f;
     private float detectionRadius = 1.75f;
     //private float forceAmount = 10000f;
     private float facingThreshold = 0.3f;
