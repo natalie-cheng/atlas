@@ -35,6 +35,8 @@ public class Cyclops : MonoBehaviour
     private float tick;
     // Checks if Atlas is Hit
     public bool isAtlasHitRunning = false;
+    // Animator reference
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -57,6 +59,7 @@ public class Cyclops : MonoBehaviour
         speed = Random.Range(0.5f, 1.5f) * 1.25f;
         float size = 3f * 1.25f / speed;
         t.localScale = new Vector3(size, size, 0);
+        animator = GetComponent<Animator>();
 
 
 
@@ -196,9 +199,34 @@ public class Cyclops : MonoBehaviour
     {
         if(health <= 0)
         {
-            Destroy(gameObject);
+            // Get the BoxCollider2D component from the Cyclops
+            BoxCollider2D collider = this.GetComponent<BoxCollider2D>();
+            Destroy(collider);
+            this.rb.velocity = new Vector2(0f, 0f);
+
+
+            StartCoroutine(CyclopsDead());
             atlasSpriteRenderer.color = Color.white;
         }
+    }
+
+    private IEnumerator CyclopsDead()
+    {
+        animator.SetBool("cyclopsDead", true);
+
+        //if (OffsetToPlayer.x < 0f)
+        //{
+        //    spriteRender.flipX = false;
+        //}
+        //else if (OffsetToPlayer.x > 0f)
+        //{
+        //    spriteRender.flipX = true;
+        //}
+
+        // Wait for the duration of your swing animation
+        // Adjust this value according to the duration of your swing animation
+        yield return new WaitForSeconds(0.35f); // Example: 0.06 second for swing animation
+        Destroy(gameObject);
     }
 
     // Sets orientation of sprite
