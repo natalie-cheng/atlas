@@ -67,7 +67,7 @@ public class Atlas_Level5 : MonoBehaviour
 
     public void check_if_hit()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetAxis("Attack") == 1f || Input.GetKeyDown(KeyCode.Space)))
         {
             // Collect all instances of a cyclops
             Cyclops[] allCyclops = GameObject.FindObjectsOfType<Cyclops>();
@@ -294,7 +294,7 @@ public class Atlas_Level5 : MonoBehaviour
     // This method should be called from Update to handle input every frame
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isSwinging)
+        if ((Input.GetAxis("Attack") == 1f || Input.GetKeyDown(KeyCode.Space)) && !isSwinging)
         {
             isSwinging = true;
             StartCoroutine(SwingSword());
@@ -341,7 +341,7 @@ public class Atlas_Level5 : MonoBehaviour
             float verticalInput = Input.GetAxis("Vertical");
             isWalking = horizontalInput != 0 || verticalInput != 0;
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if ((Input.GetAxis("Attack") == 1f || Input.GetKeyDown(KeyCode.Space)))
             {
                 //Debug.Log("came here");
                 // Exit if swinging starts
