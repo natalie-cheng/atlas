@@ -19,29 +19,28 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
-        isSwinging = Atlas_Level5.isSwinging;
-        hitCyclops = Atlas_Level5.hitCyclops;
-        isAtlasHitRunning = Cyclops.isAtlasHitRunning;
-        isWalking = Atlas_Level5.isWalking;
     }
 
     // Update is called once per frame
     void Update()
     {
+        isSwinging = Atlas_Level5.isSwinging;
+        hitCyclops = Atlas_Level5.hitCyclops;
+        isAtlasHitRunning = Cyclops.isAtlasHitRunning;
+        isWalking = Atlas_Level5.isWalking;
+
+
         if (isSwinging)
         {
-            audioSrc.clip = swordSwing;
-            audioSrc.Play();
+            StartCoroutine(playSwordSound());
         }
         if(hitCyclops)
         {
-            audioSrc.clip = cyclopsDead;
-            audioSrc.Play();
+            StartCoroutine(playCyclopsSound());
         }
         if (isAtlasHitRunning)
         {
-            audioSrc.clip = atlasGrunt;
-            audioSrc.Play();
+            StartCoroutine(playGruntSound());
         }
         //if (isWalking)
         //{
@@ -49,6 +48,26 @@ public class AudioManager : MonoBehaviour
         //    audioSrc.Play();
         //}
     }
+    private IEnumerator playSwordSound()
+    {
+        audioSrc.clip = swordSwing;
+        audioSrc.Play();
+        yield return new WaitForSeconds(0.06f);
+    }
+    private IEnumerator playCyclopsSound()
+    {
+        audioSrc.clip = cyclopsDead;
+        audioSrc.Play();
+        yield return new WaitForSeconds(0.06f);
+    }
+    private IEnumerator playGruntSound()
+    {
+        audioSrc.clip = atlasGrunt;
+        audioSrc.Play();
+        yield return new WaitForSeconds(0.06f);
+    }
+
+
 
     //public void PlaySound(string clip)
     //{
