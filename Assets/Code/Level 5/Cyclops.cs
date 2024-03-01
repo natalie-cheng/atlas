@@ -34,7 +34,7 @@ public class Cyclops : MonoBehaviour
     private float currentTime;
     private float tick;
     // Checks if Atlas is Hit
-    public bool isAtlasHitRunning = false;
+    public static bool isAtlasHitRunning = false;
     // Animator reference
     public Animator animator;
 

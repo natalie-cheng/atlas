@@ -19,8 +19,9 @@ public class Atlas_Level5 : MonoBehaviour
     // Animator reference
     public Animator animator;
     //private int swingAnimationDuration = 1;
-    public bool isSwinging = false;
-    public bool isWalking = false;
+    public static bool isSwinging = false;
+    public static bool isWalking = false;
+    public static bool hitCyclops = false;
 
     // Start is called before the first frame update
     void Start()
@@ -92,6 +93,7 @@ public class Atlas_Level5 : MonoBehaviour
 
     private void hit(Cyclops cyclop)
     {
+
         // Assuming Cyclops has a Rigidbody2D component
         Rigidbody2D cyclopsRb = cyclop.GetComponent<Rigidbody2D>();
         SpriteRenderer cyclopssprite = cyclop.GetComponent<SpriteRenderer>();
@@ -107,6 +109,7 @@ public class Atlas_Level5 : MonoBehaviour
             //cyclopssprite.color = Color.red;
             //StartCoroutine(cyclopsHit(cyclopssprite));
         }
+        hitCyclops = true;
     }
 
     //// Coroutine to handle the invulnerability duration
