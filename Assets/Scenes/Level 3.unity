@@ -408,7 +408,8 @@ GameObject:
   - component: {fileID: 148347541}
   - component: {fileID: 148347543}
   - component: {fileID: 148347544}
-  - component: {fileID: 148347547}
+  - component: {fileID: 148347545}
+  - component: {fileID: 148347546}
   m_Layer: 0
   m_Name: Atlas
   m_TagString: Untagged
@@ -457,7 +458,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1061672076, guid: 979af9915111b4e78a3be99c09ccaad6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38dd3bd4389284b42ae88210730f6106, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -477,8 +478,8 @@ Transform:
   m_GameObject: {fileID: 148347539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.929, y: 0.4467, z: 0}
-  m_LocalScale: {x: 2.75, y: 2.75, z: 1}
+  m_LocalPosition: {x: -6.85, y: 0.06, z: 0}
+  m_LocalScale: {x: 2.2, y: 2.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -528,7 +529,7 @@ MonoBehaviour:
   arrow: {fileID: 0}
   reloadTime: 1.1
   isInvulnerable: 0
---- !u!60 &148347547
+--- !u!60 &148347545
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -564,7 +565,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28011963, y: 0.52}
+    oldSize: {x: 0.51, y: 0.52}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -572,26 +573,48 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.059144307, y: 0.25326744}
-      - {x: -0.080894955, y: 0.2375856}
-      - {x: -0.107369386, y: 0.20471957}
-      - {x: -0.105851546, y: 0.060707852}
-      - {x: -0.13695219, y: -0.100712575}
-      - {x: -0.078891926, y: -0.14757323}
-      - {x: -0.09450568, y: -0.20417567}
-      - {x: -0.07685738, y: -0.24817058}
-      - {x: -0.0018046517, y: -0.26664656}
-      - {x: 0.0456194, y: -0.22704607}
-      - {x: 0.13739139, y: -0.22650522}
-      - {x: 0.091623016, y: -0.15917614}
-      - {x: 0.08966398, y: -0.11465625}
-      - {x: 0.117294736, y: -0.09533806}
-      - {x: 0.116516374, y: 0.034698386}
-      - {x: 0.0998052, y: 0.04948913}
-      - {x: 0.11561397, y: 0.1854833}
-      - {x: 0.08667474, y: 0.23473367}
-      - {x: 0.048961267, y: 0.26815385}
+    - - {x: 0.08480668, y: 0.07109841}
+      - {x: 0.07914734, y: 0.12804922}
+      - {x: 0.08406841, y: 0.20978236}
+      - {x: -0.03416136, y: 0.24270165}
+      - {x: -0.09885069, y: 0.19566742}
+      - {x: -0.11827624, y: 0.15858674}
+      - {x: -0.10890957, y: 0.07186202}
+      - {x: -0.16609839, y: -0.056524597}
+      - {x: -0.14768502, y: -0.059025496}
+      - {x: -0.11, y: -0.195}
+      - {x: -0.089999996, y: -0.205}
+      - {x: 0.12291931, y: -0.23380442}
+      - {x: 0.099999994, y: -0.125}
+      - {x: 0.09175739, y: -0.0034754025}
+      - {x: 0.09589183, y: 0.040659048}
+    - - {x: 0.08, y: 0.065}
+      - {x: 0.13, y: 0.065}
+      - {x: 0.057183735, y: 0.065}
+      - {x: 0.08, y: 0.035}
+      - {x: 0.07, y: 0.035}
   m_UseDelaunayMesh: 0
+--- !u!95 &148347546
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148347539}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 358b2542c67994fc198e5bec5308ce27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &166809734
 GameObject:
   m_ObjectHideFlags: 0

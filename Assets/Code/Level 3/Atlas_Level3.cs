@@ -16,6 +16,8 @@ public class Atlas_Level3 : MonoBehaviour
     public float reloadTime = 1.5f;
     public static float maxHealth = 100;
     public bool isInvulnerable = false;
+    private Animator animator;
+
 
     // call start
     private void Start()
@@ -23,7 +25,8 @@ public class Atlas_Level3 : MonoBehaviour
         // initialize atlas vars
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        lastShotTime = -reloadTime; 
+        lastShotTime = -reloadTime;
+        animator = GetComponent<Animator>();
     }
 
     // frame update
@@ -37,7 +40,17 @@ public class Atlas_Level3 : MonoBehaviour
         Move();
         if ((Input.GetAxis("Attack") == 1f || Input.GetKeyDown(KeyCode.Space)) && Time.time - lastShotTime >= reloadTime)
         {
-            Shoot();
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (mousePos.x > transform.position.x && spriteRenderer.flipX == true)
+            {
+                spriteRenderer.flipX = false;
+            }
+            if (mousePos.x < transform.position.x && spriteRenderer.flipX == false)
+            {
+                spriteRenderer.flipX = true;
+            }
+
+            StartCoroutine(shootArrow());
             lastShotTime = Time.time; 
         }
         flip();
@@ -46,6 +59,28 @@ public class Atlas_Level3 : MonoBehaviour
 
 
     }
+
+    private void Shoot()
+    {
+        Vector2 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 position = gameObject.transform.position;
+        diff = diff - position;
+        Vector2 direction = diff.normalized;
+        Instantiate(bullet, rb.position + direction, Quaternion.identity);
+
+    }
+
+    private IEnumerator shootArrow()
+    {
+        animator.SetBool("isShooting", true);
+
+        yield return new WaitForSeconds(0.2f);
+
+
+        animator.SetBool("isShooting", false);
+        Shoot(); // Now spawn the bullet after the animation has started
+    }
+
 
     void flip()
     {
@@ -66,18 +101,18 @@ public class Atlas_Level3 : MonoBehaviour
         if (!isInvulnerable)
         {
             isInvulnerable = true;
-            Lvl3UI.changeHealth(damage); // Assuming this method reduces Atlas's health
+            Lvl3UI.changeHealth(damage); 
             spriteRenderer.color = Color.red;
             StartCoroutine(InvulnerabilityTimer());
         }
     }
 
-    // Coroutine to handle the invulnerability duration
+
     private IEnumerator InvulnerabilityTimer()
     {
-        yield return new WaitForSeconds(1f); // Atlas is invulnerable for 1 second
+        yield return new WaitForSeconds(1f); 
         isInvulnerable = false;
-        spriteRenderer.color = Color.white; // Reset color or remove this if color change is handled elsewhere
+        spriteRenderer.color = Color.white; 
     }
 
     // move and update sprite
@@ -93,17 +128,20 @@ public class Atlas_Level3 : MonoBehaviour
         {
             vec.Normalize();
         }
+
+        if (vec.x != 0 || vec.y != 0)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
+
         rb.velocity = vec * speed;
     }
 
-    private void Shoot()
-    {
-        Vector2 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 position = gameObject.transform.position;
-        diff = diff - position;
-        Vector2 direction = diff.normalized;
-        Instantiate(bullet, rb.position + direction, Quaternion.identity);
-    }
+
 
     private void die()
     {
