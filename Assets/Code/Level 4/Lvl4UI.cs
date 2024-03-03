@@ -25,11 +25,11 @@ public class Lvl4UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Boat.xPos <= -35)
+        if (Boat.xPos <= -35 || EndDetector.xPos <= -35)
         {
             GameOver(false);
         }
-        else if (Boat.xPos >= 35)
+        else if (Boat.xPos >= 25)
         {
             GameOver(true);
         }

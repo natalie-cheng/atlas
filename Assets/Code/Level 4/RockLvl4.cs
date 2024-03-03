@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour
 {
+    public static bool didHitBoat = false;
     private float speed = 5f;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class Rock : MonoBehaviour
         if (collision.collider.gameObject.GetComponent<Boat>())
         {
             collision.collider.gameObject.GetComponent<Boat>().GoLeft();
+            didHitBoat = true;
             Destroy(gameObject);
         }
     }
