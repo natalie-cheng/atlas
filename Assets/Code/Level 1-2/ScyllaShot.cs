@@ -22,7 +22,7 @@ public class ScyllaShot : MonoBehaviour
     private void Start()
     {
         // find the player
-        player = FindObjectOfType<Atlas>().transform;
+        player = FindObjectOfType<AtlasLvl2>().transform;
         // initialize shot rigidbody
         rb = GetComponent<Rigidbody2D>();
 

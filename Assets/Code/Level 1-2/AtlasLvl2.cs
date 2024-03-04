@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Atlas : MonoBehaviour
+public class AtlasLvl2 : MonoBehaviour
 {
     // vars
     private Rigidbody2D rb;
@@ -10,7 +10,7 @@ public class Atlas : MonoBehaviour
     public static float health = 100;
     public static float maxHealth = 100;
     public static float xPos;
-    private float speed = 2;
+    private float speed = 2f;
 
     // call start
     private void Start()
@@ -18,10 +18,8 @@ public class Atlas : MonoBehaviour
         // initialize atlas vars
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        xPos = transform.position.x;
 
-        if (GameUI.levelTrack == 1) speed = 2.5f;
-        else if (GameUI.levelTrack == 2) speed = 2f;
+        xPos = transform.position.x;
     }
 
     // frame update
@@ -29,6 +27,14 @@ public class Atlas : MonoBehaviour
     {
         Move();
         xPos = transform.position.x;
+        //if (rb.velocity.x < 0)
+        //{
+        //    spriteRenderer.flipX = true;
+        //}
+        //if (rb.velocity.x > 0)
+        //{
+        //    spriteRenderer.flipX = false;
+        //}
     }
 
     // move and update sprite

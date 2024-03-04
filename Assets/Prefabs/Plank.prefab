@@ -106,10 +106,10 @@ PolygonCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -131,10 +131,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.2410604, y: 0.74929774}
-      - {x: -1.2088413, y: -0.74929774}
-      - {x: 1.2410612, y: -0.68697375}
-      - {x: 1.3055006, y: 0.7492969}
+    - - {x: 0.9625, y: 0.57875}
+      - {x: 0.355, y: 0.6525}
+      - {x: -0.26375, y: 0.6525}
+      - {x: -0.39999998, y: 0.5525}
+      - {x: -0.4025, y: 0.55}
+      - {x: -0.9, y: 0.4525}
+      - {x: -1.1999999, y: 0.1525}
+      - {x: -1.1999999, y: -0.3525}
+      - {x: -0.9, y: -0.6525}
+      - {x: 0.905, y: -0.6525}
+      - {x: 1.1999999, y: -0.4325}
+      - {x: 1.1999999, y: 0.15875}
+      - {x: 1.17625, y: 0.3375}
   m_UseDelaunayMesh: 0
 --- !u!114 &1234006226598370446
 MonoBehaviour:

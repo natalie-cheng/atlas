@@ -20,7 +20,7 @@ public class CyclopsSpawner : MonoBehaviour
     public float nextSpawnTime = 0;
 
     // Reference to Atlas
-    public Atlas atlas;
+    public Atlas_Level5 atlas;
 
     // Range for random spawning
     public float SpawnRange = 10.0f;
@@ -28,7 +28,7 @@ public class CyclopsSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        atlas = FindObjectOfType<Atlas>();
+        atlas = FindObjectOfType<Atlas_Level5>();
     }
 
     // Update is called once per frame

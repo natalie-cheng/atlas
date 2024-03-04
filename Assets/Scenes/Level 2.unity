@@ -6337,18 +6337,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1607648364696979483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7369822967324865228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c454121ef0b864643a0375b679bb1ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4131029339688943049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6496,9 +6484,9 @@ GameObject:
   - component: {fileID: 419913362199330940}
   - component: {fileID: 4990929702781726868}
   - component: {fileID: 5321345237399225430}
-  - component: {fileID: 1607648364696979483}
   - component: {fileID: 8544770772423257907}
   - component: {fileID: 8544770772423257908}
+  - component: {fileID: 8544770772423257909}
   m_Layer: 7
   m_Name: BoatLvl2
   m_TagString: BoatLvl2
@@ -6593,6 +6581,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8544770772423257909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369822967324865228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81d0408a04f84de39a1a6f4beb53200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

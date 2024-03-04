@@ -19,7 +19,7 @@ public class Lvl2UI : MonoBehaviour
         GameUI.levelTrack = 2;
         Singleton = this;
 
-        Atlas.health = 100;
+        AtlasLvl2.health = 100;
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
         instructions.SetActive(true);
@@ -29,7 +29,7 @@ public class Lvl2UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Atlas.xPos > 52)
+        if (AtlasLvl2.xPos > 52)
         {
             GameOver(true);
         }
@@ -55,12 +55,12 @@ public class Lvl2UI : MonoBehaviour
 
     private void changeHealthInternal(float dmg)
     {
-        Atlas.health -= dmg;
+        AtlasLvl2.health -= dmg;
 
         // change health bar fill
-        healthBar.fillAmount -= dmg / Atlas.maxHealth;
+        healthBar.fillAmount -= dmg / AtlasLvl2.maxHealth;
 
-        if (Atlas.health <= 0)
+        if (AtlasLvl2.health <= 0)
         {
             GameOver(false);
         }
