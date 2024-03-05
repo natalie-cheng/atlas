@@ -14,14 +14,14 @@ public class Atlas_Level5 : MonoBehaviour
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
     private float swordDamage = 100;
-    public static float health = 100;   
+    public static float health;   
     public static float maxHealth = 100;
     // Animator reference
     public Animator animator;
     //private int swingAnimationDuration = 1;
-    public static bool isSwinging = false;
-    public static bool isWalking = false;
-    public static bool hitCyclops = false;
+    public static bool isSwinging;
+    public static bool isWalking;
+    public static bool hitCyclops;
 
     public static AudioManager audiomanager;
 
@@ -37,7 +37,14 @@ public class Atlas_Level5 : MonoBehaviour
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         animator = GetComponent<Animator>();
-    }
+
+
+        // set vars
+        health = 100;
+        isSwinging = false;
+        isWalking = false;
+        hitCyclops = false;
+}
 
     // Update is called once per frame
     void Update()
@@ -56,7 +63,8 @@ public class Atlas_Level5 : MonoBehaviour
 
         // set the direction, increase by speed
         Vector2 vec = new Vector2(horizontal, vertical);
-        if(rb != null)
+        vec = vec.normalized;
+        if (rb != null)
         {
             rb.velocity = vec * speed;
         }
