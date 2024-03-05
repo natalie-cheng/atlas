@@ -4,25 +4,34 @@ using UnityEngine;
 
 public class Plank : MonoBehaviour
 {
+    private bool colliding;
+
+    // call start
+    private void Start()
+    {
+        colliding = false;
+    }
+
     // frame update
     private void Update()
     {
         // if the player is "using" and colliding with the plank
         if (Input.GetAxis("Attack") == 1)
         {
-            if (IsColliding())
+            if (colliding)
             {
                 Lvl1UI.addPlank();
+                AtlasLvl1.woodSfx = true;
                 Destroy(gameObject);
             }
         }
     }
 
-    // checks if this object is colliding with another
-    private bool IsColliding()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        Collider2D collider = Physics2D.OverlapBox(transform.position, transform.localScale, 0f);
-
-        return collider != null && collider.gameObject != gameObject;
+        if (other.CompareTag("Player"))
+        {
+            colliding = true;
+        }
     }
 }

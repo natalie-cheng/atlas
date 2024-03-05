@@ -8,7 +8,10 @@ public class AtlasLvl1 : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private AudioSource sfx;
     private float speed = 2.5f;
+
+    public static bool woodSfx;
 
     // call start
     private void Start()
@@ -17,6 +20,9 @@ public class AtlasLvl1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        sfx = GetComponent<AudioSource>();
+
+        woodSfx = false;
     }
 
     // frame update
@@ -31,6 +37,11 @@ public class AtlasLvl1 : MonoBehaviour
             spriteRenderer.flipX = false;
         }
         Move();
+        if (woodSfx)
+        {
+            sfx.Play();
+            woodSfx = false;
+        }
     }
 
     // move and update sprite
@@ -42,6 +53,7 @@ public class AtlasLvl1 : MonoBehaviour
 
         // set the direction, increase by speed
         Vector2 vec = new Vector2(horizontal, vertical); ;
+        vec = vec.normalized;
         rb.velocity = vec * speed;
 
         // update animation

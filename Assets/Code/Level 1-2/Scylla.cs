@@ -31,7 +31,6 @@ public class Scylla : MonoBehaviour
         // if the player is within range, shoot shot
         if (WithinRange())
         {
-            Debug.Log("within range");
             Shoot();
         }
     }

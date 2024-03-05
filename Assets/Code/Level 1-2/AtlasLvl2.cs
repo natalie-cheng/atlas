@@ -10,7 +10,8 @@ public class AtlasLvl2 : MonoBehaviour
     public static float health = 100;
     public static float maxHealth = 100;
     public static float xPos;
-    private float speed = 2f;
+    private float rotationSpeed = 50f;
+    private float speed = 2.25f;
 
     // call start
     private void Start()
@@ -27,14 +28,6 @@ public class AtlasLvl2 : MonoBehaviour
     {
         Move();
         xPos = transform.position.x;
-        //if (rb.velocity.x < 0)
-        //{
-        //    spriteRenderer.flipX = true;
-        //}
-        //if (rb.velocity.x > 0)
-        //{
-        //    spriteRenderer.flipX = false;
-        //}
     }
 
     // move and update sprite
@@ -45,8 +38,13 @@ public class AtlasLvl2 : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         // set the direction, increase by speed
-        Vector2 vec = new Vector2(horizontal, vertical); ;
+        Vector2 vec = new Vector2(horizontal, vertical);
+        vec = vec.normalized;
         rb.velocity = vec * speed;
+
+        // rotate towards direction of velocity
+        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 0, angle), rotationSpeed * Time.deltaTime);
     }
 
 }

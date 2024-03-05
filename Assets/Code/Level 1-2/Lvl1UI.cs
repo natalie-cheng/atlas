@@ -29,7 +29,7 @@ public class Lvl1UI : MonoBehaviour
         Singleton = this;
 
         // set objects
-        scoreText.text = "0";
+        scoreText.text = "Planks: 0";
         numPlanks = 0;
         // set the time
         currentTime = totalTime;
@@ -89,7 +89,7 @@ public class Lvl1UI : MonoBehaviour
     private void addPlankInternal()
     {
         numPlanks += 1;
-        scoreText.text = numPlanks +"";
+        scoreText.text = "Planks: " + numPlanks;
     }
 
     // start level
