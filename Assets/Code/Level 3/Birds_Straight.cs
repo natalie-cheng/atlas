@@ -12,6 +12,7 @@ public class BirdManager : MonoBehaviour
     private Vector3 moveDirection;
     public Vector3 position;
     public SpriteRenderer spriteRenderer;
+    public Audio_Manager audioM;
 
 
     void Start()
@@ -19,7 +20,7 @@ public class BirdManager : MonoBehaviour
 
         position = gameObject.transform.position;
         CalculateMovement();
-
+        audioM = FindObjectOfType<Audio_Manager>();
 
     }
 
@@ -74,10 +75,13 @@ public class BirdManager : MonoBehaviour
             {
                 atlas.TakeDamage(birdDmg);
             }
-            else
-            {
-                health -= 5f;
-            }
+        }
+
+        if (collision.gameObject.CompareTag("Arrow"))
+        {
+            health -= 5f;
+            audioM.HitSound();
+
         }
 
     }

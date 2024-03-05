@@ -40,6 +40,8 @@ public class Atlas_Level3 : MonoBehaviour
         Move();
         if ((Input.GetAxis("Attack") == 1f || Input.GetKeyDown(KeyCode.Space)) && Time.time - lastShotTime >= reloadTime)
         {
+            Audio_Manager audio = FindObjectOfType<Audio_Manager>();
+            audio.bowSound();
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             if (mousePos.x > transform.position.x && spriteRenderer.flipX == true)
             {
@@ -67,6 +69,7 @@ public class Atlas_Level3 : MonoBehaviour
         diff = diff - position;
         Vector2 direction = diff.normalized;
         Instantiate(bullet, rb.position + direction, Quaternion.identity);
+
 
     }
 

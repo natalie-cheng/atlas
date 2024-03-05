@@ -239,6 +239,7 @@ MonoBehaviour:
   birdDmg: 25
   position: {x: 0, y: 0, z: 0}
   spriteRenderer: {fileID: 105259872}
+  audioM: {fileID: 0}
 --- !u!95 &105259870
 Animator:
   serializedVersion: 5
@@ -747,6 +748,7 @@ MonoBehaviour:
   speed: 1
   birdDmg: 25
   spriteRenderer: {fileID: 253826933}
+  audioM: {fileID: 0}
 --- !u!212 &253826933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -868,7 +870,7 @@ PolygonCollider2D:
       - {x: -0.6666667, y: 0.05416667}
       - {x: -0.6, y: -0.020833334}
       - {x: -0.38333336, y: -0.18750001}
-      - {x: -0.19166668, y: -0.28750002}
+      - {x: -0.40150732, y: -0.54230654}
       - {x: -0.033333335, y: -0.27083334}
       - {x: -0.050000004, y: -0.51250005}
       - {x: 0, y: -0.5375}
@@ -1147,6 +1149,7 @@ MonoBehaviour:
   birdDmg: 25
   position: {x: 0, y: 0, z: 0}
   spriteRenderer: {fileID: 553062578}
+  audioM: {fileID: 0}
 --- !u!95 &553062576
 Animator:
   serializedVersion: 5
@@ -2431,6 +2434,7 @@ MonoBehaviour:
   birdDmg: 25
   position: {x: 0, y: 0, z: 0}
   spriteRenderer: {fileID: 1186058785}
+  audioM: {fileID: 0}
 --- !u!95 &1186058783
 Animator:
   serializedVersion: 5
@@ -2645,6 +2649,7 @@ MonoBehaviour:
   speed: 1
   birdDmg: 25
   spriteRenderer: {fileID: 1204290739}
+  audioM: {fileID: 0}
 --- !u!212 &1204290739
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2766,8 +2771,8 @@ PolygonCollider2D:
       - {x: -0.6666667, y: 0.05416667}
       - {x: -0.6, y: -0.020833334}
       - {x: -0.38333336, y: -0.18750001}
-      - {x: -0.19166668, y: -0.28750002}
-      - {x: -0.033333335, y: -0.27083334}
+      - {x: -0.36995563, y: -0.32864344}
+      - {x: -0.280195, y: -0.51769483}
       - {x: -0.050000004, y: -0.51250005}
       - {x: 0, y: -0.5375}
       - {x: 0.28333336, y: -0.5375}
@@ -2948,6 +2953,8 @@ MonoBehaviour:
   lossScreen: {fileID: 75632584}
   instructions: {fileID: 1082563773}
   healthBar: {fileID: 2069781280}
+  audioM: {fileID: 0}
+  num: 0
 --- !u!1 &1371617300
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,6 +4245,7 @@ MonoBehaviour:
   speed: 1
   birdDmg: 25
   spriteRenderer: {fileID: 1744741985}
+  audioM: {fileID: 0}
 --- !u!95 &1744741989
 Animator:
   serializedVersion: 5
@@ -4941,6 +4949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116375331}
   - component: {fileID: 2116375330}
+  - component: {fileID: 2116375333}
   - component: {fileID: 2116375332}
   m_Layer: 0
   m_Name: Background
@@ -5025,9 +5034,110 @@ MonoBehaviour:
   m_GameObject: {fileID: 2116375329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ed3fae52a6d44e2ca535bcfd108715d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a03de3dc6a5847069f0265fe3392b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bowShoot: {fileID: 8300000, guid: 12846d9ef6bf84a3aa1e8ad02ade2b15, type: 3}
+  birdHit: {fileID: 8300000, guid: 66508c89c60464d758838d299ed33aeb, type: 3}
+  winClip: {fileID: 8300000, guid: b5fe79deb36c14a89872de992871a3bf, type: 3}
+  loseClip: {fileID: 8300000, guid: ead9e0f69fdbd4df69aca6f079baf049, type: 3}
+  audioSrc: {fileID: 0}
+--- !u!82 &2116375333
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116375329}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

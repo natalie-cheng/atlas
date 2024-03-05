@@ -8,6 +8,7 @@ TagManager:
   - Bird_1
   - BoatLvl2
   - Charybdis
+  - Arrow
   layers:
   - Default
   - TransparentFX

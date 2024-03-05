@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Image = UnityEngine.UI.Image;
+using System.Threading;
 
 public class Lvl3UI : MonoBehaviour
 {
@@ -13,13 +14,15 @@ public class Lvl3UI : MonoBehaviour
     public GameObject lossScreen;
     public GameObject instructions;
     public Image healthBar;
-
+    public Audio_Manager audioM;
     public static int numBirds;
+    public int num = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        audioM = FindObjectOfType<Audio_Manager>();
         GameUI.levelTrack = 3;
 
         Singleton = this;
@@ -37,10 +40,15 @@ public class Lvl3UI : MonoBehaviour
     void Update()
     {
         // if all the birds are killed, then win
-        if (numBirds<=0)
+        if (numBirds<=0 && num == 0)
         {
+            num = 1;
             GameOver(true);
+            audioM.winSound();
+        
+
         }
+
     }
 
     public static void changeHealth(float dmg)
@@ -66,11 +74,16 @@ public class Lvl3UI : MonoBehaviour
         Time.timeScale = 0;
         if (win)
         {
+            
             winScreen.SetActive(true);
+
+
         }
         else
         {
             lossScreen.SetActive(true);
+            audioM.loseSound();
+
         }
     }
 

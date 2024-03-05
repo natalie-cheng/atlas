@@ -11,6 +11,7 @@ public class Birds : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private float previousXPosition; // To track the direction of movement
     private float initialYPosition;
+    public Audio_Manager audioM;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Birds : MonoBehaviour
         initialYPosition = transform.position.y;
         transform.position = new Vector3(CalculateX(time) - 5f, CalculateY(time) + initialYPosition, transform.position.z);
         previousXPosition = transform.position.x;
+        audioM = FindObjectOfType<Audio_Manager>();
     }
 
     // Update is called once per frame
@@ -76,10 +78,12 @@ public class Birds : MonoBehaviour
             {
                 atlas.TakeDamage(birdDmg);
             }
-            else
-            {
-                health -= 5f;
-            }
+        }
+        if(collision.gameObject.CompareTag("Arrow"))
+        {
+            health -= 5f;
+            audioM.HitSound();
+
         }
 
     }
