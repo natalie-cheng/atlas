@@ -38,6 +38,8 @@ public class Cyclops : MonoBehaviour
     // Animator reference
     public Animator animator;
 
+    public static AudioManager audiomanager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,21 +62,6 @@ public class Cyclops : MonoBehaviour
         float size = 3f * 1.25f / speed;
         t.localScale = new Vector3(size, size, 0);
         animator = GetComponent<Animator>();
-
-
-
-        //if (atlasRb != null)
-        //{
-        //    // Create a Vector2 representing the force to be applied
-        //    Vector2 force = new Vector2(50f, 50f);
-
-        //    // Add the force to the Rigidbody using AddForce method
-        //    atlasRb.AddForce(force, ForceMode2D.Impulse);
-        //}
-        //else
-        //{
-        //    Debug.LogError("Rigidbody component not found!");
-        //}
         currentTime = Time.time;
         tick = 1f;
     }
@@ -108,32 +95,9 @@ public class Cyclops : MonoBehaviour
         // Apply the clamped position back to the GameObject's position
         rb.position = cyclopsPosition;
 
-        //// Check if the player is in range
-        //if (IsPlayerInRange())
-        //{
-        //    // Stop the cyclops
-        //    rb.velocity = Vector2.zero;
-
-        //    // Start the delay coroutine
-        //    StartCoroutine(HitDelay());
-        //}
-        //else // If player is not in range
-        //{
-        //    // Move the cyclops
-        //    rb.velocity = directionToPlayer * speed;
-        //}
         rb.velocity = directionToPlayer * speed;
     }
 
-    //// Coroutine to introduce a delay before attacking
-    //IEnumerator HitDelay()
-    //{
-    //    yield return new WaitForSeconds(1.0f);
-    //    if (IsPlayerInRange())
-    //    {
-    //        hit();
-    //    }
-    //}
     // Checks if Atlas is within attack range
     private bool IsPlayerInRange()
     {
@@ -188,6 +152,7 @@ public class Cyclops : MonoBehaviour
         {
             // Hit the player
             hit();
+            AudioManager.audiomanager.gruntSound();
             currentTime = Time.time;
         }
     }
@@ -213,15 +178,6 @@ public class Cyclops : MonoBehaviour
     private IEnumerator CyclopsDead()
     {
         animator.SetBool("cyclopsDead", true);
-
-        //if (OffsetToPlayer.x < 0f)
-        //{
-        //    spriteRender.flipX = false;
-        //}
-        //else if (OffsetToPlayer.x > 0f)
-        //{
-        //    spriteRender.flipX = true;
-        //}
 
         // Wait for the duration of your swing animation
         // Adjust this value according to the duration of your swing animation

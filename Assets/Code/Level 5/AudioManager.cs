@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    public static AudioManager audiomanager;
 
     public AudioClip atlasGrunt;
     public AudioClip cyclopsDead;
@@ -15,6 +15,19 @@ public class AudioManager : MonoBehaviour
     private bool isAtlasHitRunning;
     private bool isWalking;
 
+
+    private void Awake()
+    {
+        if (audiomanager == null)
+        {
+            audiomanager = this;
+            DontDestroyOnLoad(gameObject); // Optional: keeps the object alive when loading a new scene
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,29 +37,29 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isSwinging = Atlas_Level5.isSwinging;
-        hitCyclops = Atlas_Level5.hitCyclops;
-        isAtlasHitRunning = Cyclops.isAtlasHitRunning;
-        isWalking = Atlas_Level5.isWalking;
+        //isSwinging = Atlas_Level5.isSwinging;
+        //hitCyclops = Atlas_Level5.hitCyclops;
+        //isAtlasHitRunning = Cyclops.isAtlasHitRunning;
+        //isWalking = Atlas_Level5.isWalking;
 
 
-        if (isSwinging)
-        {
-            StartCoroutine(playSwordSound());
-        }
-        if(hitCyclops)
-        {
-            StartCoroutine(playCyclopsSound());
-        }
-        if (isAtlasHitRunning)
-        {
-            StartCoroutine(playGruntSound());
-        }
-        //if (isWalking)
+        //if (isSwinging)
         //{
-        //    audioSrc.clip = atlasWalking;
-        //    audioSrc.Play();
+        //    StartCoroutine(playSwordSound());
         //}
+        //if (hitCyclops)
+        //{
+        //    StartCoroutine(playCyclopsSound());
+        //}
+        //if (isAtlasHitRunning)
+        //{
+        //    StartCoroutine(playGruntSound());
+        //}
+        ////if (isWalking)
+        ////{
+        ////    audioSrc.clip = atlasWalking;
+        ////    audioSrc.Play();
+        ////}
     }
     private IEnumerator playSwordSound()
     {
@@ -68,14 +81,17 @@ public class AudioManager : MonoBehaviour
     }
 
 
+    public void swordSound()
+    {
+        StartCoroutine(playSwordSound());
+    }
+    public void cyclopsSound()
+    {
+        StartCoroutine(playCyclopsSound());
+    }
+    public void gruntSound()
+    {
+        StartCoroutine(playGruntSound());
+    }
 
-    //public void PlaySound(string clip)
-    //{
-    //    switch (clip)
-    //    {
-    //        case "scoreSound":
-    //            audioSrc.PlayOneShot(scoreSound);
-    //            break;
-    //    }
-    //}
 }
