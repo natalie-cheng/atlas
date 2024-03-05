@@ -53,6 +53,7 @@ public class Atlas_Level5 : MonoBehaviour
         Move();
         check_if_hit();
         HandleInput();
+        //Debug.Log(health);
     }
 
     private void Move()

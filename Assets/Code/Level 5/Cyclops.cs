@@ -10,7 +10,7 @@ public class Cyclops : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float health = 100f;
     private float speed = 1f;
-    private float attackRange = 1.0f;
+    //private float attackRange = 1.0f;
     private float cyclopsDamage = 10f;
     private float forceAmount = 100f;
     // sprite renderer of cyclops
@@ -64,18 +64,19 @@ public class Cyclops : MonoBehaviour
         animator = GetComponent<Animator>();
         currentTime = Time.time;
         tick = 1f;
+        isAtlasHitRunning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         flip();
-        MoveAndHit();
+        Move();
         checkIfDead();
     }
 
     // Makes the cyclops move towards the player
-    private void MoveAndHit()
+    private void Move()
     {
         // Accesses the cyclops's position
         float cyclopsXCoordinate = this.transform.position.x;
@@ -98,15 +99,15 @@ public class Cyclops : MonoBehaviour
         rb.velocity = directionToPlayer * speed;
     }
 
-    // Checks if Atlas is within attack range
-    private bool IsPlayerInRange()
-    {
-        // Calculate the distance between Cyclops and Atlas
-        float distanceToPlayer = Vector2.Distance(transform.position, atlasTransform.position);
+    //// Checks if Atlas is within attack range
+    //private bool IsPlayerInRange()
+    //{
+    //    // Calculate the distance between Cyclops and Atlas
+    //    float distanceToPlayer = Vector2.Distance(transform.position, atlasTransform.position);
 
-        // Check if the player (Atlas) is within the attack range
-        return distanceToPlayer <= attackRange;
-    }
+    //    // Check if the player (Atlas) is within the attack range
+    //    return distanceToPlayer <= attackRange;
+    //}
 
     private void hit()
     {
@@ -115,7 +116,6 @@ public class Cyclops : MonoBehaviour
             // Calculate the direction away from the collision point
             Vector2 pushDirection = (atlas.transform.position - transform.position).normalized;
 
-            //Debug.Log(pushDirection * forceAmount);
 
             // Apply the force to push Atlas back
             atlasRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
@@ -123,7 +123,6 @@ public class Cyclops : MonoBehaviour
             //Atlas_Level5.health -= cyclopsDamage;
             Lvl5UI.AtlasChangeHealth(cyclopsDamage);
             atlasSpriteRenderer.color = Color.red;
-            //Debug.Log("here-1");
             StartCoroutine(atlasHit());
         }
     }
