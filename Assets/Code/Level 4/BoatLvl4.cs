@@ -70,7 +70,7 @@ public class Boat : MonoBehaviour
         if (collision.collider.gameObject.GetComponent<Rock>())
         {
             // audiomanager.playHitRock();
-            AudioManager.audiomanager.rockSound();
+            //AudioManager.audiomanager.rockSound();
         }
     }
 }
