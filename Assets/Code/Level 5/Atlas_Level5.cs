@@ -130,10 +130,10 @@ public class Atlas_Level5 : MonoBehaviour
     // Sets orientation of sprite
     void flip()
     {
-        if (isSwinging)
-        {
-            return;
-        }
+        //if (isSwinging)
+        //{
+        //    return;
+        //}
 
         // Gets horizontal and vertical inputs
         float horizontalInput = Input.GetAxis("Horizontal");

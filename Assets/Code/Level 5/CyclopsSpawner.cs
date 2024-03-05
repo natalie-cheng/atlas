@@ -8,7 +8,7 @@ public class CyclopsSpawner : MonoBehaviour
     public GameObject Cyclops;
 
     /// Seconds between spawn operations for start
-    private float SpawnInterval = 2.0f;
+    private float SpawnInterval = 10000.0f;
 
     /// Decrease Spawn Interval
     private float SpawnDecreaseTime = 0.07f;
