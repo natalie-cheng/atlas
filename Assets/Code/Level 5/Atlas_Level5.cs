@@ -25,6 +25,8 @@ public class Atlas_Level5 : MonoBehaviour
 
     public static AudioManager audiomanager;
 
+    public float lastHorizontalInput = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -130,20 +132,15 @@ public class Atlas_Level5 : MonoBehaviour
     // Sets orientation of sprite
     void flip()
     {
-        //if (isSwinging)
-        //{
-        //    return;
-        //}
-
-        // Gets horizontal and vertical inputs
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        if (horizontalInput < 0f)
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            lastHorizontalInput = Input.GetAxis("Horizontal");
+        }
+        if (lastHorizontalInput < 0f)
         {
             spriteRenderer.flipX = false;
         }
-        else if (horizontalInput > 0f)
+        else if (lastHorizontalInput > 0f)
         {
             spriteRenderer.flipX = true;
         }
