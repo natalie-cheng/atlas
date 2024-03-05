@@ -9,6 +9,7 @@ public class Boat : MonoBehaviour
     private float moveHit = 5f;
 
     public static float xPos;
+    public static AudioManager audiomanager;
 
     // Start is called before the first frame update
     void Start()
@@ -61,5 +62,15 @@ public class Boat : MonoBehaviour
         Vector3 newPosition = transform.position + new Vector3(moveHit, 0f, 0f);
         transform.position = newPosition;
         xPos = transform.position.x;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // if make contact with Boat, move boat left
+        if (collision.collider.gameObject.GetComponent<Rock>())
+        {
+            // audiomanager.playHitRock();
+            AudioManager.audiomanager.rockSound();
+        }
     }
 }

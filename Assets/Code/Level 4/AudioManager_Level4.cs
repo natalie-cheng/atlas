@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lvl4AudioManagerf : MonoBehaviour
 {
-    public static AudioManager instance;
+    public static AudioManager audiomanager;
     public AudioSource audioSrc;
     public AudioClip hitRock;
     private bool didHitRock;
@@ -19,12 +19,15 @@ public class Lvl4AudioManagerf : MonoBehaviour
     {
         
     }
-
     private IEnumerator playHitRock()
     {
         audioSrc.clip= hitRock;
         audioSrc.Play();
         yield return new WaitForSeconds(1f);
+    }
+    public void rockSound()
+    {
+        StartCoroutine(playHitRock());
     }
 
 }

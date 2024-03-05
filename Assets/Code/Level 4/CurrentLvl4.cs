@@ -23,7 +23,6 @@ public class Current : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // if make contact with Boat, move boat left
-        print("TEst");
         if (collision.collider.gameObject.GetComponent<Boat>())
         {
             collision.collider.gameObject.GetComponent<Boat>().GoRight();
