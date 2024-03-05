@@ -21,7 +21,7 @@ public class Scylla : MonoBehaviour
     void Start()
     {
         // player and current time
-        player = FindObjectOfType<Atlas>().transform;
+        player = FindObjectOfType<AtlasLvl2>().transform;
         currentTime = Time.time - shotDelay;
     }
 
@@ -31,7 +31,6 @@ public class Scylla : MonoBehaviour
         // if the player is within range, shoot shot
         if (WithinRange())
         {
-            Debug.Log("within range");
             Shoot();
         }
     }
@@ -41,7 +40,6 @@ public class Scylla : MonoBehaviour
     {
         // get the distance between scylla and the player
         float playerDist = Vector2.Distance(transform.position, player.position);
-        Debug.Log(transform.position);
         // if it's less than the radius, it's within range
         if (playerDist < radius)
         {

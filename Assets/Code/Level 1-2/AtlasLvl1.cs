@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Atlas : MonoBehaviour
+public class AtlasLvl1 : MonoBehaviour
 {
     // vars
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    public static float health = 100;
-    public static float maxHealth = 100;
-    public static float xPos;
-    private float speed = 2;
+    private Animator animator;
+    private AudioSource sfx;
+    private float speed = 2.5f;
+
+    public static bool woodSfx;
 
     // call start
     private void Start()
@@ -18,17 +19,29 @@ public class Atlas : MonoBehaviour
         // initialize atlas vars
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        xPos = transform.position.x;
+        animator = GetComponent<Animator>();
+        sfx = GetComponent<AudioSource>();
 
-        if (GameUI.levelTrack == 1) speed = 2.5f;
-        else if (GameUI.levelTrack == 2) speed = 2f;
+        woodSfx = false;
     }
 
     // frame update
     private void Update()
     {
+        if (rb.velocity.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        if (rb.velocity.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
         Move();
-        xPos = transform.position.x;
+        if (woodSfx)
+        {
+            sfx.Play();
+            woodSfx = false;
+        }
     }
 
     // move and update sprite
@@ -40,7 +53,18 @@ public class Atlas : MonoBehaviour
 
         // set the direction, increase by speed
         Vector2 vec = new Vector2(horizontal, vertical); ;
+        vec = vec.normalized;
         rb.velocity = vec * speed;
+
+        // update animation
+        if (vec.magnitude > 0)
+        {
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
+        }
     }
 
 }

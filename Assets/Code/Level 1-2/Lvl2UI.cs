@@ -13,23 +13,27 @@ public class Lvl2UI : MonoBehaviour
     public GameObject instructions;
     public Image healthBar;
 
+    private AudioSource sfx;
+
     // Start is called before the first frame update
     void Start()
     {
         GameUI.levelTrack = 2;
         Singleton = this;
 
-        Atlas.health = 100;
+        AtlasLvl2.health = 100;
         winScreen.SetActive(false);
         lossScreen.SetActive(false);
         instructions.SetActive(true);
         Time.timeScale = 0;
+
+        sfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Atlas.xPos > 52)
+        if (AtlasLvl2.xPos > 52)
         {
             GameOver(true);
         }
@@ -55,12 +59,13 @@ public class Lvl2UI : MonoBehaviour
 
     private void changeHealthInternal(float dmg)
     {
-        Atlas.health -= dmg;
+        AtlasLvl2.health -= dmg;
+        sfx.Play();
 
         // change health bar fill
-        healthBar.fillAmount -= dmg / Atlas.maxHealth;
+        healthBar.fillAmount -= dmg / AtlasLvl2.maxHealth;
 
-        if (Atlas.health <= 0)
+        if (AtlasLvl2.health <= 2)
         {
             GameOver(false);
         }

@@ -14,14 +14,18 @@ public class Atlas_Level5 : MonoBehaviour
     private float lastHitTime = 0f;
     private float hitCooldown = 0.25f;
     private float swordDamage = 100;
-    public static float health = 100;   
+    public static float health;   
     public static float maxHealth = 100;
     // Animator reference
     public Animator animator;
     //private int swingAnimationDuration = 1;
-    public static bool isSwinging = false;
-    public static bool isWalking = false;
-    public static bool hitCyclops = false;
+    public static bool isSwinging;
+    public static bool isWalking;
+    public static bool hitCyclops;
+
+    public static AudioManager audiomanager;
+
+    public float lastHorizontalInput = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +37,14 @@ public class Atlas_Level5 : MonoBehaviour
         // Lock rotation in the Z-axis to prevent flipping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         animator = GetComponent<Animator>();
-    }
+
+
+        // set vars
+        health = 100;
+        isSwinging = false;
+        isWalking = false;
+        hitCyclops = false;
+}
 
     // Update is called once per frame
     void Update()
@@ -52,19 +63,13 @@ public class Atlas_Level5 : MonoBehaviour
 
         // set the direction, increase by speed
         Vector2 vec = new Vector2(horizontal, vertical);
-        if(rb != null)
+        vec = vec.normalized;
+        if (rb != null)
         {
             rb.velocity = vec * speed;
         }
         animator.SetBool("walking", true);
     }
-
-
-    //// For delay in hit
-    //void FixedUpdate()
-    //{
-    //    check_if_hit();
-    //}
 
     public void check_if_hit()
     {
@@ -82,7 +87,6 @@ public class Atlas_Level5 : MonoBehaviour
                     {
                         hit(cyclop);
                         lastHitTime = Time.time; // Update the last hit time
-                        //Debug.Log("here");
                     }
                 }
             }
@@ -98,56 +102,12 @@ public class Atlas_Level5 : MonoBehaviour
         Rigidbody2D cyclopsRb = cyclop.GetComponent<Rigidbody2D>();
         SpriteRenderer cyclopssprite = cyclop.GetComponent<SpriteRenderer>();
         if (cyclopsRb != null)
-        {
-            //// Calculate the direction away from the collision point
-            //Vector3 pushDirection = cyclop.transform.position - transform.position;
-            //pushDirection.Normalize();
-
-            //// Apply the force to push the Cyclops back
-            //cyclopsRb.AddForce(pushDirection * forceAmount, ForceMode2D.Impulse);
+        { 
             cyclop.health -= swordDamage;
-            //cyclopssprite.color = Color.red;
-            //StartCoroutine(cyclopsHit(cyclopssprite));
+            AudioManager.audiomanager.cyclopsSound();
         }
         hitCyclops = true;
     }
-
-    //// Coroutine to handle the invulnerability duration
-    //private IEnumerator cyclopsHit(SpriteRenderer cyclopssprite)
-    //{
-    //    yield return new WaitForSeconds(0.2f); // Atlas is invulnerable for 1 second
-    //    cyclopssprite.color = Color.white; // Reset color or remove this if color change is handled elsewhere
-    //}
-
-    //// Checks if object is in hit range and Atlas is facing Cyclops
-    //private bool IsObjectInHitRange(Transform otherTransform)
-    //{
-    //    // Calculate the distance between the current object and the target object
-    //    float distance = Vector3.Distance(transform.position, otherTransform.position);
-    //    // Check if the distance is less than the proximity threshold
-    //    if (distance < detectionRadius)
-    //    {
-    //        // Calculate the direction from the current object to the target object
-    //        //Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
-
-    //        //// horizontal and vertical input axes
-    //        //float horizontal = Input.GetAxis("Horizontal");
-    //        //float vertical = Input.GetAxis("Vertical");
-    //        //Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
-
-
-    //        //// Calculate the dot product of the forward direction of the current object and the direction to the target
-    //        //float dotProduct = Vector3.Dot(movement, directionToTarget);
-
-    //        //// Check if the dot product is greater than the facing threshold
-    //        //if (dotProduct > facingThreshold)
-    //        //{
-    //        //    return true;
-    //        //}
-    //        return true;
-    //    }
-    //    return false;
-    //}
 
 
     // Checks if object is in hit range and Atlas is facing Cyclops
@@ -160,15 +120,6 @@ public class Atlas_Level5 : MonoBehaviour
         {
            //Calculate the direction from the current object to the target object
            Vector3 directionToTarget = (otherTransform.position - transform.position).normalized;
-
-            //// horizontal and vertical input axes
-            //float horizontal = Input.GetAxis("Horizontal");
-            //float vertical = Input.GetAxis("Vertical");
-            //Vector3 movement = new Vector3(horizontal, vertical, 0.0f);
-
-
-            //// Calculate the dot product of the forward direction of the current object and the direction to the target
-            //float dotProduct = Vector3.Dot(movement, directionToTarget);
 
             // Calculate the direction the character is facing based on SpriteRenderer's flipX state
             Vector3 facingDirection = spriteRenderer.flipX ? Vector3.right : Vector3.left;
@@ -189,110 +140,19 @@ public class Atlas_Level5 : MonoBehaviour
     // Sets orientation of sprite
     void flip()
     {
-        if (isSwinging)
+        if (Input.GetAxis("Horizontal") != 0)
         {
-            return;
+            lastHorizontalInput = Input.GetAxis("Horizontal");
         }
-
-        // Gets horizontal and vertical inputs
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        if (horizontalInput < 0f)
+        if (lastHorizontalInput < 0f)
         {
             spriteRenderer.flipX = false;
         }
-        else if (horizontalInput > 0f)
+        else if (lastHorizontalInput > 0f)
         {
             spriteRenderer.flipX = true;
         }
     }
-
-    //private void animate()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space) && !isSwinging)
-    //    {
-    //        StartCoroutine(SwingSword());
-    //    }
-
-    //    // Check for user input to set animation parameters
-    //    float horizontalInput = Input.GetAxis("Horizontal");
-    //    float verticalInput = Input.GetAxis("Vertical");
-
-    //    if (horizontalInput != 0 || verticalInput != 0)
-    //    {
-    //        StartCoroutine(Walk());
-    //    }
-
-    //    animator.SetBool("walking", (horizontalInput != 0 || verticalInput != 0));
-    //}
-
-    //IEnumerator SwingSword()
-    //{
-    //    Cyclops[] allCyclops = GameObject.FindObjectsOfType<Cyclops>();
-    //    foreach (Cyclops cyclop in allCyclops)
-    //    {
-    //        if(cyclop.isAtlasHitRunning)
-    //        {
-    //            yield break; // Exit if already running
-    //        }
-    //    }
-    //    //Debug.Log("SwingSword coroutine started");
-    //    isSwinging = true;
-    //    animator.SetBool("swinging", true);
-
-    //    // Adjust this value according to the duration of your swing animation
-    //    yield return new WaitForSeconds(0.000001f); // Change 0.5f to match your animation's duration
-
-    //    //Debug.Log("Swing animation complete");
-    //    animator.SetBool("swinging", false);
-    //    isSwinging = false;
-    //}
-
-
-    //IEnumerator Walk()
-    //{
-    //    Cyclops[] allCyclops = GameObject.FindObjectsOfType<Cyclops>();
-    //    foreach (Cyclops cyclop in allCyclops)
-    //    {
-    //        if (cyclop.isAtlasHitRunning)
-    //        {
-    //            yield break; // Exit if already running
-    //        }
-    //    }
-    //    isWalking = true;
-    //    animator.SetBool("walking", true);
-
-    //    for(int i = 0; i < 1000; i++){
-    //        yield return new WaitForSeconds(0.0001f);
-    //        if (Input.GetKeyDown(KeyCode.Space))
-    //        {
-    //            animator.SetBool("walking", false);
-    //            StartCoroutine(SwingSword());
-    //            yield break;
-    //        }
-    //    }
-    //    //Debug.Log("Swing animation complete");
-    //    animator.SetBool("walking", false);
-    //    isWalking = false;
-    //}
-
-    // checks if Atlas is dead
-    //public bool checkIfDead()
-    //{
-    //    if (health <= 0)
-    //    {
-
-    //        return true;
-
-    //    }
-    //    return false;
-    //}
-
-    //public void Dead()
-    //{
-    //    Destroy(this);
-    //}
 
     // This method should be called from Update to handle input every frame
     private void HandleInput()

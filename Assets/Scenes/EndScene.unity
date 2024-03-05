@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You won the entire whole game yay
+  m_text: Atlas returned home! You won the entire whole game yay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
   m_sharedMaterial: {fileID: 4048497433923875894, guid: ed18af80ed0094eab8da75e4535fc1a2, type: 2}
@@ -500,8 +500,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TransitionUI, Assembly-CSharp
+      - m_Target: {fileID: 993477876}
+        m_TargetAssemblyTypeName: EndSceneUI, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
