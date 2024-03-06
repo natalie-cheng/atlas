@@ -4937,7 +4937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSrc: {fileID: 0}
-  hitRock: {fileID: 8300000, guid: 39d2b33685b19d8458a28579a641a23f, type: 3}
+  hitRock: {fileID: 8300000, guid: 295fc2ef196813d46944557afd216f16, type: 3}
   hitCurrent: {fileID: 8300000, guid: 14c4f1094a0c2be4e9c999d5dc19d71b, type: 3}
 --- !u!82 &493197227
 AudioSource:
