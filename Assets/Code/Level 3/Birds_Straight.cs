@@ -74,6 +74,7 @@ public class BirdManager : MonoBehaviour
             if (collision.gameObject.name == atlas.name)
             {
                 atlas.TakeDamage(birdDmg);
+                audioM.HurtSound();
             }
         }
 

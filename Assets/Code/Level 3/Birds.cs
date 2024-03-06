@@ -77,6 +77,7 @@ public class Birds : MonoBehaviour
             if (collision.gameObject.name == atlas.name)
             {
                 atlas.TakeDamage(birdDmg);
+                audioM.HurtSound();
             }
         }
         if(collision.gameObject.CompareTag("Arrow"))

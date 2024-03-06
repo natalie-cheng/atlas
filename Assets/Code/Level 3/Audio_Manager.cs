@@ -9,6 +9,7 @@ public class Audio_Manager : MonoBehaviour
     public AudioClip birdHit;
     public AudioClip winClip;
     public AudioClip loseClip;
+    public AudioClip hurtClip;
     public AudioSource audioSrc;
 
 
@@ -27,8 +28,7 @@ public class Audio_Manager : MonoBehaviour
 
     private IEnumerator playBowSound()
     {
-        audioSrc.clip = bowShoot;
-        audioSrc.Play();
+        audioSrc.PlayOneShot(bowShoot);
         yield return new WaitForSeconds(0.06f);
     }
 
@@ -41,8 +41,7 @@ public class Audio_Manager : MonoBehaviour
 
     private IEnumerator playWinSound()
     {
-        audioSrc.clip = winClip;
-        audioSrc.Play();
+        audioSrc.PlayOneShot(winClip);
         yield return new WaitForSeconds(0.06f);
     }
 
@@ -55,8 +54,7 @@ public class Audio_Manager : MonoBehaviour
 
     private IEnumerator playLoseSound()
     {
-        audioSrc.clip = loseClip;
-        audioSrc.Play();
+        audioSrc.PlayOneShot(loseClip);
         yield return new WaitForSeconds(0.06f);
     }
 
@@ -69,8 +67,7 @@ public class Audio_Manager : MonoBehaviour
 
     private IEnumerator playHitSound()
     {
-        audioSrc.clip = birdHit;
-        audioSrc.Play();
+        audioSrc.PlayOneShot(birdHit);
         yield return new WaitForSeconds(0.06f);
     }
 
@@ -79,6 +76,19 @@ public class Audio_Manager : MonoBehaviour
     public void HitSound()
     {
         StartCoroutine(playHitSound());
+    }
+
+    private IEnumerator playHurtSound()
+    {
+        audioSrc.PlayOneShot(hurtClip);
+        yield return new WaitForSeconds(0.06f);
+    }
+
+
+
+    public void HurtSound()
+    {
+        StartCoroutine(playHurtSound());
     }
 
 }

@@ -5041,6 +5041,7 @@ MonoBehaviour:
   birdHit: {fileID: 8300000, guid: 66508c89c60464d758838d299ed33aeb, type: 3}
   winClip: {fileID: 8300000, guid: b5fe79deb36c14a89872de992871a3bf, type: 3}
   loseClip: {fileID: 8300000, guid: ead9e0f69fdbd4df69aca6f079baf049, type: 3}
+  hurtClip: {fileID: 8300000, guid: 6a7b5e5a144754746977ac52989d5131, type: 3}
   audioSrc: {fileID: 0}
 --- !u!82 &2116375333
 AudioSource:
