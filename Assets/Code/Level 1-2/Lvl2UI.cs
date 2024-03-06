@@ -14,6 +14,9 @@ public class Lvl2UI : MonoBehaviour
     public Image healthBar;
 
     private AudioSource sfx;
+    public AudioClip winSfx;
+    public AudioClip loseSfx;
+    public AudioClip dmgSfx;
 
     // Start is called before the first frame update
     void Start()
@@ -44,10 +47,12 @@ public class Lvl2UI : MonoBehaviour
         Time.timeScale = 0;
         if (win)
         {
+            sfx.PlayOneShot(winSfx);
             winScreen.SetActive(true);
         }
         else
         {
+            sfx.PlayOneShot(loseSfx);
             lossScreen.SetActive(true);
         }
     }
@@ -60,7 +65,7 @@ public class Lvl2UI : MonoBehaviour
     private void changeHealthInternal(float dmg)
     {
         AtlasLvl2.health -= dmg;
-        sfx.Play();
+        sfx.PlayOneShot(dmgSfx,1);
 
         // change health bar fill
         healthBar.fillAmount -= dmg / AtlasLvl2.maxHealth;
