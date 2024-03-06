@@ -14,6 +14,10 @@ public class Lvl5UI : MonoBehaviour
     public GameObject instructions;
     public Image healthBar;
 
+    private AudioSource sfx;
+    public AudioClip winSfx;
+    public AudioClip loseSfx;
+
     // total timer time
     private float totalTime = 61f;
     // track current time
@@ -33,6 +37,8 @@ public class Lvl5UI : MonoBehaviour
         lossScreen.SetActive(false);
         instructions.SetActive(true);
         Time.timeScale = 0;
+
+        sfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -78,10 +84,12 @@ public class Lvl5UI : MonoBehaviour
         Time.timeScale = 0;
         if (win)
         {
+            sfx.PlayOneShot(winSfx);
             winScreen.SetActive(true);
         }
         else
         {
+            sfx.PlayOneShot(loseSfx);
             lossScreen.SetActive(true);
         }
     }
