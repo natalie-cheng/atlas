@@ -69,8 +69,7 @@ public class Boat : MonoBehaviour
         // if make contact with Boat, move boat left
         if (collision.collider.gameObject.GetComponent<Rock>())
         {
-            // audiomanager.playHitRock();
-            //AudioManager.audiomanager.rockSound();
+            
         }
     }
 }
