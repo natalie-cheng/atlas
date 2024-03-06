@@ -151,7 +151,7 @@ public class Cyclops : MonoBehaviour
         {
             // Hit the player
             hit();
-            AudioManager.audiomanager.gruntSound();
+            AudioManager_Level5.audiomanager.gruntSound();
             currentTime = Time.time;
         }
     }

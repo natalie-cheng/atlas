@@ -23,7 +23,7 @@ public class Atlas_Level5 : MonoBehaviour
     public static bool isWalking;
     public static bool hitCyclops;
 
-    public static AudioManager audiomanager;
+    public static AudioManager_Level5 audiomanager;
 
     public float lastHorizontalInput = 0;
 
@@ -69,6 +69,10 @@ public class Atlas_Level5 : MonoBehaviour
         {
             rb.velocity = vec * speed;
         }
+        if(horizontal == 0 && vertical == 0)
+        {
+            rb.velocity = new Vector2(0f, 0f);
+        }
         animator.SetBool("walking", true);
     }
 
@@ -105,7 +109,7 @@ public class Atlas_Level5 : MonoBehaviour
         if (cyclopsRb != null)
         { 
             cyclop.health -= swordDamage;
-            AudioManager.audiomanager.cyclopsSound();
+            AudioManager_Level5.audiomanager.cyclopsSound();
         }
         hitCyclops = true;
     }

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager_Level5 : MonoBehaviour
 {
-    public static AudioManager audiomanager;
+    public static AudioManager_Level5 audiomanager;
 
     public AudioClip atlasGrunt;
     public AudioClip cyclopsDead;
