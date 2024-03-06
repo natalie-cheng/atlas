@@ -13,6 +13,9 @@ public class Lvl1UI : MonoBehaviour
     public GameObject winScreen;
     public GameObject lossScreen;
     public GameObject instructions;
+    private AudioSource sfx;
+    public AudioClip winSfx;
+    public AudioClip loseSfx;
 
     // total timer time
     private float totalTime = 45f;
@@ -39,6 +42,8 @@ public class Lvl1UI : MonoBehaviour
         lossScreen.SetActive(false);
         instructions.SetActive(true);
         Time.timeScale = 0;
+
+        sfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -73,10 +78,12 @@ public class Lvl1UI : MonoBehaviour
         Time.timeScale = 0;
         if (win)
         {
+            sfx.PlayOneShot(winSfx);
             winScreen.SetActive(true);
         }
         else
         {
+            sfx.PlayOneShot(loseSfx);
             lossScreen.SetActive(true);
         }
     }

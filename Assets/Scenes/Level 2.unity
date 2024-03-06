@@ -3823,6 +3823,9 @@ MonoBehaviour:
   lossScreen: {fileID: 1810753633}
   instructions: {fileID: 848678396}
   healthBar: {fileID: 72388766}
+  winSfx: {fileID: 8300000, guid: b5fe79deb36c14a89872de992871a3bf, type: 3}
+  loseSfx: {fileID: 8300000, guid: ead9e0f69fdbd4df69aca6f079baf049, type: 3}
+  dmgSfx: {fileID: 8300000, guid: 91260ce3eee6c47b59832ea895c42a91, type: 3}
 --- !u!114 &1389906569
 MonoBehaviour:
   m_ObjectHideFlags: 0
