@@ -38,7 +38,7 @@ public class Cyclops : MonoBehaviour
     // Animator reference
     public Animator animator;
 
-    public static AudioManager audiomanager;
+    public static AudioManager_Level5 audiomanager;
 
 
     // Start is called before the first frame update
