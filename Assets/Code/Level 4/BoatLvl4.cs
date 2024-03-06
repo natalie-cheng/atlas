@@ -9,7 +9,6 @@ public class Boat : MonoBehaviour
     private float moveHit = 5f;
 
     public static float xPos;
-    public static AudioManager audiomanager;
 
     // Start is called before the first frame update
     void Start()
@@ -67,9 +66,20 @@ public class Boat : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // if make contact with Boat, move boat left
-        if (collision.collider.gameObject.GetComponent<Rock>())
+        if (collision.collider.gameObject.GetComponent<Rock>() || collision.collider.gameObject.GetComponent<Projectile>())
         {
-            
+            AudioManager_Level4 audio = FindObjectOfType<AudioManager_Level4>();
+            audio.rockSound();
+            print("sound");
+
         }
+        if (collision.collider.gameObject.GetComponent<Current>())
+        {
+            AudioManager_Level4 audio = FindObjectOfType<AudioManager_Level4>();
+            audio.currentSound();
+            print("sound");
+
+        }
+
     }
 }

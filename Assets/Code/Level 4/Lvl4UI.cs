@@ -10,6 +10,10 @@ public class Lvl4UI : MonoBehaviour
     public GameObject lossScreen;
     public GameObject instructions;
 
+    private AudioSource sfx;
+    public AudioClip winSfx;
+    public AudioClip loseSfx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,8 @@ public class Lvl4UI : MonoBehaviour
         lossScreen.SetActive(false);
         instructions.SetActive(true);
         Time.timeScale = 0;
+
+        sfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,10 +46,12 @@ public class Lvl4UI : MonoBehaviour
         Time.timeScale = 0;
         if (win)
         {
+            sfx.PlayOneShot(winSfx, 1);
             winScreen.SetActive(true);
         }
         else
         {
+            sfx.PlayOneShot(loseSfx, 1);
             lossScreen.SetActive(true);
         }
     }
